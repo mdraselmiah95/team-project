@@ -11,7 +11,7 @@ const SectionFive = () => {
   }, []);
   return (
     <div className="lg:py-20 lg:px-28 px-5 py-24 bg-cover bg-section-five">
-      <h2 className="text-4xl font-medium text-color-one text-center mb-10">
+      <h2 className="lg:text-4xl text-3xl font-medium text-color-one text-center mb-10">
         How to start my first course?
       </h2>
       <div className="container">

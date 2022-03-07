@@ -1,7 +1,7 @@
 const SectionThree = () => {
   return (
     <div className="flex flex-col items-center justify-items-center justify-center text-center lg:py-32 py-10 px-10 bg-cover bg-section-three">
-      <h1 className="text-4xl text-color-one font-medium mb-6 lg:mx-72 lg:px-10">
+      <h1 className="lg:text-4xl text-3xl text-color-one font-medium mb-6 lg:mx-72 lg:px-10">
         Freelancer Solutions Based in bangladesh Community
       </h1>
       <p className="text-color-two lg:mx-72 lg:px-8">

@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "icon": "https://i.ibb.co/jbwJfwC/Icon1.png",
+    "title": "Find Your Course",
+    "details": "Search for the best instructor according to the niche you want to learn",
+    "backgroundImage": "https://i.ibb.co/Mp6XjpK/Group3.png"
+  },
+  {
+    "id": 2,
+    "icon": "https://i.ibb.co/Nt6mQkG/Icon2.png",
+    "title": "Find Instructor",
+    "details": "Select the best instructor courses you want to learn and continue with other propaganda",
+    "backgroundImage": "https://i.ibb.co/gtYVRg8/Group2.png"
+  },
+  {
+    "id": 3,
+    "icon": "https://i.ibb.co/jgmmHdH/Icon3.png",
+    "title": "Get Started",
+    "details": "Complete the payment process and start learning, You will get course modules and video in your profile",
+    "backgroundImage": "https://i.ibb.co/0FkHbmf/Group1.png"
+  }
+]

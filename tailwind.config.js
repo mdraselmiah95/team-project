@@ -6,6 +6,7 @@ module.exports = {
         "section-three":
           "url('https://i.ibb.co/m8TTmXs/3rd-section-background.png')",
         "section-five": "url('https://i.ibb.co/88Dw709/bg5.png')",
+        "bg-eight": "url('https://i.ibb.co/jfFpgRK/bg.png')",
       },
       colors: {
         "color-one": "#0F2F64",

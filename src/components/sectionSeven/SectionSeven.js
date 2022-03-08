@@ -31,7 +31,7 @@ const SectionSeven = () => {
           <h5 className="text-xl text-color-two">Postgraduate Student</h5>
         </div>
         <img
-          className="mt-4 cursor-pointer lg:ml-8 lg:mt-0"
+          className="mt-4 ml-0 cursor-pointer lg:ml-8 lg:mt-0"
           src={btn2}
           alt="arrow"
           style={{ height: "60px", width: "70px" }}

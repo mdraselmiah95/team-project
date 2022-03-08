@@ -3,14 +3,14 @@ const Footer = () => {
   return (
     <div className="px-4 py-5 pb-12 bg-color-four lg:px-28 lg:pt-44">
       <div className="grid grid-cols-2 md:grid-cols-6">
-        <div className="m-6 lg:m-0 md:col-span-2">
+        <div className="m-4 lg:m-0 md:col-span-2">
           <img src={logo} alt="Footer logo" />
           <h5 className="mt-2 mb-1 text-base text-color-one">
-            f.solutions@gmail.com
+            f.solutions@gmail
           </h5>
           <h5 className="text-base text-color-one">+(880) 19411 99607</h5>
         </div>
-        <div className="m-6 lg:m-0">
+        <div className="m-8 lg:m-0">
           <h4 className="text-base font-bold lg:mb-3 text-color-one">
             Site Map
           </h4>

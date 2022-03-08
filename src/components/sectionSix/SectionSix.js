@@ -78,14 +78,14 @@ const SectionSix = () => {
             we work for complete freelancing solutions for learner, mentors,
             professionals, companies, freelancers and outsourcers needs.
           </p>
-          <div className="flex my-16">
+          <div className="flex my-10 lg:my-16">
             <div>
               <h1 className="mb-1 text-4xl font-medium text-color-one">500</h1>
               <p className="text-base text-color-two">
                 Professional mentors working actively
               </p>
             </div>
-            <div className="mx-10">
+            <div className="mx-4 lg:mx-10">
               <h1 className="mb-1 text-4xl font-medium text-color-one">
                 7.5K+
               </h1>
@@ -110,4 +110,3 @@ const SectionSix = () => {
 };
 
 export default SectionSix;
-//ml-28 mr-44 mt-20 mb-32

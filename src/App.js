@@ -3,6 +3,7 @@ import SectionEight from "./components/sectionEight/SectionEight";
 import SectionFive from "./components/sectionFive/SectionFive";
 import SectionFour from "./components/sectionFour/SectionFour";
 import SectionFourPartTwo from "./components/sectionFourPartTwo/SectionFourPartTwo";
+import SectionSeven from "./components/sectionSeven/SectionSeven";
 import SectionSix from "./components/sectionSix/SectionSix";
 import SectionThree from "./components/sectionThree/SectionThree";
 
@@ -15,6 +16,7 @@ function App() {
       <SectionFourPartTwo />
       <SectionFive />
       <SectionSix />
+      <SectionSeven />
       <SectionEight />
     </>
   );

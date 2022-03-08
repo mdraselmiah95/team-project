@@ -10,12 +10,12 @@ const SectionFive = () => {
       .then((data) => setCourse(data));
   }, []);
   return (
-    <div className="lg:py-20 lg:px-28 px-5 py-24 bg-cover bg-section-five">
-      <h2 className="lg:text-4xl text-3xl font-medium text-color-one text-center mb-10">
+    <div className="px-5 py-12 bg-cover lg:py-20 lg:px-28 bg-section-five">
+      <h2 className="mb-10 text-3xl font-medium text-center lg:text-4xl text-color-one">
         How to start my first course?
       </h2>
       <div className="container">
-        <div className="lg:grid-cols-3	grid-cols-1 grid gap-10">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
           {course.map((data) => (
             <Course key={data.id} data={data} />
           ))}

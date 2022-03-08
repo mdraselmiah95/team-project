@@ -6,7 +6,7 @@ const SectionSeven = () => {
   const start = "https://i.ibb.co/7yy9qXr/rating-icon.png";
 
   return (
-    <div className="px-6 lg:py-36 lg:px-28 py-9">
+    <div className="px-6 lg:py-36 lg:px-28 py-9 lg:mb-28">
       <h1 className="mb-16 text-3xl font-medium text-center lg:text-4xl text-color-one lg:px-80">
         96% our Students satisfied with our services
       </h1>

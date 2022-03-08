@@ -1,3 +1,4 @@
+import Footer from "./components/footer/Footer";
 import Partners from "./components/parnters/Partners";
 import SectionEight from "./components/sectionEight/SectionEight";
 import SectionFive from "./components/sectionFive/SectionFive";
@@ -18,6 +19,7 @@ function App() {
       <SectionSix />
       <SectionSeven />
       <SectionEight />
+      <Footer />
     </>
   );
 }

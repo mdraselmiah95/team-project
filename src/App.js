@@ -1,3 +1,4 @@
+import Banner from "./components/banner/Banner";
 import Footer from "./components/footer/Footer";
 import Partners from "./components/parnters/Partners";
 import SectionEight from "./components/sectionEight/SectionEight";
@@ -11,6 +12,7 @@ import SectionThree from "./components/sectionThree/SectionThree";
 function App() {
   return (
     <>
+      <Banner />
       <Partners />
       <SectionThree />
       <SectionFour />

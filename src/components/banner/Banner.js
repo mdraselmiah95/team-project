@@ -4,7 +4,7 @@ const Banner = () => {
   const HeroImage = " https://i.ibb.co/KzgCF3j/Hero-Image.png";
   const icon = "https://i.ibb.co/rfh773h/Arrow-Down.png";
   return (
-    <div className="lg:pb-20 bg-color-four">
+    <div className="mt-20 lg:pb-20 bg-color-four">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="px-11 py-14 lg:pt-28 lg:pl-36">
           <h1 className="text-4xl font-bold text-color-three lg:text-7xl">

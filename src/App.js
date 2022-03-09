@@ -1,5 +1,6 @@
 import Banner from "./components/banner/Banner";
 import Footer from "./components/footer/Footer";
+import NavBar from "./components/navBar/NavBar";
 import Partners from "./components/parnters/Partners";
 import SectionEight from "./components/sectionEight/SectionEight";
 import SectionFive from "./components/sectionFive/SectionFive";
@@ -12,6 +13,7 @@ import SectionThree from "./components/sectionThree/SectionThree";
 function App() {
   return (
     <>
+      <NavBar />
       <Banner />
       <Partners />
       <SectionThree />

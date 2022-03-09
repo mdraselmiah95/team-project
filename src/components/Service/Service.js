@@ -16,7 +16,7 @@ const Service = ({ data }) => {
           {title}
         </h3>
         <p className="text-base text-color-two">{details}</p>
-        <img className="mt-2" src={iconTwo} alt="icon" />
+        <img className="mt-2 cursor-pointer" src={iconTwo} alt="icon" />
       </div>
     </>
   );

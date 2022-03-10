@@ -1,6 +1,6 @@
 const Service = ({ data }) => {
   const { title, icon, details, backgroundImage, iconTwo } = data;
-  console.log(data);
+  // console.log(data);
   return (
     <>
       <div

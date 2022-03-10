@@ -10,9 +10,9 @@ const SectionSeven = () => {
       <h1 className="mb-16 text-3xl font-medium text-center lg:text-4xl text-color-one lg:px-80">
         96% our Students satisfied with our services
       </h1>
-      <div className="items-center lg:flex">
+      <div className="items-center lg:flex swiper-slide">
         <img
-          className="mb-4 cursor-pointer lg:mr-12 lg:mb-0"
+          className="mb-4 cursor-pointer lg:mr-12 lg:mb-0 swiper-button-prev"
           src={btn1}
           alt="arrow"
           style={{ height: "60px", width: "60px" }}
@@ -31,7 +31,7 @@ const SectionSeven = () => {
           <h5 className="text-xl text-color-two">Postgraduate Student</h5>
         </div>
         <img
-          className="mt-4 -ml-4 cursor-pointer lg:ml-8 lg:mt-0"
+          className="mt-4 -ml-4 cursor-pointer lg:ml-8 lg:mt-0 swiper-button-next"
           src={btn2}
           alt="arrow"
           style={{ height: "60px", width: "70px" }}

@@ -50,10 +50,10 @@ const NavBar = () => {
             open ? "top-20 " : "top-[-490px]"
           }`}
         >
-          <button className="px-4 py-3 font-bold cursor-pointer md:px-6 md:py-4 text-color-three">
+          <button className="px-4 py-3 font-bold rounded-md cursor-pointer md:px-6 md:py-4 text-color-three hover:text-white hover:bg-color-three">
             Login
           </button>
-          <button className="px-4 py-3 font-bold text-white rounded-md cursor-pointer md:px-8 md:py-4 bg-color-three">
+          <button className="px-4 py-3 font-bold text-white rounded-md cursor-pointer hover:text-color-three hover:bg-white hover:border-color-three hover:border md:px-8 md:py-4 bg-color-three">
             Sign Up
           </button>
         </div>

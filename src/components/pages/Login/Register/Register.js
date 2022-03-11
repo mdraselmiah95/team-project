@@ -3,33 +3,25 @@ import {
   faUserLock,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
-import Swal from "sweetalert2";
+import nhost from "../../../../utils/Nhost";
+import { useForm } from "react-hook-form";
 
 const Register = () => {
-  const [loginData, setLoginData] = useState({});
+  const { register, handleSubmit, reset } = useForm();
+  const onSubmit = async (data) => {
+    const { session, error } = await nhost.auth.signUp({
+      email: data.email,
+      password: data.password,
+      options: {
+        displayName: data.name,
+      },
+    });
 
-  const handleOnBlur = (e) => {
-    const field = e.target.name;
-    const value = e.target.value;
-    const newLoginData = { ...loginData };
-    newLoginData[field] = value;
-    setLoginData(newLoginData);
-    console.log(newLoginData);
+    console.log("session", session);
+    console.log("error", error);
+    reset();
   };
 
-  const handleRegisterSubmit = (e) => {
-    if (loginData.password !== loginData.password2) {
-      // alert("Your password did not match");
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Your password did not match!",
-      });
-      return;
-    }
-    e.preventDefault();
-  };
   return (
     <div className="py-10 pb-10 mx-6">
       <h2 className="px-3 mb-4 text-3xl font-bold text-center md:text-4xl text-color-one">
@@ -44,34 +36,33 @@ const Register = () => {
           />
         </div>
         <div className="p-4">
-          <form onSubmit={handleRegisterSubmit}>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <input
               className="block w-4/5 px-3 py-2 mb-3 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md required focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
               placeholder="Your Name"
               name="name"
               type="text"
-              onBlur={handleOnBlur}
+              {...register("name", { required: true })}
             />
             <input
               className="block w-4/5 px-3 py-2 mb-3 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md required focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
               placeholder="Your Email"
               name="email"
               type="email"
-              onBlur={handleOnBlur}
+              {...register("email", { required: true })}
             />
             <input
               className="block w-4/5 px-3 py-2 mb-3 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md required focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
               placeholder="Your Password"
               type="password"
               name="password"
-              onBlur={handleOnBlur}
+              {...register("password", { required: true })}
             />
             <input
               className="block w-4/5 px-3 py-2 mb-3 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md required focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
               placeholder="Re-Type Your Password"
               type="password"
               name="password2"
-              onBlur={handleOnBlur}
             />
             <button
               className="px-4 py-3 font-bold text-white rounded-md cursor-pointer md:px-7 hover:text-color-three hover:bg-white hover:border-color-three hover:border md:py-3 bg-color-three focus:shadow-outline focus:outline-none"

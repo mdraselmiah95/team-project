@@ -3,22 +3,21 @@ import {
   faUnlockAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import { useForm } from "react-hook-form";
+import nhost from "../../../../utils/Nhost";
 
 const Login = () => {
-  const [loginData, setLoginData] = useState({});
+  const { register, handleSubmit, reset } = useForm();
+  const onSubmit = async (data) => {
+    const { session, mfa, error } = await nhost.auth.signIn({
+      email: data.email,
+      password: data.password,
+    });
 
-  const handleOnChange = (e) => {
-    const field = e.target.name;
-    const value = e.target.value;
-    const newLoginData = { ...loginData };
-    newLoginData[field] = value;
-    setLoginData(newLoginData);
-    console.log(newLoginData);
-  };
-
-  const handleLogInSubmit = (e) => {
-    e.preventDefault();
+    console.log("session", session);
+    console.log("mfa", mfa);
+    console.log("error", error);
+    reset();
   };
 
   return (
@@ -35,20 +34,20 @@ const Login = () => {
           />
         </div>
         <div className="p-4">
-          <form onSubmit={handleLogInSubmit}>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <input
               className="block w-4/5 px-3 py-2 mb-3 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md required focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
               type="email"
               placeholder="Your Email"
               name="email"
-              onChange={handleOnChange}
+              {...register("email", { required: true })}
             />
             <input
               className="block w-4/5 px-3 py-2 mb-3 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md required focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
               type="password"
               placeholder="Your Password"
               name="password"
-              onChange={handleOnChange}
+              {...register("password", { required: true })}
             />
             <button
               className="px-4 py-3 font-bold text-white rounded-md cursor-pointer md:px-7 hover:text-color-three hover:bg-white hover:border-color-three hover:border md:py-3 bg-color-three focus:shadow-outline focus:outline-none"

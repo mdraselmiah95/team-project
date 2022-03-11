@@ -4,6 +4,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import nhost from "../../../../utils/Nhost";
 
 const Login = () => {
@@ -57,10 +58,12 @@ const Login = () => {
               LogIn
             </button>
             <div>
-              <button className="px-4 py-2 my-2 font-semibold bg-white border rounded shadow hover:bg-gray-100 text-color-three border-btn-border">
-                New User? Please Register
-                <FontAwesomeIcon icon={faAngleDoubleRight} className="mx-2" />
-              </button>
+              <Link to="/register">
+                <button className="px-4 py-2 my-2 font-semibold bg-white border rounded shadow hover:bg-gray-100 text-color-three border-btn-border">
+                  New User? Please Register
+                  <FontAwesomeIcon icon={faAngleDoubleRight} className="mx-2" />
+                </button>
+              </Link>
             </div>
           </form>
         </div>

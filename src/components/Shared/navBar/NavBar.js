@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   let Links = [
@@ -18,7 +19,9 @@ const NavBar = () => {
       text-gray-800"
         >
           <span className="pt-2 mr-1">
-            <img src={logo} alt="logo" />
+            <Link to="/">
+              <img src={logo} alt="logo" />
+            </Link>
           </span>
         </div>
 
@@ -50,12 +53,16 @@ const NavBar = () => {
             open ? "top-20 " : "top-[-490px]"
           }`}
         >
-          <button className="px-4 py-3 font-bold rounded-md cursor-pointer md:px-6 md:py-4 text-color-three hover:text-white hover:bg-color-three">
-            Login
-          </button>
-          <button className="px-4 py-3 font-bold text-white rounded-md cursor-pointer hover:text-color-three hover:bg-white hover:border-color-three hover:border md:px-8 md:py-4 bg-color-three">
-            Sign Up
-          </button>
+          <Link to="/login">
+            <button className="px-4 py-3 font-bold rounded-md cursor-pointer md:px-6 md:py-4 text-color-three hover:text-white hover:bg-color-three">
+              Login
+            </button>
+          </Link>
+          <Link to="/register">
+            <button className="px-4 py-3 font-bold text-white rounded-md cursor-pointer hover:text-color-three hover:bg-white hover:border-color-three hover:border md:px-8 md:py-4 bg-color-three">
+              Sign Up
+            </button>
+          </Link>
         </div>
       </div>
     </div>

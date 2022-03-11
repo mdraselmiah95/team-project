@@ -3,8 +3,9 @@ import {
   faUserLock,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import nhost from "../../../../utils/Nhost";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
+import nhost from "../../../../utils/Nhost";
 
 const Register = () => {
   const { register, handleSubmit, reset } = useForm();
@@ -30,9 +31,9 @@ const Register = () => {
       <div className="grid items-center grid-cols-1 md:grid-cols-2">
         <div className="">
           <img
-            src="https://i.ibb.co/6Pq31jq/Mypass.png"
+            src="https://i.ibb.co/4FY6BNQ/Unlock.png"
             alt="registration"
-            className=""
+            className="w-9/12 mx-auto"
           />
         </div>
         <div className="p-4">
@@ -72,10 +73,12 @@ const Register = () => {
               Register
             </button>
             <div>
-              <button className="px-4 py-2 my-2 font-semibold bg-white border rounded shadow hover:bg-gray-100 text-color-three border-btn-border">
-                <FontAwesomeIcon icon={faAngleDoubleLeft} className="mr-2" />
-                Already Registered? Please Login
-              </button>
+              <Link to="/login">
+                <button className="px-4 py-2 my-2 font-semibold bg-white border rounded shadow hover:bg-gray-100 text-color-three border-btn-border">
+                  <FontAwesomeIcon icon={faAngleDoubleLeft} className="mr-2" />
+                  Already Registered? Please Login
+                </button>
+              </Link>
             </div>
           </form>
         </div>

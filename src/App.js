@@ -9,22 +9,29 @@ import SectionFourPartTwo from "./components/sectionFourPartTwo/SectionFourPartT
 import SectionSeven from "./components/sectionSeven/SectionSeven";
 import SectionSix from "./components/sectionSix/SectionSix";
 import SectionThree from "./components/sectionThree/SectionThree";
+import { NhostAuthProvider } from "@nhost/react-auth";
+import { NhostApolloProvider } from "@nhost/react-apollo";
+import nhost from "./utils/Nhost";
+import Register from "./components/pages/Login/Register/Register";
 
 function App() {
   return (
-    <>
-      <NavBar />
-      <Banner />
-      <Partners />
-      <SectionThree />
-      <SectionFour />
-      <SectionFourPartTwo />
-      <SectionFive />
-      <SectionSix />
-      <SectionSeven />
-      <SectionEight />
-      <Footer />
-    </>
+    <NhostAuthProvider nhost={nhost}>
+      <NhostApolloProvider nhost={nhost}>
+        {/* <NavBar />
+        <Banner />
+        <Partners />
+        <SectionThree />
+        <SectionFour />
+        <SectionFourPartTwo />
+        <SectionFive />
+        <SectionSix />
+        <SectionSeven />
+        <SectionEight />
+        <Footer /> */}
+        <Register />
+      </NhostApolloProvider>
+    </NhostAuthProvider>
   );
 }
 

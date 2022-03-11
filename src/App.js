@@ -16,8 +16,8 @@ import Register from "./components/pages/Login/Register/Register";
 
 function App() {
   return (
-    <NhostAuthProvider nhost={nhost}>
-      <NhostApolloProvider nhost={nhost}>
+    <NhostApolloProvider nhost={nhost}>
+      <NhostAuthProvider nhost={nhost}>
         {/* <NavBar />
         <Banner />
         <Partners />
@@ -30,8 +30,8 @@ function App() {
         <SectionEight />
         <Footer /> */}
         <Register />
-      </NhostApolloProvider>
-    </NhostAuthProvider>
+      </NhostAuthProvider>
+    </NhostApolloProvider>
   );
 }
 

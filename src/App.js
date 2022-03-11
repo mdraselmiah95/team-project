@@ -13,6 +13,7 @@ import { NhostAuthProvider } from "@nhost/react-auth";
 import { NhostApolloProvider } from "@nhost/react-apollo";
 import nhost from "./utils/Nhost";
 import Register from "./components/pages/Login/Register/Register";
+import Login from "./components/pages/Login/login/Login";
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
         <SectionSeven />
         <SectionEight />
         <Footer /> */}
-        <Register />
+        <Login />
       </NhostAuthProvider>
     </NhostApolloProvider>
   );

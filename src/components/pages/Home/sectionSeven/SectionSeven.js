@@ -12,7 +12,7 @@ const SectionSeven = () => {
       </h1>
       <div className="items-center lg:flex swiper-slide">
         <img
-          className="mb-4 cursor-pointer lg:mr-12 lg:mb-0 swiper-button-prev"
+          className="mb-4 cursor-pointer lg:mr-12 lg:mb-0 hover:opacity-75"
           src={btn1}
           alt="arrow"
           style={{ height: "60px", width: "60px" }}
@@ -31,7 +31,7 @@ const SectionSeven = () => {
           <h5 className="text-xl text-color-two">Postgraduate Student</h5>
         </div>
         <img
-          className="mt-4 -ml-4 cursor-pointer lg:ml-8 lg:mt-0 swiper-button-next"
+          className="mt-4 -ml-4 cursor-pointer lg:ml-8 lg:mt-0 hover:opacity-75"
           src={btn2}
           alt="arrow"
           style={{ height: "60px", width: "70px" }}

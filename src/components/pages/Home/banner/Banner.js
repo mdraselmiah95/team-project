@@ -19,13 +19,13 @@ const Banner = () => {
           </p>
           <div className="lg:absolute">
             <div className="lg:flex">
-              <button className="py-2 my-2 font-medium text-white rounded-t shadow lg:my-0 px-7 bg-color-three">
+              <button className="py-2 my-2 font-medium text-white rounded-t shadow lg:my-0 px-7 bg-color-three hover:opacity-75">
                 Courses
               </button>
-              <button className="py-2 mx-1 font-medium text-white rounded-t shadow px-7 bg-color-five">
+              <button className="py-2 mx-1 font-medium text-white rounded-t shadow px-7 bg-color-five hover:opacity-75">
                 Mentor
               </button>
-              <button className="py-2 font-medium text-white rounded-t shadow px-7 bg-color-five">
+              <button className="py-2 font-medium text-white rounded-t shadow px-7 bg-color-five hover:opacity-75">
                 Company
               </button>
             </div>
@@ -66,7 +66,7 @@ const Banner = () => {
                 </div>
                 <h4 className="text-lg text-color-one">Dhaka</h4>
               </div>
-              <button className="px-6 py-3 font-bold text-white rounded shadow bg-color-three hover:text-slate-600 hover:bg-blue-400">
+              <button className="px-6 py-3 font-bold text-white border rounded shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three ">
                 Search Now
               </button>
             </div>

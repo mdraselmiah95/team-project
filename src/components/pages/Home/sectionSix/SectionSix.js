@@ -100,7 +100,7 @@ const SectionSix = () => {
               </p>
             </div>
           </div>
-          <button className="px-6 py-4 text-white rounded shadow bg-color-three hover:text-slate-600 hover:bg-blue-400">
+          <button className="px-6 py-4 font-bold text-white border rounded shadow bg-color-three hover:text-color-three hover:bg-white hover:border-color-three hover:border">
             Get Started Now
           </button>
         </div>

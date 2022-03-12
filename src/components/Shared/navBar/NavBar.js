@@ -60,7 +60,7 @@ const NavBar = () => {
             </button>
           </Link>
           <Link to="/register">
-            <button className="px-4 py-3 font-bold text-white rounded-md cursor-pointer hover:text-color-three hover:bg-white hover:border-color-three hover:border md:px-8 md:py-4 bg-color-three">
+            <button className="px-4 py-3 font-bold text-white border rounded-md cursor-pointer hover:text-color-three hover:bg-white hover:border-color-three hover:border md:px-8 md:py-4 bg-color-three">
               Sign Up
             </button>
           </Link>

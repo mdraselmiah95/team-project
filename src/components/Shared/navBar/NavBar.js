@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
+  //NavLinks
   let Links = [
     { name: "Home", link: "/" },
     { name: "About Us", link: "/" },

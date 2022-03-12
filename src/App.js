@@ -10,22 +10,20 @@ import nhost from "./utils/Nhost";
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <NhostApolloProvider nhost={nhost}>
-          <NhostAuthProvider nhost={nhost}>
-            <NavBar />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="home" element={<Home />} />
-              <Route path="login" element={<Login />} />
-              <Route path="register" element={<Register />} />
-            </Routes>
-            <Footer />
-          </NhostAuthProvider>
-        </NhostApolloProvider>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <NhostApolloProvider nhost={nhost}>
+        <NhostAuthProvider nhost={nhost}>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="home" element={<Home />} />
+            <Route path="login" element={<Login />} />
+            <Route path="register" element={<Register />} />
+          </Routes>
+          <Footer />
+        </NhostAuthProvider>
+      </NhostApolloProvider>
+    </BrowserRouter>
   );
 }
 

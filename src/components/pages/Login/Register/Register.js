@@ -24,7 +24,7 @@ const Register = () => {
   };
 
   return (
-    <div className="py-10 pb-10 mx-6">
+    <div className="px-8 py-12 mt-20">
       <h2 className="px-3 mb-4 text-3xl font-bold text-center md:text-4xl text-color-one">
         Create New Account:
       </h2>
@@ -33,7 +33,7 @@ const Register = () => {
           <img
             src="https://i.ibb.co/4FY6BNQ/Unlock.png"
             alt="registration"
-            className="w-9/12 mx-auto"
+            className="w-8/12 mx-auto"
           />
         </div>
         <div className="p-4">

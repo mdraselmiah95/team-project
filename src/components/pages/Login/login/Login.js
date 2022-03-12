@@ -22,7 +22,7 @@ const Login = () => {
   };
 
   return (
-    <div className="py-10 pb-10 mx-6">
+    <div className="px-6 py-10 mt-20">
       <h2 className="px-3 mb-4 text-3xl font-bold text-center md:text-4xl text-color-one">
         Please Login:
       </h2>

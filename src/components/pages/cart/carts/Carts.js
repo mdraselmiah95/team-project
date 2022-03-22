@@ -8,7 +8,15 @@ const Carts = () => {
     .map((item) => item.wholePrice)
     .reduce((acc, cc) => acc + cc, 0);
 
-  return (
+  return courses.length === 0 ? (
+    <div className="px-5 py-12 bg-cover lg:py-20 lg:px-28 bg-courses-bg-two">
+      <Link to="/courses">
+        <h2 className="mb-10 text-3xl font-medium text-center lg:text-4xl text-color-one cursor-pointer">
+          Go to courses
+        </h2>
+      </Link>
+    </div>
+  ) : (
     <div className="px-6 py-8 md:px-36 md:py-32">
       <div className="grid grid-cols-1 md:grid-cols-3">
         {/* shopping cart */}

@@ -6,6 +6,7 @@ const Course = ({ data }) => {
   const { image, price, star, starCount, title, description, wholePrice } =
     data;
   const [showModal, setShowModal] = React.useState(false);
+
   return (
     <>
       <div className="px-6 mx-auto lg:px-0">

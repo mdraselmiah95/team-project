@@ -1,15 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
+import courseStore from "../../../../utils/courseStore";
 
 const Carts = () => {
-  const [courses, setCourses] = useState([]);
+  const courses = courseStore((state) => state.courses);
+  const removeItem = courseStore((state) => state.dispatch);
+  const total = courses
+    .map((item) => item.wholePrice)
+    .reduce((acc, cc) => acc + cc, 0);
 
-  useEffect(() => {
-    fetch("./coursesDetails.json")
-      .then((res) => res.json())
-      .then((data) => setCourses(data));
-  }, []);
-  return (
+  return courses.length === 0 ? (
+    <div className="px-5 py-12 bg-cover lg:py-20 lg:px-28 bg-courses-bg-two">
+      <Link to="/courses">
+        <h2 className="mb-10 text-3xl font-medium text-center lg:text-4xl text-color-one cursor-pointer">
+          Go to courses
+        </h2>
+      </Link>
+    </div>
+  ) : (
     <div className="px-6 py-8 md:px-36 md:py-32">
       <div className="grid grid-cols-1 md:grid-cols-3">
         {/* shopping cart */}
@@ -31,7 +39,12 @@ const Carts = () => {
               {courses.map((data) => (
                 <tbody key={data.id} className="">
                   <tr className="border-b">
-                    <td className="w-4 h-4 pr-2 font-bold cursor-pointer md:pr-5">
+                    <td
+                      className="w-4 h-4 pr-2 font-bold cursor-pointer md:pr-5"
+                      onClick={() =>
+                        removeItem({ type: "remove/courses", payload: data })
+                      }
+                    >
                       X
                     </td>
                     <td className="py-3 md:py-6">
@@ -72,7 +85,7 @@ const Carts = () => {
           </h3>
           <div className="flex items-center justify-between py-4 border-b ">
             <h3 className="text-lg font-medium text-color-one">Subtotal</h3>
-            <h3 className="text-2xl font-bold text-color-eight">$29</h3>
+            <h3 className="text-2xl font-bold text-color-eight">${total}</h3>
           </div>
           <div className="flex items-center justify-between text-lg font-medium pt-11 text-color-one">
             <h3>Shipping</h3>

@@ -1,7 +1,7 @@
 import React from "react";
 import Rating from "react-rating";
-import { Link } from "react-router-dom";
 import "./CourseModal.css";
+import courseStore from "../../../../utils/courseStore";
 
 const CourseModal = ({ data, setShowModal }) => {
   const {
@@ -20,6 +20,9 @@ const CourseModal = ({ data, setShowModal }) => {
   } = data;
   const img = "https://i.ibb.co/RDNh0GQ/Group-1000002095.png";
   const imgTwo = "https://i.ibb.co/Qvv15bs/play.png";
+
+  const addCourse = courseStore((state) => state.dispatch);
+
   return (
     <div className="fixed inset-0 z-50 items-center justify-center w-9/12 m-auto overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
       <div className="px-5 bg-white shadow-lg outline-none py-7 focus:outline-none">
@@ -101,14 +104,15 @@ const CourseModal = ({ data, setShowModal }) => {
                 <del>${price}</del>
               </h5>
             </div>
-            <Link to="/cart">
-              <button
-                onClick={() => setShowModal(false)}
-                className="px-6 py-3 mt-10 font-bold text-white border rounded shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three"
-              >
-                Enroll Now
-              </button>
-            </Link>
+            <button
+              onClick={() => {
+                setShowModal(false);
+                addCourse({ type: "add/courses", payload: data });
+              }}
+              className="px-6 py-3 mt-10 font-bold text-white border rounded shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three"
+            >
+              Enroll Now
+            </button>
           </div>
         </div>
       </div>

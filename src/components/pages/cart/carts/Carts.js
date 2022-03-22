@@ -5,7 +5,7 @@ import courseStore from "../../../../utils/courseStore";
 const Carts = () => {
   const courses = courseStore((state) => state.courses);
   const total = courses
-    .map((item) => item.price)
+    .map((item) => item.wholePrice)
     .reduce((acc, cc) => acc + cc, 0);
 
   return (

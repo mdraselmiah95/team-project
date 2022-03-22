@@ -1,7 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import courseStore from "../../../../utils/courseStore";
 
 const CheckoutBody = () => {
+  const courses = courseStore((state) => state.courses);
+
+  const total = courses
+    .map((item) => item.wholePrice)
+    .reduce((acc, cc) => acc + cc, 0);
   return (
     <div className="px-4 py-8 md:py-32 md:px-36">
       <h3 className="mb-8 text-lg font-medium text-color-one md:text-3xl">
@@ -237,7 +243,7 @@ const CheckoutBody = () => {
             </span>
           </h5>
           <h4 className="pb-4 mb-4 font-medium border-b text-color-one">
-            Total: <span className="font-normal ">$29</span>
+            Total: <span className="font-normal ">${total}</span>
           </h4>
           <button className="text-sm text-color-one">
             Have a coupon?

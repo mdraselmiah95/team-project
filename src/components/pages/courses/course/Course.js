@@ -5,7 +5,6 @@ import CourseModal from "../courseModal/CourseModal";
 const Course = ({ data }) => {
   const { image, price, star, starCount, title, description, wholePrice } =
     data;
-  console.log(data);
   const [showModal, setShowModal] = React.useState(false);
   return (
     <>

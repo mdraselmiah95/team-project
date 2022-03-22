@@ -1,6 +1,5 @@
 import React from "react";
 import Rating from "react-rating";
-import { Link } from "react-router-dom";
 import "./CourseModal.css";
 
 const CourseModal = ({ data, setShowModal }) => {
@@ -101,14 +100,15 @@ const CourseModal = ({ data, setShowModal }) => {
                 <del>${price}</del>
               </h5>
             </div>
-            <Link to="/cart">
-              <button
-                onClick={() => setShowModal(false)}
-                className="px-6 py-3 mt-10 font-bold text-white border rounded shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three"
-              >
-                Enroll Now
-              </button>
-            </Link>
+            <button
+              onClick={() => {
+                setShowModal(false);
+                console.log(data);
+              }}
+              className="px-6 py-3 mt-10 font-bold text-white border rounded shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three"
+            >
+              Enroll Now
+            </button>
           </div>
         </div>
       </div>

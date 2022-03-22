@@ -22,7 +22,7 @@ const Banner = () => {
               <input
                 type="text"
                 placeholder="Search Courses/ Mentors/ Companies"
-                className="px-6 py-3 cursor-pointer md:pl-3 mainInput bg-color-four placeholder:text-color-two"
+                className="px-6 py-3 rounded cursor-pointer md:pl-3 mainInput bg-color-four placeholder:text-color-two"
               />
               <button className="px-6 py-3 mt-3 ml-3 font-bold text-white border rounded shadow md:mt-0 bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three ">
                 Search Now

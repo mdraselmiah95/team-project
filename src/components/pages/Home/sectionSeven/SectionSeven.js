@@ -1,3 +1,5 @@
+import React from "react";
+
 const SectionSeven = () => {
   const person = "https://i.ibb.co/K6B7pqv/bg-base.png";
   const btn1 = "https://i.ibb.co/MRbWJYV/button.png";

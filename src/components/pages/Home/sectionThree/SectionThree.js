@@ -1,3 +1,5 @@
+import React from "react";
+
 const SectionThree = () => {
   return (
     <div className="flex flex-col items-center justify-center px-10 py-10 text-center bg-cover justify-items-center lg:py-32 bg-section-three">

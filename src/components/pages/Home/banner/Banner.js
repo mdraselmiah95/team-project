@@ -1,4 +1,5 @@
 import "./Banner.css";
+import React from "react";
 
 const Banner = () => {
   const HeroImage = " https://i.ibb.co/KzgCF3j/Hero-Image.png";

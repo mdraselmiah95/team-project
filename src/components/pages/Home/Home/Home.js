@@ -7,10 +7,11 @@ import SectionFourPartTwo from "../sectionFourPartTwo/SectionFourPartTwo";
 import SectionSeven from "../sectionSeven/SectionSeven";
 import SectionSix from "../sectionSix/SectionSix";
 import SectionThree from "../sectionThree/SectionThree";
+import React from "react";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Banner />
       <Partners />
       <SectionThree />
@@ -20,7 +21,7 @@ const Home = () => {
       <SectionSix />
       <SectionSeven />
       <SectionEight />
-    </div>
+    </>
   );
 };
 

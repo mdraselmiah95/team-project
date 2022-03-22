@@ -1,3 +1,5 @@
+import React from "react";
+
 const SectionSix = () => {
   const icon1 = "https://i.ibb.co/crtTQyp/Icon1.png";
   const icon2 = "https://i.ibb.co/CwLLXfd/Icon2.png";

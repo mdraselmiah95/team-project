@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Service from "../Service/Service";
 
 const SectionFourPartTwo = () => {
@@ -9,6 +9,7 @@ const SectionFourPartTwo = () => {
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
+  // console.log(services); JSON response
   return (
     <div className="px-5 lg:px-36">
       <div className="container">

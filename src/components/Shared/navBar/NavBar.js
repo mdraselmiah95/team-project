@@ -1,15 +1,7 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
-  //NavLinks
-  let Links = [
-    { name: "Home", link: "/" },
-    { name: "About Us", link: "/" },
-    { name: "Courses", link: "/" },
-    { name: "Resources", link: "/" },
-    { name: "Careers", link: "/" },
-  ];
   const logo = "https://i.ibb.co/FYNmXRm/F.png";
   let [open, setOpen] = useState(false);
   return (
@@ -38,16 +30,48 @@ const NavBar = () => {
             open ? "top-20 " : "top-[-490px]"
           }`}
         >
-          {Links.map((link) => (
-            <li key={link.name} className="text-xl md:ml-8 md:my-0 my-7">
-              <a
-                href={link.link}
-                className="text-base font-medium duration-500 text-color-three hover:text-blue-400 "
-              >
-                {link.name}
-              </a>
-            </li>
-          ))}
+          <li className="grid text-xl md:block md:my-0 my-7">
+            <NavLink
+              to="/"
+              style={({ isActive }) => {
+                return {
+                  color: isActive ? "#FFB201" : "",
+                };
+              }}
+              className="py-3 text-base font-medium duration-500 text-color-three hover:text-blue-400 md:pr-11"
+            >
+              Home
+            </NavLink>
+            <a
+              href="gkk"
+              className="py-3 text-base font-medium duration-500 text-color-three hover:text-blue-400 md:pr-11"
+            >
+              About Us
+            </a>
+            <NavLink
+              to="/courses"
+              style={({ isActive }) => {
+                return {
+                  color: isActive ? "#FFB201" : "",
+                };
+              }}
+              className="py-3 text-base font-medium duration-500 text-color-three hover:text-blue-400 md:pr-11"
+            >
+              Courses
+            </NavLink>
+            <a
+              href="gkk"
+              className="py-3 text-base font-medium duration-500 text-color-three hover:text-blue-400 md:pr-11"
+            >
+              Eligibility test
+            </a>
+            <a
+              href="gkk"
+              className="py-3 text-base font-medium duration-500 text-color-three hover:text-blue-400"
+            >
+              Careers
+            </a>
+          </li>
         </ul>
         <div
           className={`md:flex md:items-center md:pb-0 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-5 transition-all duration-500 ease-in ${

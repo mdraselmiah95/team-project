@@ -1,3 +1,5 @@
+import React from "react";
+
 const Footer = () => {
   const logo = "https://i.ibb.co/6w1KJ6d/Logo.png";
   return (

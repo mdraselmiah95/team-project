@@ -1,3 +1,5 @@
+import React from "react";
+
 const Course = ({ data }) => {
   const { title, icon, details, backgroundImage } = data;
   console.log(data);
@@ -12,8 +14,8 @@ const Course = ({ data }) => {
         }}
       >
         <img src={icon} alt="icon" />
-        <h3 className="text-2xl text-color-one font-medium my-4">{title}</h3>
-        <p className="text-color-two text-base">{details}</p>
+        <h3 className="my-4 text-2xl font-medium text-color-one">{title}</h3>
+        <p className="text-base text-color-two">{details}</p>
       </div>
     </>
   );

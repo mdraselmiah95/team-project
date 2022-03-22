@@ -1,3 +1,5 @@
+import React from "react";
+
 const Service = ({ data }) => {
   const { title, icon, details, backgroundImage, iconTwo } = data;
   // console.log(data);

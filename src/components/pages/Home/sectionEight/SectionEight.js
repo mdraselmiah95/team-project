@@ -1,3 +1,5 @@
+import React from "react";
+
 const SectionEight = () => {
   return (
     <div className="lg:relative">

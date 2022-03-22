@@ -21,7 +21,7 @@ const CourseModal = ({ data, setShowModal }) => {
   const img = "https://i.ibb.co/RDNh0GQ/Group-1000002095.png";
   const imgTwo = "https://i.ibb.co/Qvv15bs/play.png";
 
-  const addCourse = courseStore((state) => state.addCourse);
+  const addCourse = courseStore((state) => state.dispatch);
 
   return (
     <div className="fixed inset-0 z-50 items-center justify-center w-9/12 m-auto overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
@@ -107,7 +107,7 @@ const CourseModal = ({ data, setShowModal }) => {
             <button
               onClick={() => {
                 setShowModal(false);
-                addCourse(data);
+                addCourse({ type: "add/courses", payload: data });
               }}
               className="px-6 py-3 mt-10 font-bold text-white border rounded shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three"
             >

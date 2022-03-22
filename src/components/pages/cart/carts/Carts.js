@@ -4,6 +4,7 @@ import courseStore from "../../../../utils/courseStore";
 
 const Carts = () => {
   const courses = courseStore((state) => state.courses);
+  const removeItem = courseStore((state) => state.dispatch);
   const total = courses
     .map((item) => item.wholePrice)
     .reduce((acc, cc) => acc + cc, 0);
@@ -38,7 +39,12 @@ const Carts = () => {
               {courses.map((data) => (
                 <tbody key={data.id} className="">
                   <tr className="border-b">
-                    <td className="w-4 h-4 pr-2 font-bold cursor-pointer md:pr-5">
+                    <td
+                      className="w-4 h-4 pr-2 font-bold cursor-pointer md:pr-5"
+                      onClick={() =>
+                        removeItem({ type: "remove/courses", payload: data })
+                      }
+                    >
                       X
                     </td>
                     <td className="py-3 md:py-6">

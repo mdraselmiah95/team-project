@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
+import courseStore from "../../../../utils/courseStore";
 
 const Carts = () => {
-  const [courses, setCourses] = useState([]);
+  const courses = courseStore((state) => state.courses);
 
-  useEffect(() => {
-    fetch("./coursesDetails.json")
-      .then((res) => res.json())
-      .then((data) => setCourses(data));
-  }, []);
   return (
     <div className="px-6 py-8 md:px-36 md:py-32">
       <div className="grid grid-cols-1 md:grid-cols-3">

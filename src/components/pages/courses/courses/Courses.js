@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import courseStore from "../../../../utils/courseStore";
 import Course from "../course/Course";
 
 const Courses = () => {
   const [courses, setCourses] = useState([]);
+  const count = courseStore((state) => state.courses);
 
   useEffect(() => {
     fetch("./coursesDetails.json")
@@ -53,7 +56,11 @@ const Courses = () => {
           </div>
         </div>
         <div>
-          <h2 className="text-lg font-medium text-color-two ">48 Results</h2>
+          <Link to="/cart">
+            <h2 className="text-lg font-medium text-color-two ">
+              {count.length} Items
+            </h2>
+          </Link>
         </div>
       </div>
       <div className="mt-12">

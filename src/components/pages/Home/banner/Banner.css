@@ -2,4 +2,10 @@
   .banner {
     height: 113.3%;
   }
+  .rapperInput {
+    width: 200%;
+  }
+  .mainInput {
+    width: 78%;
+  }
 }

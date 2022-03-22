@@ -2,7 +2,7 @@
   {
     "id": 1,
     "icon": "https://i.ibb.co/4tZZ7dg/1icon.png",
-    "title": "Quality Freelancers",
+    "title": "Students Profile",
     "details": "helps to become you a quality freelancer by our courses",
     "iconTwo": "https://i.ibb.co/3hnHP3X/1arrow.png",
     "backgroundImage": "https://i.ibb.co/LNSdZh4/1bg.png"
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "icon": "https://i.ibb.co/2PFL4BK/2icon.png",
-    "title": "Quality Mentors",
+    "title": "Teachers Profile",
     "details": "we provide quality mentors who are expert in their platform",
     "iconTwo": "https://i.ibb.co/RzzdNKJ/2arrow.png",
     "backgroundImage": "https://i.ibb.co/H7mjxXH/2bg.png"
@@ -20,54 +20,6 @@
     "icon": "https://i.ibb.co/fdjbb7v/3icon.png",
     "title": "Company Platform",
     "details": "Freelancers and agencies can launch their courses easily",
-    "iconTwo": "https://i.ibb.co/3hnHP3X/1arrow.png",
-    "backgroundImage": "https://i.ibb.co/LNSdZh4/1bg.png"
-  },
-  {
-    "id": 4,
-    "icon": "https://i.ibb.co/tKPJpDJ/4icon.png",
-    "title": "Team Solutions",
-    "details": "we solve a team based freelancers project issues",
-    "iconTwo": "https://i.ibb.co/RzzdNKJ/2arrow.png",
-    "backgroundImage": "https://i.ibb.co/H7mjxXH/2bg.png"
-  },
-  {
-    "id": 5,
-    "icon": "https://i.ibb.co/d4mdLms/5icon.png",
-    "title": "Hire Students",
-    "details": "Company can hire our best students for projects or teams",
-    "iconTwo": "https://i.ibb.co/3hnHP3X/1arrow.png",
-    "backgroundImage": "https://i.ibb.co/LNSdZh4/1bg.png"
-  },
-  {
-    "id": 6,
-    "icon": "https://i.ibb.co/sV1RcsV/6icon.png",
-    "title": "Marketplace & Portfolio",
-    "details": "Proper marketplace knowledge and portfolio building process",
-    "iconTwo": "https://i.ibb.co/RzzdNKJ/2arrow.png",
-    "backgroundImage": "https://i.ibb.co/H7mjxXH/2bg.png"
-  },
-  {
-    "id": 7,
-    "icon": "https://i.ibb.co/X4KtdWf/7icon.png",
-    "title": "Eligibility Test",
-    "details": "We organize exams to check  qualification in each 6 months",
-    "iconTwo": "https://i.ibb.co/3hnHP3X/1arrow.png",
-    "backgroundImage": "https://i.ibb.co/LNSdZh4/1bg.png"
-  },
-  {
-    "id": 8,
-    "icon": "https://i.ibb.co/bv1QRzY/8icon.png",
-    "title": "Requirement  Understanding",
-    "details": "Courses for understanding how to understand requirements",
-    "iconTwo": "https://i.ibb.co/RzzdNKJ/2arrow.png",
-    "backgroundImage": "https://i.ibb.co/H7mjxXH/2bg.png"
-  },
-  {
-    "id": 9,
-    "icon": "https://i.ibb.co/d4mdLms/5icon.png",
-    "title": "Hire Students",
-    "details": "Company can hire our best students for projects or teams",
     "iconTwo": "https://i.ibb.co/3hnHP3X/1arrow.png",
     "backgroundImage": "https://i.ibb.co/LNSdZh4/1bg.png"
   }

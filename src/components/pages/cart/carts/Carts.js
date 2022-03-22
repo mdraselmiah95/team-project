@@ -4,6 +4,9 @@ import courseStore from "../../../../utils/courseStore";
 
 const Carts = () => {
   const courses = courseStore((state) => state.courses);
+  const total = courses
+    .map((item) => item.price)
+    .reduce((acc, cc) => acc + cc, 0);
 
   return (
     <div className="px-6 py-8 md:px-36 md:py-32">
@@ -68,7 +71,7 @@ const Carts = () => {
           </h3>
           <div className="flex items-center justify-between py-4 border-b ">
             <h3 className="text-lg font-medium text-color-one">Subtotal</h3>
-            <h3 className="text-2xl font-bold text-color-eight">$29</h3>
+            <h3 className="text-2xl font-bold text-color-eight">${total}</h3>
           </div>
           <div className="flex items-center justify-between text-lg font-medium pt-11 text-color-one">
             <h3>Shipping</h3>

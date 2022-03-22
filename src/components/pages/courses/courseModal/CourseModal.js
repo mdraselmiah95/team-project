@@ -22,8 +22,6 @@ const CourseModal = ({ data, setShowModal }) => {
   const imgTwo = "https://i.ibb.co/Qvv15bs/play.png";
 
   const addCourse = courseStore((state) => state.addCourse);
-  const courses = courseStore((state) => state.courses);
-  console.log(courses);
 
   return (
     <div className="fixed inset-0 z-50 items-center justify-center w-9/12 m-auto overflow-x-hidden overflow-y-auto outline-none focus:outline-none">

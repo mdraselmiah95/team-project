@@ -5,8 +5,15 @@ import nhost from "../../../utils/Nhost";
 const NavBar = () => {
   const logo = "https://i.ibb.co/FYNmXRm/F.png";
   let [open, setOpen] = useState(false);
-  const user = nhost.auth.getUser();
-  console.log(user);
+
+  const user = localStorage.getItem("userInfo")
+    ? JSON.parse(localStorage.getItem("userInfo"))
+    : [];
+
+  const handleSignOut = async () => {
+    await nhost.auth.singOut();
+    localStorage.removeItem("userInfo");
+  };
   return (
     <div className="fixed top-0 left-0 w-full">
       <div className="items-center justify-between py-4 bg-white md:flex md:px-36 px-7">
@@ -76,22 +83,40 @@ const NavBar = () => {
             </a>
           </li>
         </ul>
-        <div
-          className={`md:flex md:items-center md:pb-0 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-5 transition-all duration-500 ease-in ${
-            open ? "top-20 " : "top-[-490px]"
-          }`}
-        >
-          <Link to="/login">
+        {user.length !== 0 ? (
+          <div
+            className={`md:flex md:items-center md:pb-0 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-5 transition-all duration-500 ease-in ${
+              open ? "top-20 " : "top-[-490px]"
+            }`}
+          >
             <button className="px-4 py-3 font-bold rounded-md cursor-pointer md:px-6 md:py-4 text-color-three hover:text-white hover:bg-color-three">
-              Login
+              {user.displayName}
             </button>
-          </Link>
-          <Link to="/register">
-            <button className="px-4 py-3 font-bold text-white border rounded-md cursor-pointer hover:text-color-three hover:bg-white hover:border-color-three hover:border md:px-8 md:py-4 bg-color-three">
-              Sign Up
+            <button
+              onClick={handleSignOut}
+              className="px-4 py-3 font-bold text-white border rounded-md cursor-pointer hover:text-color-three hover:bg-white hover:border-color-three hover:border md:px-8 md:py-4 bg-color-three"
+            >
+              Sign Out
             </button>
-          </Link>
-        </div>
+          </div>
+        ) : (
+          <div
+            className={`md:flex md:items-center md:pb-0 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-5 transition-all duration-500 ease-in ${
+              open ? "top-20 " : "top-[-490px]"
+            }`}
+          >
+            <Link to="/login">
+              <button className="px-4 py-3 font-bold rounded-md cursor-pointer md:px-6 md:py-4 text-color-three hover:text-white hover:bg-color-three">
+                Login
+              </button>
+            </Link>
+            <Link to="/register">
+              <button className="px-4 py-3 font-bold text-white border rounded-md cursor-pointer hover:text-color-three hover:bg-white hover:border-color-three hover:border md:px-8 md:py-4 bg-color-three">
+                Sign Up
+              </button>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -12,9 +12,11 @@ const Body = () => {
     });
 
     console.log("session", session);
+    localStorage.setItem("userInfo", JSON.stringify(session.user));
     console.log("error", error);
     reset();
   };
+
   return (
     <div className="px-6 py-10 mt-20">
       <div className="grid items-center grid-cols-1 md:grid-cols-2">

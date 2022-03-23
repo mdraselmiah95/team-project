@@ -7,9 +7,16 @@ import SectionFourPartTwo from "../sectionFourPartTwo/SectionFourPartTwo";
 import SectionSeven from "../sectionSeven/SectionSeven";
 import SectionSix from "../sectionSix/SectionSix";
 import SectionThree from "../sectionThree/SectionThree";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Home = () => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch("./coursesDetails.json")
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  }, []);
+  console.log(data);
   return (
     <>
       <Banner />

@@ -8,7 +8,6 @@ const Body = () => {
     const { session, error } = await nhost.auth.signUp({
       email: data.email,
       password: data.password,
-      phoneNumber: data.phone,
       options: {
         displayName: `${data.name} ${data.lastName}`,
       },
@@ -84,7 +83,7 @@ const Body = () => {
                 {...register("email", { required: true })}
               ></input>
             </div> */}
-
+            {/* 
             <div className="w-full pr-0 mb-3">
               <label
                 className="block text-base text-color-one font-medium mb-3"
@@ -92,7 +91,6 @@ const Body = () => {
               >
                 Phone Number *
               </label>
-              {/* inputField Phone Number*/}
               <input
                 className="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
                 type="number"
@@ -101,7 +99,7 @@ const Body = () => {
                 name="phone"
                 {...register("phone", { required: true })}
               ></input>
-            </div>
+            </div> */}
 
             <div className="w-full pr-0 mb-3">
               <label
@@ -131,7 +129,7 @@ const Body = () => {
               {/* inputField Password */}
               <input
                 className="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
-                type="text"
+                type="password"
                 required
                 placeholder="Password"
                 name="password"

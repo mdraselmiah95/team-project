@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import nhost from "../../../utils/Nhost";
 
 const NavBar = () => {
   const logo = "https://i.ibb.co/FYNmXRm/F.png";
   let [open, setOpen] = useState(false);
+  const user = nhost.auth.getUser();
+  console.log(user);
   return (
     <div className="fixed top-0 left-0 w-full">
       <div className="items-center justify-between py-4 bg-white md:flex md:px-36 px-7">

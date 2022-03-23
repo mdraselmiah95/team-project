@@ -24,7 +24,7 @@ const Body = () => {
           <img
             src="https://i.ibb.co/4VRhB9L/image-7.png"
             alt="registration"
-            className="w-3/5 mx-auto md:w-4/5"
+            className="w-3/5 mx-auto md:w-6/12"
           />
         </div>
         <div className="p-4" style={{ marginBottom: "33%" }}>
@@ -35,14 +35,14 @@ const Body = () => {
             <div className="flex flex-wrap ">
               <div className="w-full pr-5 mb-3 md:w-1/2">
                 <label
-                  className="block text-base text-color-one font-medium mb-3"
+                  className="block mb-3 text-base font-medium text-color-one"
                   htmlFor="grid-first-name"
                 >
                   First Name *
                 </label>
                 {/* inputField First Name */}
                 <input
-                  className="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                  className="block w-full px-4 py-3 border rounded appearance-none text-color-one focus:outline placeholder:text-color-one"
                   type="text"
                   required
                   placeholder="First Name"
@@ -51,14 +51,14 @@ const Body = () => {
               </div>
               <div className="w-full mb-6 md:w-1/2 md:mb-0">
                 <label
-                  className="block text-base text-color-one font-medium mb-3"
+                  className="block mb-3 text-base font-medium text-color-one"
                   htmlFor="grid-first-name"
                 >
                   Last Name *
                 </label>
                 {/* inputField Last Name */}
                 <input
-                  className="appearance-none block w-full  text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                  className="block w-full px-4 py-3 border rounded appearance-none text-color-one focus:outline placeholder:text-color-one"
                   type="text"
                   required
                   placeholder="Last Name"
@@ -69,13 +69,13 @@ const Body = () => {
 
             {/* <div className="w-full pr-0 mb-3">
               <label
-                className="block text-base text-color-one font-medium mb-3"
+                className="block mb-3 text-base font-medium text-color-one"
                 htmlFor="grid-first-name"
               >
                 Username *
               </label>
               <input
-                className="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                className="block w-full px-4 py-3 border rounded appearance-none text-color-one focus:outline placeholder:text-color-one"
                 type="email"
                 required
                 placeholder="Username"
@@ -86,13 +86,13 @@ const Body = () => {
             {/* 
             <div className="w-full pr-0 mb-3">
               <label
-                className="block text-base text-color-one font-medium mb-3"
+                className="block mb-3 text-base font-medium text-color-one"
                 htmlFor="grid-first-name"
               >
                 Phone Number *
               </label>
               <input
-                className="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                className="block w-full px-4 py-3 border rounded appearance-none text-color-one focus:outline placeholder:text-color-one"
                 type="number"
                 required
                 placeholder="Phone Number"
@@ -103,14 +103,14 @@ const Body = () => {
 
             <div className="w-full pr-0 mb-3">
               <label
-                className="block text-base text-color-one font-medium mb-3"
+                className="block mb-3 text-base font-medium text-color-one"
                 htmlFor="grid-first-name"
               >
                 Email Address *
               </label>
               {/* inputField Email Address */}
               <input
-                className="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                className="block w-full px-4 py-3 border rounded appearance-none text-color-one focus:outline placeholder:text-color-one"
                 type="email"
                 required
                 placeholder="Email Address"
@@ -121,14 +121,14 @@ const Body = () => {
 
             <div className="w-full pr-0 mb-3">
               <label
-                className="block text-base text-color-one font-medium mb-3"
+                className="block mb-3 text-base font-medium text-color-one"
                 htmlFor="grid-first-name"
               >
                 Password *
               </label>
               {/* inputField Password */}
               <input
-                className="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                className="block w-full px-4 py-3 border rounded appearance-none text-color-one focus:outline placeholder:text-color-one"
                 type="password"
                 required
                 placeholder="Password"
@@ -139,13 +139,13 @@ const Body = () => {
 
             {/* <div className="w-full pr-0 mb-3">
               <label
-                className="block text-base text-color-one font-medium mb-3"
+                className="block mb-3 text-base font-medium text-color-one"
                 htmlFor="grid-first-name"
               >
                 Confirm Password *
               </label>
               <input
-                className="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                className="block w-full px-4 py-3 border rounded appearance-none text-color-one focus:outline placeholder:text-color-one"
                 type="number"
                 required
                 placeholder="Re-type your password"

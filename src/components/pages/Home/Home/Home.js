@@ -1,5 +1,4 @@
 import Banner from "../banner/Banner";
-import Partners from "../parnters/Partners";
 import SectionEight from "../sectionEight/SectionEight";
 import SectionFive from "../sectionFive/SectionFive";
 import SectionFour from "../sectionFour/SectionFour";

@@ -18,6 +18,7 @@ const CourseModal = ({ data, setShowModal }) => {
     titleTwo,
     creator,
     lastUpdate,
+    courseOverview,
   } = data;
   const img = "https://i.ibb.co/RDNh0GQ/Group-1000002095.png";
   const imgTwo = "https://i.ibb.co/Qvv15bs/play.png";
@@ -26,7 +27,7 @@ const CourseModal = ({ data, setShowModal }) => {
 
   return (
     <div className="fixed inset-0 z-50 items-center justify-center w-9/12 m-auto overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
-      <div className="px-5 bg-white shadow-lg outline-none py-7 focus:outline-none">
+      <div className="px-5 bg-white border shadow-lg outline-none py-7 focus:outline-none rounded-xl ">
         <img
           src={img}
           alt="cross"
@@ -116,6 +117,25 @@ const CourseModal = ({ data, setShowModal }) => {
                 Enroll Now
               </button>
             </Link>
+          </div>
+        </div>
+        <div className="mt-3 lg:py-10 lg:px-7 md:mt-0">
+          <div className="md:flex">
+            <button className="px-6 py-2 mr-1 font-medium text-white border rounded-t-md bg-color-three hover:bg-blue-900">
+              Courses Overview
+            </button>
+            <button className="px-6 py-2 my-3 mr-1 font-medium text-white border rounded-t-md bg-color-five hover:bg-cyan-600 md:my-0">
+              Course Lessons
+            </button>
+            <button className="px-6 py-2 mr-1 font-medium text-white border rounded-t-md bg-color-five hover:bg-cyan-600">
+              Course Lessons
+            </button>
+          </div>
+          <div className="mt-8 shadow-lg md:px-12 md:py-11 md:mt-0">
+            <h2 className="mb-5 text-2xl font-medium text-color-one">
+              Course Overview
+            </h2>
+            <p className="text-justify text-color-two">{courseOverview}</p>
           </div>
         </div>
       </div>

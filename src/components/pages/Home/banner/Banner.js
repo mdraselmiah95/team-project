@@ -24,11 +24,11 @@ const Banner = () => {
                 See All Courses
               </button>
             </Link>
-            <Link to="/register">
+            {/* <Link to="/register">
               <button className="px-6 py-2.5 mr-5 font-bold text-white border rounded shadow md:mt-0 bg-color-ten hover:bg-white hover:border-color-ten hover:border hover:text-color-ten">
                 Register Now
               </button>
-            </Link>
+            </Link> */}
           </div>
           <div className="lg:absolute">
             <div className="py-3 text-center bg-white rounded md:pl-3 lg:flex rapperInput">

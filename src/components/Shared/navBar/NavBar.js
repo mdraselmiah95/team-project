@@ -52,12 +52,6 @@ const NavBar = () => {
             >
               Home
             </NavLink>
-            <a
-              href="gkk"
-              className="py-3 text-base font-medium duration-500 text-color-three hover:text-blue-400 md:pr-11"
-            >
-              About Us
-            </a>
             <NavLink
               to="/courses"
               style={({ isActive }) => {
@@ -69,12 +63,6 @@ const NavBar = () => {
             >
               Courses
             </NavLink>
-            <a
-              href="gkk"
-              className="py-3 text-base font-medium duration-500 text-color-three hover:text-blue-400 md:pr-11"
-            >
-              Eligibility test
-            </a>
             <a
               href="gkk"
               className="py-3 text-base font-medium duration-500 text-color-three hover:text-blue-400"

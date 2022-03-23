@@ -1,7 +1,5 @@
 import React from "react";
-import SectionEight from "../../Home/sectionEight/SectionEight";
 import Courses from "../courses/Courses";
-import SectionFour from "../sectionFour/SectionFour";
 import SectionOne from "../sectionOne/SectionOne";
 import SectionTwo from "../sectionTwo/SectionTwo";
 
@@ -11,8 +9,8 @@ const CoursesHome = () => {
       <SectionOne />
       <SectionTwo />
       <Courses />
-      <SectionFour />
-      <SectionEight />
+      {/* <SectionFour /> */}
+      {/* <SectionEight /> */}
     </div>
   );
 };

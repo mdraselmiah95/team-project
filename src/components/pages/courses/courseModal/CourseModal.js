@@ -100,11 +100,11 @@ const CourseModal = ({ data, setShowModal }) => {
             </div>
             <div className="flex mt-3">
               <h2 className="text-3xl font-bold md:text-6xl text-color-eight">
-                ${wholePrice}
+                ৳{wholePrice}
               </h2>
-              <h5 className="ml-1 text-xl font-medium text-color-two md:text-3xl">
+              {/* <h5 className="ml-1 text-xl font-medium text-color-two md:text-3xl">
                 <del>${price}</del>
-              </h5>
+              </h5> */}
             </div>
             <Link to="/cart">
               <button

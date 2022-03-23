@@ -35,11 +35,11 @@ const Course = ({ data }) => {
         </div>
         <div className="flex mt-1.5">
           <h2 className="mr-2 text-2xl font-bold text-color-eight">
-            ${wholePrice}
+            ৳{wholePrice}
           </h2>
-          <h5 className="font-medium text-color-two">
+          {/* <h5 className="font-medium text-color-two">
             $<del>{price}</del>
-          </h5>
+          </h5> */}
         </div>
       </div>
 

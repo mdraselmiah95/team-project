@@ -12,7 +12,7 @@ const Carts = () => {
   return courses.length === 0 ? (
     <div className="px-5 py-12 bg-cover lg:py-20 lg:px-28 bg-courses-bg-two">
       <Link to="/courses">
-        <h2 className="mb-10 text-3xl font-medium text-center lg:text-4xl text-color-one cursor-pointer">
+        <h2 className="mb-10 text-3xl font-medium text-center cursor-pointer lg:text-4xl text-color-one">
           Go to courses
         </h2>
       </Link>
@@ -23,7 +23,7 @@ const Carts = () => {
         {/* shopping cart */}
         <div className="col-span-2">
           <h3 className="mb-10 text-lg font-medium text-color-one md:text-3xl">
-            Shopping Cart
+            Course Enrollment
           </h3>
           <div className="max-w-full overflow-x-auto">
             <table className="w-full table-auto">
@@ -81,7 +81,7 @@ const Carts = () => {
         {/* Cart Total */}
         <div className="text-center pl-7">
           <h3 className="mb-10 text-lg font-medium text-color-one md:text-3xl">
-            Cart totals
+            Cart Fees
           </h3>
           <div className="flex items-center justify-between py-4 border-b ">
             <h3 className="text-lg font-medium text-color-one">Subtotal</h3>

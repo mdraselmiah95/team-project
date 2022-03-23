@@ -1,15 +1,15 @@
 import React from "react";
+import SectionFive from "../../Home/sectionFive/SectionFive";
 import Courses from "../courses/Courses";
 import SectionOne from "../sectionOne/SectionOne";
-import SectionTwo from "../sectionTwo/SectionTwo";
 
 const CoursesHome = () => {
   return (
     <div>
       <SectionOne />
-      <SectionTwo />
+      {/* <SectionTwo /> */}
       <Courses />
-      {/* <SectionFour /> */}
+      <SectionFive />
       {/* <SectionEight /> */}
     </div>
   );

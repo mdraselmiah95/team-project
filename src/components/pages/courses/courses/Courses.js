@@ -49,7 +49,7 @@ const Courses = () => {
           ))}
         </div>
       </div>
-      <div className="flex items-center justify-center mt-8 md:mt-14">
+      {/* <div className="flex items-center justify-center mt-8 md:mt-14">
         <img src={iconTwo} alt="icon" className="cursor-pointer" />
         <p className="mx-2 font-medium underline cursor-pointer md:mx-5 text-color-eight">
           1
@@ -79,7 +79,7 @@ const Courses = () => {
           20
         </p>
         <img src={iconOne} alt="icon" className="cursor-pointer" />
-      </div>
+      </div> */}
     </div>
   );
 };

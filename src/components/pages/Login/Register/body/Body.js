@@ -9,7 +9,7 @@ const Body = () => {
       email: data.email,
       password: data.password,
       options: {
-        displayName: data.name,
+        displayName: `${data.name} ${data.lastName}`,
       },
     });
 
@@ -35,14 +35,14 @@ const Body = () => {
             <div className="flex flex-wrap ">
               <div className="w-full pr-5 mb-3 md:w-1/2">
                 <label
-                  class="block text-base text-color-one font-medium mb-3"
-                  for="grid-first-name"
+                  className="block text-base text-color-one font-medium mb-3"
+                  htmlFor="grid-first-name"
                 >
                   First Name *
                 </label>
                 {/* inputField First Name */}
                 <input
-                  class="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                  className="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
                   type="text"
                   required
                   placeholder="First Name"
@@ -51,14 +51,14 @@ const Body = () => {
               </div>
               <div className="w-full mb-6 md:w-1/2 md:mb-0">
                 <label
-                  class="block text-base text-color-one font-medium mb-3"
-                  for="grid-first-name"
+                  className="block text-base text-color-one font-medium mb-3"
+                  htmlFor="grid-first-name"
                 >
                   Last Name *
                 </label>
                 {/* inputField Last Name */}
                 <input
-                  class="appearance-none block w-full  text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                  className="appearance-none block w-full  text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
                   type="text"
                   required
                   placeholder="Last Name"
@@ -67,53 +67,51 @@ const Body = () => {
               </div>
             </div>
 
-            <div className="w-full pr-0 mb-3">
+            {/* <div className="w-full pr-0 mb-3">
               <label
-                class="block text-base text-color-one font-medium mb-3"
-                for="grid-first-name"
+                className="block text-base text-color-one font-medium mb-3"
+                htmlFor="grid-first-name"
               >
                 Username *
               </label>
-              {/* inputField Username */}
               <input
-                class="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                className="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
                 type="email"
                 required
                 placeholder="Username"
                 name="email"
                 {...register("email", { required: true })}
               ></input>
-            </div>
-
+            </div> */}
+            {/* 
             <div className="w-full pr-0 mb-3">
               <label
-                class="block text-base text-color-one font-medium mb-3"
-                for="grid-first-name"
+                className="block text-base text-color-one font-medium mb-3"
+                htmlFor="grid-first-name"
               >
                 Phone Number *
               </label>
-              {/* inputField Phone Number*/}
               <input
-                class="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                className="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
                 type="number"
                 required
                 placeholder="Phone Number"
                 name="phone"
                 {...register("phone", { required: true })}
               ></input>
-            </div>
+            </div> */}
 
             <div className="w-full pr-0 mb-3">
               <label
-                class="block text-base text-color-one font-medium mb-3"
-                for="grid-first-name"
+                className="block text-base text-color-one font-medium mb-3"
+                htmlFor="grid-first-name"
               >
                 Email Address *
               </label>
               {/* inputField Email Address */}
               <input
-                class="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
-                type="number"
+                className="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                type="email"
                 required
                 placeholder="Email Address"
                 name="email"
@@ -123,15 +121,15 @@ const Body = () => {
 
             <div className="w-full pr-0 mb-3">
               <label
-                class="block text-base text-color-one font-medium mb-3"
-                for="grid-first-name"
+                className="block text-base text-color-one font-medium mb-3"
+                htmlFor="grid-first-name"
               >
                 Password *
               </label>
               {/* inputField Password */}
               <input
-                class="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
-                type="number"
+                className="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                type="password"
                 required
                 placeholder="Password"
                 name="password"
@@ -139,23 +137,22 @@ const Body = () => {
               ></input>
             </div>
 
-            <div className="w-full pr-0 mb-3">
+            {/* <div className="w-full pr-0 mb-3">
               <label
-                class="block text-base text-color-one font-medium mb-3"
-                for="grid-first-name"
+                className="block text-base text-color-one font-medium mb-3"
+                htmlFor="grid-first-name"
               >
                 Confirm Password *
               </label>
-              {/* inputField Confirm Password*/}
               <input
-                class="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                className="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
                 type="number"
                 required
                 placeholder="Re-type your password"
                 name="passwordTwo"
                 {...register("passwordTwo", { required: true })}
               ></input>
-            </div>
+            </div> */}
 
             <button
               className="py-3 mt-5 font-bold text-white border rounded-md shadow px-28 bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three "

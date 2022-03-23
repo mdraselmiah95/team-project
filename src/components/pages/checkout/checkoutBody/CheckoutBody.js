@@ -21,14 +21,14 @@ const CheckoutBody = () => {
             <div className="flex flex-wrap ">
               <div className="w-full pr-0 mb-3 md:w-1/2 md:mb-0 md:pr-6">
                 <label
-                  class="block text-base text-color-one font-medium mb-3"
-                  for="grid-first-name"
+                  className="block text-base text-color-one font-medium mb-3"
+                  htmlFor="grid-first-name"
                 >
                   Email Address *
                 </label>
                 {/* inputField Email address */}
                 <input
-                  class="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                  className="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
                   type="text"
                   required
                   placeholder="Email Address"
@@ -36,14 +36,14 @@ const CheckoutBody = () => {
               </div>
               <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0">
                 <label
-                  class="block text-base text-color-one font-medium mb-3"
-                  for="grid-first-name"
+                  className="block text-base text-color-one font-medium mb-3"
+                  htmlFor="grid-first-name"
                 >
                   Confirm Email Address *
                 </label>
                 {/* inputField confirm Email address */}
                 <input
-                  class="appearance-none block w-full  text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                  className="appearance-none block w-full  text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
                   type="text"
                   required
                   placeholder="Confirm Email Address"
@@ -54,14 +54,14 @@ const CheckoutBody = () => {
             <div className="flex flex-wrap mt-5">
               <div className="w-full pr-0 mb-3 md:w-1/2 md:mb-0 md:pr-6">
                 <label
-                  class="block text-base text-color-one font-medium mb-3"
-                  for="grid-first-name"
+                  className="block text-base text-color-one font-medium mb-3"
+                  htmlFor="grid-first-name"
                 >
                   Password *
                 </label>
                 {/* inputField Password */}
                 <input
-                  class="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                  className="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
                   type="text"
                   required
                   placeholder="Password"
@@ -69,14 +69,14 @@ const CheckoutBody = () => {
               </div>
               <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0">
                 <label
-                  class="block text-base text-color-one font-medium mb-3"
-                  for="grid-first-name"
+                  className="block text-base text-color-one font-medium mb-3"
+                  htmlFor="grid-first-name"
                 >
                   Confirm Password *
                 </label>
                 {/* inputField confirm password */}
                 <input
-                  class="appearance-none block w-full  text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                  className="appearance-none block w-full  text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
                   type="text"
                   placeholder="Confirm Password"
                 ></input>
@@ -91,14 +91,14 @@ const CheckoutBody = () => {
             <div className="flex flex-wrap ">
               <div className="w-full pr-0 mb-3 md:w-1/2 md:mb-0 md:pr-6">
                 <label
-                  class="block text-base text-color-one font-medium mb-3"
-                  for="grid-first-name"
+                  className="block text-base text-color-one font-medium mb-3"
+                  htmlFor="grid-first-name"
                 >
                   First Name *
                 </label>
                 {/* inputField First Name */}
                 <input
-                  class="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                  className="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
                   type="text"
                   required
                   placeholder="First Name"
@@ -106,14 +106,14 @@ const CheckoutBody = () => {
               </div>
               <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0">
                 <label
-                  class="block text-base text-color-one font-medium mb-3"
-                  for="grid-first-name"
+                  className="block text-base text-color-one font-medium mb-3"
+                  htmlFor="grid-first-name"
                 >
                   Last Name *
                 </label>
                 {/* inputField Last Name */}
                 <input
-                  class="appearance-none block w-full  text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                  className="appearance-none block w-full  text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
                   type="text"
                   required
                   placeholder="Last Name"
@@ -124,14 +124,14 @@ const CheckoutBody = () => {
             <div className="flex flex-wrap py-5">
               <div className="w-full pr-0 mb-3 md:w-2/3 md:mb-0 md:pr-6">
                 <label
-                  class="block text-base text-color-one font-medium mb-3"
-                  for="grid-first-name"
+                  className="block text-base text-color-one font-medium mb-3"
+                  htmlFor="grid-first-name"
                 >
                   Street Address *
                 </label>
                 {/* inputField Street Address */}
                 <input
-                  class="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                  className="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
                   type="text"
                   required
                   placeholder="Street Address"
@@ -139,12 +139,12 @@ const CheckoutBody = () => {
               </div>
               <div className="w-full px-3 mb-6 md:w-1/3 md:mb-0">
                 <label
-                  class="block text-base text-color-one font-medium mb-3"
-                  for="grid-first-name"
+                  className="block text-base text-color-one font-medium mb-3"
+                  htmlFor="grid-first-name"
                 ></label>
                 {/* inputField Apartment, suite, or unit */}
                 <input
-                  class="appearance-none block w-full mt-9 text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                  className="appearance-none block w-full mt-9 text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
                   type="text"
                   required
                   placeholder="Apartment, suite, or unit"
@@ -155,14 +155,14 @@ const CheckoutBody = () => {
             <div className="flex flex-wrap mb-5">
               <div className="w-full pr-0 mb-3 md:w-2/4 md:mb-0 md:pr-6">
                 <label
-                  class="block text-base text-color-one font-medium mb-3"
-                  for="grid-first-name"
+                  className="block text-base text-color-one font-medium mb-3"
+                  htmlFor="grid-first-name"
                 >
                   City *
                 </label>
                 {/* inputField City */}
                 <input
-                  class="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                  className="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
                   type="text"
                   required
                   placeholder="City"
@@ -170,14 +170,14 @@ const CheckoutBody = () => {
               </div>
               <div className="w-full px-3 mb-6 md:w-1/4 md:mb-0">
                 <label
-                  class="block text-base text-color-one font-medium mb-3"
-                  for="grid-first-name"
+                  className="block text-base text-color-one font-medium mb-3"
+                  htmlFor="grid-first-name"
                 >
                   State *
                 </label>
                 {/* inputField State */}
                 <input
-                  class="appearance-none block w-full  text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                  className="appearance-none block w-full  text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
                   type="text"
                   required
                   placeholder="State"
@@ -185,14 +185,14 @@ const CheckoutBody = () => {
               </div>
               <div className="w-full px-3 mb-6 md:w-1/4 md:mb-0">
                 <label
-                  class="block text-base text-color-one font-medium mb-3"
-                  for="grid-first-name"
+                  className="block text-base text-color-one font-medium mb-3"
+                  htmlFor="grid-first-name"
                 >
                   Zip Code *
                 </label>
                 {/* Zip Code */}
                 <input
-                  class="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                  className="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
                   type="number"
                   required
                   placeholder="Zip Code"
@@ -202,14 +202,14 @@ const CheckoutBody = () => {
 
             <div className="w-full mb-5">
               <label
-                class="block text-base text-color-one font-medium mb-3"
-                for="grid-first-name"
+                className="block text-base text-color-one font-medium mb-3"
+                htmlFor="grid-first-name"
               >
                 Country *
               </label>
               {/* inputField Country */}
               <input
-                class="appearance-none block w-full  text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                className="appearance-none block w-full  text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
                 type="text"
                 required
                 placeholder="Country"
@@ -218,14 +218,14 @@ const CheckoutBody = () => {
 
             <div className="w-full mb-5 md:mb-0">
               <label
-                class="block text-base text-color-one font-medium mb-3"
-                for="grid-first-name"
+                className="block text-base text-color-one font-medium mb-3"
+                htmlFor="grid-first-name"
               >
                 Phone Number *
               </label>
               {/* inputField Phone Number */}
               <input
-                class="appearance-none block w-full  text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                className="appearance-none block w-full  text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
                 type="number"
                 required
                 placeholder="+880 19411 99600"

@@ -6,16 +6,17 @@ import nhost from "../../../../../utils/Nhost";
 const Body = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = async (data) => {
-    const { session, mfa, error } = await nhost.auth.signIn({
+    const { session, error } = await nhost.auth.signIn({
       email: data.email,
       password: data.password,
     });
 
     console.log("session", session);
-    console.log("mfa", mfa);
+    localStorage.setItem("userInfo", JSON.stringify(session.user));
     console.log("error", error);
     reset();
   };
+
   return (
     <div className="px-6 py-10 mt-20">
       <div className="grid items-center grid-cols-1 md:grid-cols-2">
@@ -31,16 +32,16 @@ const Body = () => {
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="w-full pr-0 mb-3 md:w-9/12">
               <label
-                class="block text-base text-color-one font-medium mb-3"
-                for="grid-first-name"
+                className="block text-base text-color-one font-medium mb-3"
+                htmlFor="grid-first-name"
               >
                 Username *
               </label>
               {/* inputField Email address */}
               <input
-                class="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                className="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
                 type="email"
-                placeholder="Email Address/ Phone Number"
+                placeholder="Email Address"
                 name="email"
                 {...register("email", { required: true })}
               ></input>
@@ -48,14 +49,14 @@ const Body = () => {
 
             <div className="w-full pr-0 mb-3 md:w-9/12">
               <label
-                class="block text-base text-color-one font-medium mb-3"
-                for="grid-first-name"
+                className="block text-base text-color-one font-medium mb-3"
+                htmlFor="grid-first-name"
               >
                 Password *
               </label>
               {/* inputField Password */}
               <input
-                class="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
+                className="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
                 type="password"
                 placeholder="Your Password"
                 name="password"

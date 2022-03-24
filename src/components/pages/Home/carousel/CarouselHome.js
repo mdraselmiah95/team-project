@@ -1,9 +1,9 @@
 import React from "react";
 import Rating from "react-rating";
-import HomeCoursesModal from "../homeCoursesModal/HomeCoursesModal";
+// import HomeCoursesModal from "../homeCoursesModal/HomeCoursesModal";
 
 const CarouselHome = ({ item }) => {
-  const [showModal, setShowModal] = React.useState(false);
+  //   const [showModal, setShowModal] = React.useState(false);
   const { image, star, starCount, title, description, wholePrice } = item;
   return (
     <>

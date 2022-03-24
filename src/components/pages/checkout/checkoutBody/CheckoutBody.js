@@ -18,6 +18,38 @@ const CheckoutBody = () => {
           <h4 className="pb-2 text-xl border-b text-color-one">Student Info</h4>
           {/* Billing Info */}
           <form action="" className="w-full py-10">
+            <div className="w-full mb-5">
+              <label
+                className="block mb-3 text-base font-medium text-color-one"
+                htmlFor="grid-first-name"
+              >
+                Name *
+              </label>
+              {/* inputField Country */}
+              <input
+                className="block w-full px-4 py-3 border rounded appearance-none text-color-one focus:outline placeholder:text-color-one"
+                type="text"
+                required
+                placeholder="First Name"
+              ></input>
+            </div>
+
+            <div className="w-full mb-5">
+              <label
+                className="block mb-3 text-base font-medium text-color-one"
+                htmlFor="grid-first-name"
+              >
+                Phone Number *
+              </label>
+              {/* inputField Phone Number */}
+              <input
+                className="block w-full px-4 py-3 border rounded appearance-none text-color-one focus:outline placeholder:text-color-one"
+                type="number"
+                required
+                placeholder="+880 19411 99600"
+              ></input>
+            </div>
+
             <div className="flex flex-wrap ">
               <div className="w-full pr-0 mb-3 md:w-1/2 md:mb-0 md:pr-6">
                 <label
@@ -82,13 +114,13 @@ const CheckoutBody = () => {
                 ></input>
               </div>
             </div>
-            <p className="py-5 text-sm italic text-color-eleven ">
+            {/* <p className="py-5 text-sm italic text-color-eleven ">
               A strong password is required. The password must be at least 6
               characters in length. Consider adding letters, numbers, and
               symbols to increase the password strength.
-            </p>
+            </p> */}
 
-            <div className="flex flex-wrap ">
+            {/* <div className="flex flex-wrap ">
               <div className="w-full pr-0 mb-3 md:w-1/2 md:mb-0 md:pr-6">
                 <label
                   className="block mb-3 text-base font-medium text-color-one"
@@ -96,7 +128,7 @@ const CheckoutBody = () => {
                 >
                   First Name *
                 </label>
-                {/* inputField First Name */}
+               
                 <input
                   className="block w-full px-4 py-3 border rounded appearance-none text-color-one focus:outline placeholder:text-color-one"
                   type="text"
@@ -111,7 +143,7 @@ const CheckoutBody = () => {
                 >
                   Last Name *
                 </label>
-                {/* inputField Last Name */}
+              
                 <input
                   className="block w-full px-4 py-3 border rounded appearance-none text-color-one focus:outline placeholder:text-color-one"
                   type="text"
@@ -119,9 +151,9 @@ const CheckoutBody = () => {
                   placeholder="Last Name"
                 ></input>
               </div>
-            </div>
+            </div> */}
 
-            <div className="flex flex-wrap py-5">
+            {/* <div className="flex flex-wrap py-5">
               <div className="w-full pr-0 mb-3 md:w-2/3 md:mb-0 md:pr-6">
                 <label
                   className="block mb-3 text-base font-medium text-color-one"
@@ -129,7 +161,7 @@ const CheckoutBody = () => {
                 >
                   Street Address *
                 </label>
-                {/* inputField Street Address */}
+                
                 <input
                   className="block w-full px-4 py-3 border rounded appearance-none text-color-one focus:outline placeholder:text-color-one"
                   type="text"
@@ -142,7 +174,7 @@ const CheckoutBody = () => {
                   className="block mb-3 text-base font-medium text-color-one"
                   htmlFor="grid-first-name"
                 ></label>
-                {/* inputField Apartment, suite, or unit */}
+                
                 <input
                   className="block w-full px-4 py-3 border rounded appearance-none mt-9 text-color-one focus:outline placeholder:text-color-one"
                   type="text"
@@ -150,9 +182,9 @@ const CheckoutBody = () => {
                   placeholder="Apartment, suite, or unit"
                 ></input>
               </div>
-            </div>
+            </div> */}
 
-            <div className="flex flex-wrap mb-5">
+            {/* <div className="flex flex-wrap mb-5">
               <div className="w-full pr-0 mb-3 md:w-2/4 md:mb-0 md:pr-6">
                 <label
                   className="block mb-3 text-base font-medium text-color-one"
@@ -160,7 +192,7 @@ const CheckoutBody = () => {
                 >
                   City *
                 </label>
-                {/* inputField City */}
+               
                 <input
                   className="block w-full px-4 py-3 border rounded appearance-none text-color-one focus:outline placeholder:text-color-one"
                   type="text"
@@ -175,7 +207,7 @@ const CheckoutBody = () => {
                 >
                   State *
                 </label>
-                {/* inputField State */}
+                
                 <input
                   className="block w-full px-4 py-3 border rounded appearance-none text-color-one focus:outline placeholder:text-color-one"
                   type="text"
@@ -190,7 +222,7 @@ const CheckoutBody = () => {
                 >
                   Zip Code *
                 </label>
-                {/* Zip Code */}
+                
                 <input
                   className="block w-full px-4 py-3 border rounded appearance-none text-color-one focus:outline placeholder:text-color-one"
                   type="number"
@@ -198,39 +230,7 @@ const CheckoutBody = () => {
                   placeholder="Zip Code"
                 ></input>
               </div>
-            </div>
-
-            <div className="w-full mb-5">
-              <label
-                className="block mb-3 text-base font-medium text-color-one"
-                htmlFor="grid-first-name"
-              >
-                Country *
-              </label>
-              {/* inputField Country */}
-              <input
-                className="block w-full px-4 py-3 border rounded appearance-none text-color-one focus:outline placeholder:text-color-one"
-                type="text"
-                required
-                placeholder="Country"
-              ></input>
-            </div>
-
-            <div className="w-full mb-5 md:mb-0">
-              <label
-                className="block mb-3 text-base font-medium text-color-one"
-                htmlFor="grid-first-name"
-              >
-                Phone Number *
-              </label>
-              {/* inputField Phone Number */}
-              <input
-                className="block w-full px-4 py-3 border rounded appearance-none text-color-one focus:outline placeholder:text-color-one"
-                type="number"
-                required
-                placeholder="+880 19411 99600"
-              ></input>
-            </div>
+            </div> */}
           </form>
         </div>
         {/* Order Summery */}

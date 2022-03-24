@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 const CourseModal = ({ data, setShowModal }) => {
   const {
     image,
-    price,
     star,
     starCount,
     descriptionTwo,
@@ -144,8 +143,3 @@ const CourseModal = ({ data, setShowModal }) => {
 };
 
 export default CourseModal;
-
-/*
- 
-
-*/

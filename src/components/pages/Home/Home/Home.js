@@ -4,6 +4,7 @@ import SectionFour from "../sectionFour/SectionFour";
 import SectionFourPartTwo from "../sectionFourPartTwo/SectionFourPartTwo";
 import React, { useEffect, useState } from "react";
 import Carousel from "../../../Shared/Carousel";
+import CarouselHome from "../carousel/CarouselHome";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -14,10 +15,10 @@ const Home = () => {
   }, []);
   const settings = {
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 4,
     slidesToScroll: 4,
-    autoplay: false,
+    autoplay: true,
 
     responsive: [
       {
@@ -49,6 +50,12 @@ const Home = () => {
   return (
     <>
       <Banner />
+      <Carousel
+        {...settings}
+        slider={data.map((item) => (
+          <CarouselHome key={item.id} item={item} className=""></CarouselHome>
+        ))}
+      />
       {/* <Partners /> */}
       {/* <SectionThree /> */}
       <SectionFour />
@@ -57,14 +64,6 @@ const Home = () => {
       {/* <SectionSix /> */}
       {/* <SectionSeven /> */}
       {/* <SectionEight /> */}
-      {/* <Carousel
-        {...settings}
-        slider={data.map((item) => (
-          <div key={item.id} onClick={() => console.log(item)}>
-            <img src={item.image} alt={item.title} />
-          </div>
-        ))}
-      /> */}
     </>
   );
 };

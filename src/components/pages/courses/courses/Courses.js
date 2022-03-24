@@ -14,8 +14,8 @@ const Courses = () => {
       .then((data) => setCourses(data));
   }, []);
 
-  const iconOne = "https://i.ibb.co/QK0wG19/Group2.png";
-  const iconTwo = "https://i.ibb.co/wzGrm5v/Group1.png";
+  // const iconOne = "https://i.ibb.co/QK0wG19/Group2.png";
+  // const iconTwo = "https://i.ibb.co/wzGrm5v/Group1.png";
 
   return (
     <div className="px-6 py-8 lg:py-28 lg:px-36 bg-color-four">

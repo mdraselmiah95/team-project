@@ -1,11 +1,10 @@
 import React from "react";
 import Rating from "react-rating";
-import CourseModal from "../courseModal/CourseModal";
+import HomeCoursesModal from "../homeCoursesModal/HomeCoursesModal";
 
-const Course = ({ data }) => {
-  const { image, star, starCount, title, description, wholePrice } = data;
+const CarouselHome = ({ item }) => {
   const [showModal, setShowModal] = React.useState(false);
-
+  const { image, star, starCount, title, description, wholePrice } = item;
   return (
     <>
       <div className="px-6 mx-auto lg:px-0">
@@ -14,7 +13,8 @@ const Course = ({ data }) => {
           alt="icon"
           className="cursor-pointer"
           type="button"
-          onClick={() => setShowModal(true)}
+          //   onClick={() => console.log(item)}
+          //   onClick={() => setShowModal(true)}
         />
         <h2 className="mt-4 font-medium text-color-one">{title}</h2>
         <p className="my-1 text-color-two">{description}</p>
@@ -36,20 +36,16 @@ const Course = ({ data }) => {
           <h2 className="mr-2 text-2xl font-bold text-color-eight">
             ৳{wholePrice}
           </h2>
-          {/* <h5 className="font-medium text-color-two">
-            $<del>{price}</del>
-          </h5> */}
         </div>
       </div>
-
-      {showModal ? (
+      {/* {showModal ? (
         <>
-          <CourseModal setShowModal={setShowModal} data={data} />
-          <div className="fixed inset-0 z-40 bg-black opacity-70"></div>
+          <HomeCoursesModal setShowModal={setShowModal} item={item} />
+          <div className="sticky inset-0 z-40 bg-black opacity-70"></div>
         </>
-      ) : null}
+      ) : null} */}
     </>
   );
 };
 
-export default Course;
+export default CarouselHome;

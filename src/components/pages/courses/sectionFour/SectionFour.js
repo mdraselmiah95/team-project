@@ -11,7 +11,7 @@ const SectionFour = () => {
   }, []);
 
   return (
-    <div className="px-5 py-12 bg-cover lg:py-20 lg:px-28 bg-courses-bg-two lg:mb-40">
+    <div className="px-5 py-12 bg-cover lg:py-20 lg:px-28 bg-courses-bg-two">
       <h2 className="mb-10 text-3xl font-medium text-center lg:text-4xl text-color-one">
         How to start my first course?
       </h2>

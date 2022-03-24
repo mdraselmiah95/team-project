@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import nhost from "../../../utils/Nhost";
+import "./NavBar.css";
 
 const NavBar = () => {
   const logo = "https://i.ibb.co/FYNmXRm/F.png";
   let [open, setOpen] = useState(false);
+
+  const icon = "https://i.ibb.co/SB2YTTq/path2.png";
 
   const user = localStorage.getItem("userInfo")
     ? JSON.parse(localStorage.getItem("userInfo"))
@@ -59,9 +62,65 @@ const NavBar = () => {
                   color: isActive ? "#FFB201" : "",
                 };
               }}
-              className="py-3 text-base font-medium duration-500 text-color-three hover:text-blue-400 md:pr-11"
+              className="relative py-3 text-base font-medium duration-500 dropdown text-color-three hover:text-blue-400 md:pr-11"
             >
               Courses
+              <img src={icon} alt="icon" className="inline-block ml-2" />
+              <div className="absolute flex px-12 py-8 bg-white rounded-md shadow-md mt-7 dropdown-content w-max ">
+                <div className="mr-32 font-normal text-color-two">
+                  <a href="link" className="block">
+                    Web Design & Development
+                  </a>
+                  <a href="link" className="block mt-3 ">
+                    Graphics Design
+                  </a>
+                  <a href="link" className="block mt-3">
+                    Digital Marketing
+                  </a>
+                  <a href="link" className="block mt-3">
+                    SEO
+                  </a>
+                  <a href="link" className="block mt-3">
+                    eCommerce
+                  </a>
+                </div>
+
+                <div className="mr-32 font-normal text-color-two">
+                  <a href="link" className="">
+                    Digital Product Design
+                  </a>
+                  <a href="link" className="block mt-3 ">
+                    Content Writing
+                  </a>
+                  <a href="link" className="block mt-3">
+                    Branding & Promotion
+                  </a>
+                  <a href="link" className="block mt-3">
+                    Sales & Marketing
+                  </a>
+                  <a href="link" className="block mt-3">
+                    Programming
+                  </a>
+                </div>
+
+                <div className="mr-32 font-normal text-color-two">
+                  <a href="link" className="">
+                    App Development
+                  </a>
+                  <a href="link" className="block mt-3 ">
+                    Video Editing
+                  </a>
+                  <a href="link" className="block mt-3">
+                    Promotional Video
+                  </a>
+                  <a href="link" className="block mt-3">
+                    Entrepreneurs
+                  </a>
+                  <a href="link" className="block mt-3">
+                    Data Entry
+                  </a>
+                </div>
+              </div>
             </NavLink>
             <a
               href="gkk"

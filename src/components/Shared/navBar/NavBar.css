@@ -1,0 +1,7 @@
+.dropdown-content {
+  margin-left: -250%;
+  display: none;
+}
+.dropdown:hover .dropdown-content {
+  display: flex;
+}

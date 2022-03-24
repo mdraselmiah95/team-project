@@ -65,7 +65,11 @@ const NavBar = () => {
               className="relative py-3 text-base font-medium duration-500 dropdown text-color-three hover:text-blue-400 md:pr-11"
             >
               Courses
-              <img src={icon} alt="icon" className="inline-block ml-2" />
+              <img
+                src={icon}
+                alt="icon"
+                className="inline-block w-2.5 h-2 ml-2"
+              />
               <div className="absolute flex px-12 py-8 bg-white rounded-md shadow-md mt-7 dropdown-content w-max ">
                 <div className="mr-32 font-normal text-color-two">
                   <a href="link" className="block">

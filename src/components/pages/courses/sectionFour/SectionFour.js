@@ -16,7 +16,7 @@ const SectionFour = () => {
         How to start my first course?
       </h2>
       <div className="container">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-3 ">
           {course.map((data) => (
             <SectionFourCourse key={data.id} data={data} />
           ))}

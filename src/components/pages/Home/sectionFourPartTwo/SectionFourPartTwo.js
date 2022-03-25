@@ -13,7 +13,7 @@ const SectionFourPartTwo = () => {
   return (
     <div className="px-5 pb-5 lg:px-36 md:pb-32">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3">
           {services.map((data) => (
             <Service key={data.id} data={data} />
           ))}

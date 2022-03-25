@@ -70,7 +70,7 @@ const NavBar = () => {
                 alt="icon"
                 className="inline-block w-2.5 h-2 ml-2"
               />
-              <div className="absolute flex px-12 py-8 bg-white rounded-md shadow-md mt-7 dropdown-content w-max ">
+              <div className="absolute flex px-12 py-8 bg-white rounded-md shadow-md dropdown-content w-max ">
                 <div className="mr-32 font-normal text-color-two">
                   <a href="link" className="block">
                     Web Design & Development
@@ -107,11 +107,11 @@ const NavBar = () => {
                   </a>
                 </div>
 
-                <div className="mr-32 font-normal text-color-two">
-                  <a href="link" className="">
+                <div className="font-normal mr-11 text-color-two">
+                  <a href="link" className=" hover:skew-x-1">
                     App Development
                   </a>
-                  <a href="link" className="block mt-3 ">
+                  <a href="link" className="block mt-3">
                     Video Editing
                   </a>
                   <a href="link" className="block mt-3">

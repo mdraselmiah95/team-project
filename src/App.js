@@ -11,6 +11,8 @@ import CartHome from "./components/pages/cart/cartHome/CartHome";
 import CheckoutHome from "./components/pages/checkout/checkoutHome/CheckoutHome";
 import LoginHome from "./components/pages/Login/login/logInHome/LoginHome";
 import RegisterHome from "./components/pages/Login/Register/registerHome/RegisterHome";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (

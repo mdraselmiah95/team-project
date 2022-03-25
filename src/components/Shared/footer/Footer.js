@@ -4,17 +4,17 @@ const Footer = () => {
   const logo = "https://i.ibb.co/6w1KJ6d/Logo.png";
   return (
     <div className="px-4 py-5 pb-12 bg-color-four lg:px-28">
-      <div className="grid grid-cols-2 md:grid-cols-6">
-        <div className="m-4 lg:m-0 md:col-span-2">
+      <div className="flex items-center justify-around cursor-pointer">
+        <div className="">
           <img src={logo} alt="Footer logo" />
         </div>
-        <div className="m-8 lg:m-0">
-          <h4 className="text-base font-bold lg:mb-3 text-color-one">
+        <div className="flex ">
+          {/* <h4 className="text-base font-bold lg:mb-3 text-color-one">
             Site Map
-          </h4>
-          <h5 className="text-base lg:mb-2 text-color-two">About Us</h5>
-          <h5 className="text-base lg:mb-2 text-color-two">Location</h5>
-          <h5 className="text-base text-color-two">Careers</h5>
+          </h4> */}
+          <h5 className="px-8 text-base text-color-two">Courses</h5>
+          <h5 className="px-8 text-base text-color-two">Location</h5>
+          <h5 className="px-8 text-base text-color-two">Careers</h5>
         </div>
         {/* <div className="m-6 lg:m-0">
           <h4 className="text-base font-bold lg:mb-3 text-color-one">
@@ -32,10 +32,10 @@ const Footer = () => {
           <h5 className="text-base lg:mb-2 text-color-two">Privacy Policy</h5>
           <h5 className="text-base text-color-two">Term of Use</h5>
         </div> */}
-        <div className="m-6 lg:m-0">
-          <h4 className="text-base font-bold lg:mb-3 text-color-one">Follow</h4>
-          <h5 className="text-base lg:mb-2 text-color-two">Facebook</h5>
-          <h5 className="text-base lg:mb-2 text-color-two">Instagram</h5>
+        <div className="flex">
+          {/* <h4 className="text-base font-bold lg:mb-3 text-color-one">Follow</h4> */}
+          <h5 className="px-8 text-base text-color-two">Facebook</h5>
+          <h5 className="px-8 text-base text-color-two">Instagram</h5>
         </div>
       </div>
       <hr className="my-4 lg:my-8" />

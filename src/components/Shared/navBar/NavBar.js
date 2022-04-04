@@ -78,15 +78,6 @@ const NavBar = () => {
                   <a href="link" className="block mt-3 ">
                     Graphics Design
                   </a>
-                  <a href="link" className="block mt-3">
-                    Digital Marketing
-                  </a>
-                  <a href="link" className="block mt-3">
-                    SEO
-                  </a>
-                  <a href="link" className="block mt-3">
-                    eCommerce
-                  </a>
                 </div>
 
                 <div className="mr-32 font-normal text-color-two">
@@ -96,15 +87,6 @@ const NavBar = () => {
                   <a href="link" className="block mt-3 ">
                     Content Writing
                   </a>
-                  <a href="link" className="block mt-3">
-                    Branding & Promotion
-                  </a>
-                  <a href="link" className="block mt-3">
-                    Sales & Marketing
-                  </a>
-                  <a href="link" className="block mt-3">
-                    Programming
-                  </a>
                 </div>
 
                 <div className="font-normal mr-11 text-color-two">
@@ -113,15 +95,6 @@ const NavBar = () => {
                   </a>
                   <a href="link" className="block mt-3">
                     Video Editing
-                  </a>
-                  <a href="link" className="block mt-3">
-                    Promotional Video
-                  </a>
-                  <a href="link" className="block mt-3">
-                    Entrepreneurs
-                  </a>
-                  <a href="link" className="block mt-3">
-                    Data Entry
                   </a>
                 </div>
               </div>

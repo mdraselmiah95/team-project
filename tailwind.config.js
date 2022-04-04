@@ -5,7 +5,7 @@ module.exports = {
       backgroundImage: {
         "section-three":
           "url('https://i.ibb.co/m8TTmXs/3rd-section-background.png')",
-        "section-five": "url('https://i.ibb.co/88Dw709/bg5.png')",
+        "section-five": "url('https://i.ibb.co/Gsv9S4V/Group.png')",
         "bg-eight": "url('https://i.ibb.co/jfFpgRK/bg.png')",
         "bg-six": "url('https://i.ibb.co/mt2mGRz/Different-things.png')",
         "courses-bg-one": "url('https://i.ibb.co/097Mrbg/bg1.png')",

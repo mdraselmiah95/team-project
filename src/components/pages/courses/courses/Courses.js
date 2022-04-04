@@ -1,21 +1,15 @@
 import React, { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
-// import courseStore from "../../../../utils/courseStore";
 import Course from "../course/Course";
 import "./Courses.css";
 
 const Courses = () => {
   const [courses, setCourses] = useState([]);
-  // const count = courseStore((state) => state.courses);
 
   useEffect(() => {
     fetch("./coursesDetails.json")
       .then((res) => res.json())
       .then((data) => setCourses(data));
   }, []);
-
-  // const iconOne = "https://i.ibb.co/QK0wG19/Group2.png";
-  // const iconTwo = "https://i.ibb.co/wzGrm5v/Group1.png";
 
   return (
     <div className="px-6 py-8 lg:py-28 lg:px-36 bg-color-four">
@@ -49,37 +43,6 @@ const Courses = () => {
           ))}
         </div>
       </div>
-      {/* <div className="flex items-center justify-center mt-8 md:mt-14">
-        <img src={iconTwo} alt="icon" className="cursor-pointer" />
-        <p className="mx-2 font-medium underline cursor-pointer md:mx-5 text-color-eight">
-          1
-        </p>
-        <p className="mx-2 font-medium underline cursor-pointer md:mx-5 text-color-eight">
-          2
-        </p>
-        <p className="mx-2 font-medium underline cursor-pointer md:mx-5 text-color-eight">
-          3
-        </p>
-        <p className="mx-2 font-medium underline cursor-pointer md:mx-5 text-color-eight">
-          4
-        </p>
-        <p className="mx-5 font-medium underline cursor-pointer text-color-eight">
-          5
-        </p>
-        <p className="mx-2 font-medium underline cursor-pointer md:mx-5 text-color-eight">
-          .
-        </p>
-        <p className="mx-2 font-medium underline cursor-pointer md:mx-5 text-color-eight">
-          .
-        </p>
-        <p className="mx-2 font-medium underline cursor-pointer md:mx-5 text-color-eight">
-          .
-        </p>
-        <p className="mx-2 font-medium underline cursor-pointer md:mx-5 text-color-eight">
-          20
-        </p>
-        <img src={iconOne} alt="icon" className="cursor-pointer" />
-      </div> */}
     </div>
   );
 };

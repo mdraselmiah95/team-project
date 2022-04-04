@@ -7,10 +7,8 @@ const CoursesHome = () => {
   return (
     <div>
       <SectionOne />
-      {/* <SectionTwo /> */}
       <Courses />
       <SectionFive />
-      {/* <SectionEight /> */}
     </div>
   );
 };

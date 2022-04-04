@@ -55,7 +55,7 @@ const Carts = () => {
                       />
                     </td>
                     <td className="text-base font-medium md:text-xl pl-7 text-color-one">
-                      {data.titleTwo}
+                      {data.title}
                     </td>
                     <td>
                       <div className="flex lg:pl-12 lg:pr-20">
@@ -87,13 +87,6 @@ const Carts = () => {
             <h3 className="text-lg font-medium text-color-one">Subtotal</h3>
             <h3 className="text-2xl font-bold text-color-eight">${total}</h3>
           </div>
-          {/* <div className="flex items-center justify-between text-lg font-medium pt-11 text-color-one">
-            <h3>Shipping</h3>
-            <h3>
-              Free Shipping
-              <input type="checkbox" className="ml-3 border rounded-full" />
-            </h3>
-          </div> */}
           <Link to="/checkout">
             <button className="px-16 py-4 mt-16 font-bold text-white border rounded shadow md:mt-24 md:px-20 bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three ">
               Proceed to checkout

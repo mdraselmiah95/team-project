@@ -18,7 +18,7 @@ const SectionOne = () => {
             };
           }}
         >
-          Home All
+          Home
         </NavLink>
         <FontAwesomeIcon icon={faAngleRight} className="mx-2" />
         <NavLink
@@ -29,7 +29,7 @@ const SectionOne = () => {
             };
           }}
         >
-          Courses
+          All Courses
         </NavLink>
       </h2>
     </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import Rating from "react-rating";
-import "./CourseModal.css";
 import courseStore from "../../../../utils/courseStore";
 import { Link } from "react-router-dom";
 
@@ -17,10 +16,8 @@ const CourseModal = ({ data, setShowModal }) => {
     titleTwo,
     creator,
     lastUpdate,
-    courseOverview,
   } = data;
   const img = "https://i.ibb.co/RDNh0GQ/Group-1000002095.png";
-  const imgTwo = "https://i.ibb.co/Qvv15bs/play.png";
 
   const addCourse = courseStore((state) => state.dispatch);
 
@@ -35,23 +32,17 @@ const CourseModal = ({ data, setShowModal }) => {
           onClick={() => setShowModal(false)}
         />
         <div className="flex flex-col md:flex-row lg:py-10 lg:px-7">
-          <div className="relative bg-black md:w-6/12">
+          <div className="md:w-6/12">
             <img
               src={image}
               alt="icon"
-              className="object-fill w-full h-full opacity-50 cursor-pointer"
+              className="w-full h-full cursor-pointer "
               type="button"
-              // style={{ width: "307.26px", height: "438.65px" }}
-              onClick={() => setShowModal(true)}
+              style={{
+                width: "307.26px",
+                height: "438.65px",
+              }}
             />
-            <button className="btn">
-              <img
-                src={imgTwo}
-                alt="play icon"
-                style={{ height: "75px" }}
-                onClick={() => setShowModal(false)}
-              />
-            </button>
           </div>
           <div className="md:ml-6">
             <h1 className="text-2xl font-medium text-color-one md:text-4xl">
@@ -101,40 +92,30 @@ const CourseModal = ({ data, setShowModal }) => {
               <h2 className="text-3xl font-bold md:text-6xl text-color-eight">
                 ৳{wholePrice}
               </h2>
-              {/* <h5 className="ml-1 text-xl font-medium text-color-two md:text-3xl">
-                <del>${price}</del>
-              </h5> */}
             </div>
-            <Link to="/cart">
-              <button
-                onClick={() => {
-                  setShowModal(false);
-                  addCourse({ type: "add/courses", payload: data });
-                }}
-                className="px-6 py-3 mt-10 font-bold text-white border rounded shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three"
-              >
-                Enroll Now
-              </button>
-            </Link>
-          </div>
-        </div>
-        <div className="mt-3 lg:py-10 lg:px-7 md:mt-0">
-          <div className="md:flex">
-            <button className="px-6 py-2 mr-1 font-medium text-white border rounded-t-md bg-color-three hover:bg-blue-900">
-              Courses Overview
-            </button>
-            <button className="px-6 py-2 my-3 mr-1 font-medium text-white border rounded-t-md bg-color-five hover:bg-cyan-600 md:my-0">
-              Course Lessons
-            </button>
-            <button className="px-6 py-2 mr-1 font-medium text-white border rounded-t-md bg-color-five hover:bg-cyan-600">
-              Course Lessons
-            </button>
-          </div>
-          <div className="mt-8 shadow-lg md:px-12 md:py-11 md:mt-0">
-            <h2 className="mb-5 text-2xl font-medium text-color-one">
-              Course Overview
-            </h2>
-            <p className="text-justify text-color-two">{courseOverview}</p>
+            <div className="flex mt-10">
+              <Link to="/cart">
+                <button
+                  onClick={() => {
+                    setShowModal(false);
+                    addCourse({ type: "add/courses", payload: data });
+                  }}
+                  className="px-6 py-3 mr-4 font-bold text-white border rounded-lg shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three"
+                >
+                  Enroll Now
+                </button>
+              </Link>
+              <Link to="/">
+                <button
+                  onClick={() => {
+                    setShowModal(false);
+                  }}
+                  className="px-6 py-3 font-bold text-white border rounded-lg shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three"
+                >
+                  Course Details
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

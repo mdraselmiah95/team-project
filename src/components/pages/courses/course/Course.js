@@ -14,7 +14,7 @@ const Course = ({ data }) => {
           alt="icon"
           className="cursor-pointer"
           type="button"
-          onClick={() => setShowModal(true)}
+          // onClick={() => setShowModal(true)}
         />
         <h2 className="mt-4 font-medium text-color-one">{title}</h2>
         <p className="my-1 text-color-two">{description}</p>
@@ -34,12 +34,16 @@ const Course = ({ data }) => {
         </div>
         <div className="flex mt-1.5">
           <h2 className="mr-2 text-2xl font-bold text-color-eight">
-            ৳{wholePrice}
+            <span className="text-2xl font-bold">&#2547;</span>
+            {wholePrice}
           </h2>
-          {/* <h5 className="font-medium text-color-two">
-            $<del>{price}</del>
-          </h5> */}
         </div>
+        <button
+          className="w-full py-4 mt-5 font-bold text-white border rounded shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three"
+          onClick={() => setShowModal(true)}
+        >
+          Course Details
+        </button>
       </div>
 
       {showModal ? (

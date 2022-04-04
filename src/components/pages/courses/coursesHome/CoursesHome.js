@@ -1,5 +1,5 @@
 import React from "react";
-import SectionFive from "../../Home/sectionFive/SectionFive";
+import Course from "../../../Shared/course/Course";
 import Courses from "../courses/Courses";
 import SectionOne from "../sectionOne/SectionOne";
 
@@ -8,7 +8,7 @@ const CoursesHome = () => {
     <div>
       <SectionOne />
       <Courses />
-      <SectionFive />
+      <Course />
     </div>
   );
 };

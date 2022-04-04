@@ -72,28 +72,49 @@ const NavBar = () => {
               />
               <div className="absolute flex px-12 py-8 bg-white rounded-md shadow-md dropdown-content w-max ">
                 <div className="mr-32 font-normal text-color-two">
-                  <a href="link" className="block">
-                    Web Design & Development
-                  </a>
-                  <a href="link" className="block mt-3 ">
+                  <NavLink
+                    to="/webDevelopment"
+                    style={({ isActive }) => {
+                      return {
+                        color: isActive ? "#FFB201" : "",
+                      };
+                    }}
+                  >
+                    <a
+                      href="link"
+                      className="block duration-500 hover:text-blue-400"
+                    >
+                      Web Design & Development
+                    </a>
+                  </NavLink>
+                  <a
+                    href="link"
+                    className="block mt-3 duration-500 hover:text-blue-400"
+                  >
                     Graphics Design
                   </a>
                 </div>
 
                 <div className="mr-32 font-normal text-color-two">
-                  <a href="link" className="">
+                  <a href="link" className="duration-500 hover:text-blue-400">
                     Digital Product Design
                   </a>
-                  <a href="link" className="block mt-3 ">
+                  <a
+                    href="link"
+                    className="block mt-3 duration-500 hover:text-blue-400"
+                  >
                     Content Writing
                   </a>
                 </div>
 
                 <div className="font-normal mr-11 text-color-two">
-                  <a href="link" className=" hover:skew-x-1">
+                  <a href="link" className="duration-500 hover:text-blue-400">
                     App Development
                   </a>
-                  <a href="link" className="block mt-3">
+                  <a
+                    href="link"
+                    className="block mt-3 duration-500 hover:text-blue-400"
+                  >
                     Video Editing
                   </a>
                 </div>

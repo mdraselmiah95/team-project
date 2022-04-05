@@ -9,6 +9,9 @@ const VideoBody = () => {
       .then((res) => res.json())
       .then((data) => setCourses(data));
   }, []);
+
+  const filterItems = courses.filter((data) => data.category === "video");
+
   return (
     <div className="px-6 py-8 lg:py-28 lg:px-36 ">
       <div className="items-center justify-between flex-none md:flex">
@@ -36,7 +39,7 @@ const VideoBody = () => {
       </div>
       <div className="mt-12">
         <div className="grid grid-cols-1 gap-4 lg:gap-10 md:grid-cols-3 lg:grid-cols-4">
-          {courses.map((data) => (
+          {filterItems.map((data) => (
             <SingleCourse key={data.id} data={data} />
           ))}
         </div>

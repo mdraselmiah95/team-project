@@ -147,12 +147,21 @@ const NavBar = () => {
                       App Development
                     </a>
                   </NavLink>
-                  <a
-                    href="link"
-                    className="block mt-3 duration-500 hover:text-blue-400"
+                  <NavLink
+                    to="/videoEditing"
+                    style={({ isActive }) => {
+                      return {
+                        color: isActive ? "#FFB201" : "",
+                      };
+                    }}
                   >
-                    Video Editing
-                  </a>
+                    <a
+                      href="link"
+                      className="block mt-3 duration-500 hover:text-blue-400"
+                    >
+                      Video Editing
+                    </a>
+                  </NavLink>
                 </div>
               </div>
             </NavLink>

@@ -18,6 +18,7 @@ import GraphicsHome from "./components/pages/megaMenuContainer/graphicsDesign/gr
 import DigitalHome from "./components/pages/megaMenuContainer/digitalProductDesign/digitalHome/DigitalHome";
 import ContentHome from "./components/pages/megaMenuContainer/contentWriting/contentHome/ContentHome";
 import AppHome from "./components/pages/megaMenuContainer/appDevelopment/appHome/AppHome";
+import VideoHome from "./components/pages/megaMenuContainer/videoEditing/videoHome/VideoHome";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path="digitalProductDesign" element={<DigitalHome />} />
             <Route path="contentWriting" element={<ContentHome />} />
             <Route path="appDevelopment" element={<AppHome />} />
+            <Route path="videoEditing" element={<VideoHome />} />
             <Route path="cart" element={<CartHome />} />
             <Route path="checkout" element={<CheckoutHome />} />
             <Route path="login" element={<LoginHome />} />

@@ -16,6 +16,8 @@ import "slick-carousel/slick/slick-theme.css";
 import DevHome from "./components/pages/megaMenuContainer/webDevelopment/devHome/DevHome";
 import GraphicsHome from "./components/pages/megaMenuContainer/graphicsDesign/graphicsHome/GraphicsHome";
 import DigitalHome from "./components/pages/megaMenuContainer/digitalProductDesign/digitalHome/DigitalHome";
+import ContentHome from "./components/pages/megaMenuContainer/contentWriting/contentHome/ContentHome";
+import AppHome from "./components/pages/megaMenuContainer/appDevelopment/appHome/AppHome";
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
             <Route path="webDevelopment" element={<DevHome />} />
             <Route path="graphicsDesign" element={<GraphicsHome />} />
             <Route path="digitalProductDesign" element={<DigitalHome />} />
+            <Route path="contentWriting" element={<ContentHome />} />
+            <Route path="appDevelopment" element={<AppHome />} />
             <Route path="cart" element={<CartHome />} />
             <Route path="checkout" element={<CheckoutHome />} />
             <Route path="login" element={<LoginHome />} />

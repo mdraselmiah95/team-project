@@ -9,12 +9,15 @@ const GraphicsBody = () => {
       .then((res) => res.json())
       .then((data) => setCourses(data));
   }, []);
+
+  const filterItems = courses.filter((data) => data.category === "graphics");
+
   return (
     <div className="px-6 py-8 lg:py-28 lg:px-36 ">
       <div className="items-center justify-between flex-none md:flex">
         <div className="mb-8 text-center md:mb-0 md:text-left coursesTitle">
           <h1 className="text-xl font-medium md:text-4xl text-color-one">
-            Our All Courses
+            Graphics Design
           </h1>
           <p className="mt-5 text-color-two">
             We believe in technology and our team to take care of your career
@@ -36,7 +39,7 @@ const GraphicsBody = () => {
       </div>
       <div className="mt-12">
         <div className="grid grid-cols-1 gap-4 lg:gap-10 md:grid-cols-3 lg:grid-cols-4">
-          {courses.map((data) => (
+          {filterItems.map((data) => (
             <SingleCourse key={data.id} data={data} />
           ))}
         </div>

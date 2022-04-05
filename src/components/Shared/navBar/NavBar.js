@@ -87,18 +87,36 @@ const NavBar = () => {
                       Web Design & Development
                     </a>
                   </NavLink>
-                  <a
-                    href="link"
-                    className="block mt-3 duration-500 hover:text-blue-400"
+                  <NavLink
+                    to="/graphicsDesign"
+                    style={({ isActive }) => {
+                      return {
+                        color: isActive ? "#FFB201" : "",
+                      };
+                    }}
                   >
-                    Graphics Design
-                  </a>
+                    <a
+                      href="link"
+                      className="block mt-3 duration-500 hover:text-blue-400"
+                    >
+                      Graphics Design
+                    </a>
+                  </NavLink>
                 </div>
 
                 <div className="mr-32 font-normal text-color-two">
-                  <a href="link" className="duration-500 hover:text-blue-400">
-                    Digital Product Design
-                  </a>
+                  <NavLink
+                    to="/digitalProductDesign"
+                    style={({ isActive }) => {
+                      return {
+                        color: isActive ? "#FFB201" : "",
+                      };
+                    }}
+                  >
+                    <a href="link" className="duration-500 hover:text-blue-400">
+                      Digital Product Design
+                    </a>
+                  </NavLink>
                   <a
                     href="link"
                     className="block mt-3 duration-500 hover:text-blue-400"

@@ -14,6 +14,8 @@ import RegisterHome from "./components/pages/Login/Register/registerHome/Registe
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import DevHome from "./components/pages/megaMenuContainer/webDevelopment/devHome/DevHome";
+import GraphicsHome from "./components/pages/megaMenuContainer/graphicsDesign/graphicsHome/GraphicsHome";
+import DigitalHome from "./components/pages/megaMenuContainer/digitalProductDesign/digitalHome/DigitalHome";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
             <Route path="home" element={<Home />} />
             <Route path="courses" element={<CoursesHome />} />
             <Route path="webDevelopment" element={<DevHome />} />
+            <Route path="graphicsDesign" element={<GraphicsHome />} />
+            <Route path="digitalProductDesign" element={<DigitalHome />} />
             <Route path="cart" element={<CartHome />} />
             <Route path="checkout" element={<CheckoutHome />} />
             <Route path="login" element={<LoginHome />} />

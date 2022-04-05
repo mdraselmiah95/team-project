@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Course from "../course/Course";
-import "./Courses.css";
+import SingleCourse from "../singleCourse/SingleCourse";
 
-const Courses = () => {
+const DigitalBody = () => {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
@@ -12,7 +11,7 @@ const Courses = () => {
   }, []);
 
   return (
-    <div className="px-6 py-8 lg:py-28 lg:px-36 bg-color-four">
+    <div className="px-6 py-8 lg:py-28 lg:px-36 ">
       <div className="items-center justify-between flex-none md:flex">
         <div className="mb-8 text-center md:mb-0 md:text-left coursesTitle">
           <h1 className="text-xl font-medium md:text-4xl text-color-one">
@@ -29,7 +28,7 @@ const Courses = () => {
           <input
             type="text"
             placeholder="Search Related Courses"
-            className="px-4 py-2 mr-1 border-2 rounded-md cursor-pointer md:px-6 md:py-3 border-color-two bg-color-four placeholder:text-color-two"
+            className="px-4 py-2 mr-1 border-2 rounded-md cursor-pointer md:px-6 md:py-3 border-color-two placeholder:text-color-two"
           />
           <button className="px-4 py-2 font-bold text-white border rounded-md shadow md:px-6 md:py-3 bg-color-one hover:bg-white hover:border-color-three hover:border hover:text-color-three ">
             Search Now
@@ -39,7 +38,7 @@ const Courses = () => {
       <div className="mt-12">
         <div className="grid grid-cols-1 gap-4 lg:gap-10 md:grid-cols-3 lg:grid-cols-4">
           {courses.map((data) => (
-            <Course key={data.id} data={data} />
+            <SingleCourse key={data.id} data={data} />
           ))}
         </div>
       </div>
@@ -47,4 +46,4 @@ const Courses = () => {
   );
 };
 
-export default Courses;
+export default DigitalBody;

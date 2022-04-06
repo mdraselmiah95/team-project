@@ -1,23 +1,34 @@
 import React from "react";
 import CourseInformation from "../courseInformation/CourseInformation";
+import "./CourseBody.css";
 
 const CourseBody = () => {
   const img1 = "https://i.ibb.co/0MyZxqL/img1.png";
   const mentor = "https://i.ibb.co/9vGxYbf/mentor.png";
   const star = "https://i.ibb.co/x5dcfBW/Frame-152.png";
+  const playButton = "https://i.ibb.co/Qvv15bs/play.png";
   return (
     <div className="px-5 py-6 md:pt-16 md:pb-32 md:pl-36 md:pr-56">
       <div className="grid grid-cols-1 md:grid-cols-3">
         <div className="col-span-2 mr-4 md:mr-12">
-          <img
-            className="rounded-2xl"
-            src={img1}
-            alt="html and css"
-            style={{
-              width: "629px",
-              height: "416px",
-            }}
-          />
+          <div className="relative bg-black rounded-2xl">
+            <img
+              className="rounded-2xl object-fill w-full h-full opacity-60"
+              src={img1}
+              alt="html and css"
+              style={{
+                width: "629px",
+                height: "416px",
+              }}
+            />
+            <button className="btn">
+              <img
+                src={playButton}
+                alt="play icon"
+                // style={{ height: "75px" }}
+              />
+            </button>
+          </div>
           <div className="mt-8 md:mt-16">
             <CourseInformation />
           </div>

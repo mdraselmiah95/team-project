@@ -1,6 +1,7 @@
 import React from "react";
 import Rating from "react-rating";
 import courseStore from "../../../../utils/courseStore";
+import "./CourseModal.css";
 import { Link } from "react-router-dom";
 
 const CourseModal = ({ data, setShowModal }) => {
@@ -18,6 +19,7 @@ const CourseModal = ({ data, setShowModal }) => {
     lastUpdate,
   } = data;
   const img = "https://i.ibb.co/RDNh0GQ/Group-1000002095.png";
+  const imgTwo = "https://i.ibb.co/Qvv15bs/play.png";
 
   const addCourse = courseStore((state) => state.dispatch);
 
@@ -32,17 +34,25 @@ const CourseModal = ({ data, setShowModal }) => {
           onClick={() => setShowModal(false)}
         />
         <div className="flex flex-col md:flex-row lg:py-10 lg:px-7">
-          <div className="md:w-6/12">
+          <div className="md:w-6/12 relative bg-black ">
             <img
               src={image}
               alt="icon"
-              className="w-full h-full cursor-pointer "
+              className="object-fill w-full h-full opacity-50 cursor-pointer"
               type="button"
               style={{
                 width: "307.26px",
                 height: "438.65px",
               }}
             />
+            <button className="btn">
+              <img
+                src={imgTwo}
+                alt="play icon"
+                style={{ height: "75px" }}
+                // onClick={() => setShowModal(false)}
+              />
+            </button>
           </div>
           <div className="md:ml-6">
             <h1 className="text-2xl font-medium text-color-one md:text-4xl">

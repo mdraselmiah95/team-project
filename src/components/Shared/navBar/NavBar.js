@@ -18,7 +18,7 @@ const NavBar = () => {
     localStorage.removeItem("userInfo");
   };
   return (
-    <div className="fixed top-0 left-0 w-full">
+    <div className="fixed top-0 left-0 w-full z-30">
       <div className="items-center justify-between py-4 bg-white md:flex md:px-36 px-7">
         <div
           className="font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 

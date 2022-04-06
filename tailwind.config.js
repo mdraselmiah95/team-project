@@ -24,6 +24,7 @@ module.exports = {
         "color-eight": "#A27FFF",
         "color-ten": "#1EBCB4",
         "color-eleven": "#3F5983",
+        "color-twelve": "#E3EEFC",
       },
     },
   },

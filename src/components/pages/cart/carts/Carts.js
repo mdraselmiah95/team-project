@@ -23,7 +23,7 @@ const Carts = () => {
         {/* shopping cart */}
         <div className="col-span-2">
           <h3 className="mb-10 text-lg font-medium text-color-one md:text-3xl">
-            Course Enrollment
+            Applied Courses
           </h3>
           <div className="max-w-full overflow-x-auto">
             <table className="w-full table-auto">
@@ -60,16 +60,19 @@ const Carts = () => {
                     <td>
                       <div className="flex lg:pl-12 lg:pr-20">
                         <h2 className="mr-2 text-lg font-bold md:text-2xl text-color-eight">
-                          ${data.wholePrice}
+                          <span>&#2547;</span>
+                          {data.wholePrice}
                         </h2>
                         <h5 className="font-medium text-color-two">
-                          $<del>{data.price}</del>
+                          <span>&#2547;</span>
+                          <del>{data.price}</del>
                         </h5>
                       </div>
                     </td>
                     <td>
                       <h2 className="text-2xl font-bold text-color-eight">
-                        ${data.wholePrice}
+                        <span>&#2547;</span>
+                        {data.wholePrice}
                       </h2>
                     </td>
                   </tr>
@@ -81,11 +84,14 @@ const Carts = () => {
         {/* Cart Total */}
         <div className="text-center pl-7">
           <h3 className="mb-10 text-lg font-medium text-color-one md:text-3xl">
-            Fees
+            Course Total
           </h3>
           <div className="flex items-center justify-between py-4 border-b ">
             <h3 className="text-lg font-medium text-color-one">Subtotal</h3>
-            <h3 className="text-2xl font-bold text-color-eight">${total}</h3>
+            <h3 className="text-2xl font-bold text-color-eight">
+              <span>&#2547;</span>
+              {total}
+            </h3>
           </div>
           <Link to="/checkout">
             <button className="px-16 py-4 mt-16 font-bold text-white border rounded shadow md:mt-24 md:px-20 bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three ">

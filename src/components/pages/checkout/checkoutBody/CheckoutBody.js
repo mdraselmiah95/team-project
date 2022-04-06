@@ -11,7 +11,7 @@ const CheckoutBody = () => {
   return (
     <div className="px-4 py-8 md:py-32 md:px-36">
       <h3 className="mb-8 text-lg font-medium text-color-one md:text-3xl">
-        Checkout
+        Admission Info
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-4">
         <div className="col-span-3">
@@ -243,7 +243,11 @@ const CheckoutBody = () => {
             </span>
           </h5>
           <h4 className="pb-4 mb-4 font-medium border-b text-color-one">
-            Total: <span className="font-normal ">${total}</span>
+            Total:{" "}
+            <span className="font-normal ">
+              <span>&#2547;</span>
+              {total}
+            </span>
           </h4>
           <button className="text-sm text-color-one">
             Have a coupon?
@@ -253,7 +257,7 @@ const CheckoutBody = () => {
           </button>
           <Link to="/checkout">
             <button className="px-16 py-3 mt-10 font-bold text-white border rounded-md shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three ">
-              Checkout
+              Enroll
             </button>
           </Link>
           <Link to="/checkout">

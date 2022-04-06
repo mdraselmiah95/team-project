@@ -1,31 +1,37 @@
 import React from "react";
-import { Outlet, Link, Routes, Route } from "react-router-dom";
-import CourseModule from "../courseModule/CourseModule";
-import CoursesOverview from "../coursesOverview/CoursesOverview";
+import { Outlet, NavLink } from "react-router-dom";
 
 const CourseInformation = () => {
   return (
     <div>
-      <nav className="flex">
-        <Link
-          to="/courseDetails/body/information/courseOverview"
-          className="px-6 py-2 mr-1 text-white rounded-t-md bg-color-five"
-        >
-          Courses Overview
-        </Link>
+      <div className="flex">
+        <nav>
+          <NavLink
+            to="/courseDetails/overview"
+            className="px-6 font-medium py-2 mr-1 text-white rounded-t-md bg-color-five"
+            style={({ isActive }) => {
+              return {
+                backgroundColor: isActive ? "#1E5DBC" : "",
+              };
+            }}
+          >
+            Courses Overview
+          </NavLink>
 
-        <Link
-          to="/courseDetails/body/information/courseModule"
-          className="px-6 py-2 mr-1 text-white rounded-t-md bg-color-five"
-        >
-          Course Module
-        </Link>
-        <Outlet />
-      </nav>
-      <Routes>
-        <Route path="courseOverview" element={<CoursesOverview />} />
-        <Route path="courseModule" element={<CourseModule />} />
-      </Routes>
+          <NavLink
+            to="/courseDetails/module"
+            className="px-6 py-2 font-medium mr-1 text-white rounded-t-md bg-color-five"
+            style={({ isActive }) => {
+              return {
+                backgroundColor: isActive ? "#1E5DBC" : "",
+              };
+            }}
+          >
+            Course Module
+          </NavLink>
+        </nav>
+      </div>
+      <Outlet />
     </div>
   );
 };

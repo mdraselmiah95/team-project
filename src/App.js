@@ -20,6 +20,8 @@ import ContentHome from "./components/pages/megaMenuContainer/contentWriting/con
 import AppHome from "./components/pages/megaMenuContainer/appDevelopment/appHome/AppHome";
 import VideoHome from "./components/pages/megaMenuContainer/videoEditing/videoHome/VideoHome";
 import CourseHome from "./components/pages/courseDetails/courseHome/CourseHome";
+import CoursesOverview from "./components/pages/courseDetails/coursesOverview/CoursesOverview";
+import CourseModule from "./components/pages/courseDetails/courseModule/CourseModule";
 
 function App() {
   return (
@@ -37,7 +39,10 @@ function App() {
             <Route path="contentWriting" element={<ContentHome />} />
             <Route path="appDevelopment" element={<AppHome />} />
             <Route path="videoEditing" element={<VideoHome />} />
-            <Route path="courseDetails" element={<CourseHome />} />
+            <Route path="courseDetails" element={<CourseHome />}>
+              <Route path="overview" element={<CoursesOverview />} />
+              <Route path="module" element={<CourseModule />} />
+            </Route>
             <Route path="cart" element={<CartHome />} />
             <Route path="checkout" element={<CheckoutHome />} />
             <Route path="login" element={<LoginHome />} />

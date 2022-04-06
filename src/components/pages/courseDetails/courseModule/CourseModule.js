@@ -92,7 +92,7 @@ const CourseModule = () => {
                       <input
                         className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                         type="radio"
-                        name="flexRadioDefault"
+                        name="flexRadioDefault1"
                         id="flexRadioDefault1"
                       ></input>
                       <label
@@ -107,7 +107,7 @@ const CourseModule = () => {
                       <input
                         className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                         type="radio"
-                        name="flexRadioDefault"
+                        name="flexRadioDefault1"
                         id="flexRadioDefault2"
                       ></input>
                       <label
@@ -122,7 +122,7 @@ const CourseModule = () => {
                       <input
                         className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                         type="radio"
-                        name="flexRadioDefault"
+                        name="flexRadioDefault1"
                         id="flexRadioDefault3"
                       ></input>
                       <label
@@ -142,12 +142,12 @@ const CourseModule = () => {
                       <input
                         className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                         type="radio"
-                        name="flexRadioDefault"
-                        id="flexRadioDefault1"
+                        name="flexRadioDefault2"
+                        id="flexRadioDefault4"
                       ></input>
                       <label
                         className="form-check-label inline-block text-color-two"
-                        for="flexRadioDefault1"
+                        for="flexRadioDefault4"
                       >
                         {item.quizzes.quizTwo.answerOne}
                       </label>
@@ -157,12 +157,12 @@ const CourseModule = () => {
                       <input
                         className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                         type="radio"
-                        name="flexRadioDefault"
-                        id="flexRadioDefault2"
+                        name="flexRadioDefault2"
+                        id="flexRadioDefault5"
                       ></input>
                       <label
                         className="form-check-label inline-block text-color-two"
-                        for="flexRadioDefault2"
+                        for="flexRadioDefault5"
                       >
                         {item.quizzes.quizTwo.answerTwo}
                       </label>
@@ -172,12 +172,12 @@ const CourseModule = () => {
                       <input
                         className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                         type="radio"
-                        name="flexRadioDefault"
-                        id="flexRadioDefault3"
+                        name="flexRadioDefault2"
+                        id="flexRadioDefault6"
                       ></input>
                       <label
                         className="form-check-label inline-block text-color-two"
-                        for="flexRadioDefault3"
+                        for="flexRadioDefault6"
                       >
                         {item.quizzes.quizTwo.answerThree}
                       </label>
@@ -192,7 +192,7 @@ const CourseModule = () => {
                       <input
                         className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                         type="radio"
-                        name="flexRadioDefault"
+                        name="flexRadioDefault3"
                         id="flexRadioDefault1"
                       ></input>
                       <label
@@ -207,7 +207,7 @@ const CourseModule = () => {
                       <input
                         className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                         type="radio"
-                        name="flexRadioDefault"
+                        name="flexRadioDefault3"
                         id="flexRadioDefault2"
                       ></input>
                       <label
@@ -222,7 +222,7 @@ const CourseModule = () => {
                       <input
                         className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                         type="radio"
-                        name="flexRadioDefault"
+                        name="flexRadioDefault3"
                         id="flexRadioDefault3"
                       ></input>
                       <label
@@ -233,6 +233,344 @@ const CourseModule = () => {
                       </label>
                     </div>
                   </div>
+
+                  <div className=" mt-6">
+                    <h2 className="text-color-one font-medium text-lg mb-4">
+                      {item.quizzes.quizFour.question}
+                    </h2>
+                    <div className="form-check mb-2">
+                      <input
+                        className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="radio"
+                        name="flexRadioDefault4"
+                        id="flexRadioDefault1"
+                      ></input>
+                      <label
+                        className="form-check-label inline-block text-color-two"
+                        for="flexRadioDefault1"
+                      >
+                        {item.quizzes.quizFour.answerOne}
+                      </label>
+                    </div>
+                    <div className="form-check mb-2">
+                      <input
+                        className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="radio"
+                        name="flexRadioDefault4"
+                        id="flexRadioDefault2"
+                      ></input>
+                      <label
+                        className="form-check-label inline-block text-color-two"
+                        for="flexRadioDefault2"
+                      >
+                        {item.quizzes.quizFour.answerTwo}
+                      </label>
+                    </div>
+                    <div className="form-check mb-2">
+                      <input
+                        className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="radio"
+                        name="flexRadioDefault4"
+                        id="flexRadioDefault3"
+                      ></input>
+                      <label
+                        className="form-check-label inline-block text-color-two"
+                        for="flexRadioDefault3"
+                      >
+                        {item.quizzes.quizFour.answerThree}
+                      </label>
+                    </div>
+                  </div>
+
+                  <div className=" mt-6">
+                    <h2 className="text-color-one font-medium text-lg mb-4">
+                      {item.quizzes.quizFive.question}
+                    </h2>
+                    <div className="form-check mb-2">
+                      <input
+                        className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="radio"
+                        name="flexRadioDefault5"
+                        id="flexRadioDefault1"
+                      ></input>
+                      <label
+                        className="form-check-label inline-block text-color-two"
+                        for="flexRadioDefault1"
+                      >
+                        {item.quizzes.quizFive.answerOne}
+                      </label>
+                    </div>
+                    <div className="form-check mb-2">
+                      <input
+                        className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="radio"
+                        name="flexRadioDefault5"
+                        id="flexRadioDefault2"
+                      ></input>
+                      <label
+                        className="form-check-label inline-block text-color-two"
+                        for="flexRadioDefault2"
+                      >
+                        {item.quizzes.quizFive.answerTwo}
+                      </label>
+                    </div>
+                    <div className="form-check mb-2">
+                      <input
+                        className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="radio"
+                        name="flexRadioDefault5"
+                        id="flexRadioDefault3"
+                      ></input>
+                      <label
+                        className="form-check-label inline-block text-color-two"
+                        for="flexRadioDefault3"
+                      >
+                        {item.quizzes.quizFive.answerThree}
+                      </label>
+                    </div>
+                  </div>
+
+                  <div className=" mt-6">
+                    <h2 className="text-color-one font-medium text-lg mb-4">
+                      {item.quizzes.quizSix.question}
+                    </h2>
+                    <div className="form-check mb-2">
+                      <input
+                        className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="radio"
+                        name="flexRadioDefault6"
+                        id="flexRadioDefault1"
+                      ></input>
+                      <label
+                        className="form-check-label inline-block text-color-two"
+                        for="flexRadioDefault1"
+                      >
+                        {item.quizzes.quizSix.answerOne}
+                      </label>
+                    </div>
+                    <div className="form-check mb-2">
+                      <input
+                        className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="radio"
+                        name="flexRadioDefault6"
+                        id="flexRadioDefault2"
+                      ></input>
+                      <label
+                        className="form-check-label inline-block text-color-two"
+                        for="flexRadioDefault2"
+                      >
+                        {item.quizzes.quizSix.answerTwo}
+                      </label>
+                    </div>
+                    <div className="form-check mb-2">
+                      <input
+                        className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="radio"
+                        name="flexRadioDefault6"
+                        id="flexRadioDefault3"
+                      ></input>
+                      <label
+                        className="form-check-label inline-block text-color-two"
+                        for="flexRadioDefault3"
+                      >
+                        {item.quizzes.quizSix.answerThree}
+                      </label>
+                    </div>
+                  </div>
+
+                  <div className=" mt-6">
+                    <h2 className="text-color-one font-medium text-lg mb-4">
+                      {item.quizzes.quizSeven.question}
+                    </h2>
+                    <div className="form-check mb-2">
+                      <input
+                        className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="radio"
+                        name="flexRadioDefault7"
+                        id="flexRadioDefault1"
+                      ></input>
+                      <label
+                        className="form-check-label inline-block text-color-two"
+                        for="flexRadioDefault1"
+                      >
+                        {item.quizzes.quizSeven.answerOne}
+                      </label>
+                    </div>
+                    <div className="form-check mb-2">
+                      <input
+                        className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="radio"
+                        name="flexRadioDefault7"
+                        id="flexRadioDefault2"
+                      ></input>
+                      <label
+                        className="form-check-label inline-block text-color-two"
+                        for="flexRadioDefault2"
+                      >
+                        {item.quizzes.quizSeven.answerTwo}
+                      </label>
+                    </div>
+                    <div className="form-check mb-2">
+                      <input
+                        className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="radio"
+                        name="flexRadioDefault7"
+                        id="flexRadioDefault3"
+                      ></input>
+                      <label
+                        className="form-check-label inline-block text-color-two"
+                        for="flexRadioDefault3"
+                      >
+                        {item.quizzes.quizSeven.answerThree}
+                      </label>
+                    </div>
+                  </div>
+
+                  <div className=" mt-6">
+                    <h2 className="text-color-one font-medium text-lg mb-4">
+                      {item.quizzes.quizEight.question}
+                    </h2>
+                    <div className="form-check mb-2">
+                      <input
+                        className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="radio"
+                        name="flexRadioDefault8"
+                        id="flexRadioDefault1"
+                      ></input>
+                      <label
+                        className="form-check-label inline-block text-color-two"
+                        for="flexRadioDefault1"
+                      >
+                        {item.quizzes.quizEight.answerOne}
+                      </label>
+                    </div>
+                    <div className="form-check mb-2">
+                      <input
+                        className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="radio"
+                        name="flexRadioDefault8"
+                        id="flexRadioDefault2"
+                      ></input>
+                      <label
+                        className="form-check-label inline-block text-color-two"
+                        for="flexRadioDefault2"
+                      >
+                        {item.quizzes.quizEight.answerTwo}
+                      </label>
+                    </div>
+                    <div className="form-check mb-2">
+                      <input
+                        className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="radio"
+                        name="flexRadioDefault8"
+                        id="flexRadioDefault3"
+                      ></input>
+                      <label
+                        className="form-check-label inline-block text-color-two"
+                        for="flexRadioDefault3"
+                      >
+                        {item.quizzes.quizEight.answerThree}
+                      </label>
+                    </div>
+                  </div>
+
+                  <div className=" mt-6">
+                    <h2 className="text-color-one font-medium text-lg mb-4">
+                      {item.quizzes.quizNine.question}
+                    </h2>
+                    <div className="form-check mb-2">
+                      <input
+                        className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="radio"
+                        name="flexRadioDefault9"
+                        id="flexRadioDefault1"
+                      ></input>
+                      <label
+                        className="form-check-label inline-block text-color-two"
+                        for="flexRadioDefault1"
+                      >
+                        {item.quizzes.quizNine.answerOne}
+                      </label>
+                    </div>
+                    <div className="form-check mb-2">
+                      <input
+                        className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="radio"
+                        name="flexRadioDefault9"
+                        id="flexRadioDefault2"
+                      ></input>
+                      <label
+                        className="form-check-label inline-block text-color-two"
+                        for="flexRadioDefault2"
+                      >
+                        {item.quizzes.quizNine.answerTwo}
+                      </label>
+                    </div>
+                    <div className="form-check mb-2">
+                      <input
+                        className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="radio"
+                        name="flexRadioDefault9"
+                        id="flexRadioDefault3"
+                      ></input>
+                      <label
+                        className="form-check-label inline-block text-color-two"
+                        for="flexRadioDefault3"
+                      >
+                        {item.quizzes.quizNine.answerThree}
+                      </label>
+                    </div>
+                  </div>
+
+                  <div className=" mt-6">
+                    <h2 className="text-color-one font-medium text-lg mb-4">
+                      {item.quizzes.quizTen.question}
+                    </h2>
+                    <div className="form-check mb-2">
+                      <input
+                        className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="radio"
+                        name="flexRadioDefault10"
+                        id="flexRadioDefault1"
+                      ></input>
+                      <label
+                        className="form-check-label inline-block text-color-two"
+                        for="flexRadioDefault1"
+                      >
+                        {item.quizzes.quizTen.answerOne}
+                      </label>
+                    </div>
+                    <div className="form-check mb-2">
+                      <input
+                        className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="radio"
+                        name="flexRadioDefault10"
+                        id="flexRadioDefault2"
+                      ></input>
+                      <label
+                        className="form-check-label inline-block text-color-two"
+                        for="flexRadioDefault2"
+                      >
+                        {item.quizzes.quizTen.answerTwo}
+                      </label>
+                    </div>
+                    <div className="form-check mb-2">
+                      <input
+                        className="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="radio"
+                        name="flexRadioDefault10"
+                        id="flexRadioDefault3"
+                      ></input>
+                      <label
+                        className="form-check-label inline-block text-color-two"
+                        for="flexRadioDefault3"
+                      >
+                        {item.quizzes.quizTen.answerThree}
+                      </label>
+                    </div>
+                  </div>
+
+                  {/* finish checkBox */}
                 </div>
                 <button className="hover:text-color-three hover:bg-white hover:border-color-three hover:border ml-8 py-4 px-11 text-white font-bold bg-color-three rounded-md my-12">
                   Submit Now

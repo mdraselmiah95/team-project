@@ -20,10 +20,25 @@ export const Quiz = [
       name: "Quiz",
       time: "1 of 10 Questions",
     },
-    classes: {
-      one: "What does HTML stand for?",
-      two: "Who is making the Web standards?",
-      three: "Choose the correct HTML element for the largest heading:",
+    quizzes: {
+      quizOne: {
+        question: "What does HTML stand for?",
+        answerOne: "Hyperlinks and Text Markup Language",
+        answerTwo: "Home Tool Markup Language",
+        answerThree: "Hyper Text Markup Language",
+      },
+      quizTwo: {
+        question: "Who is making the Web standards?",
+        answerOne: "The  World Wide Web Consortium",
+        answerTwo: "Google",
+        answerThree: "Mozilla",
+      },
+      quizThree: {
+        question: "Choose the correct HTML element for the largest heading:",
+        answerOne: "<h6>",
+        answerTwo: "<heading>",
+        answerThree: "<h1>",
+      },
     },
   },
 ];

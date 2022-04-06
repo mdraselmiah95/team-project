@@ -69,7 +69,7 @@ const CourseBody = () => {
                 </h5>
               </div>
               <div className="flex justify-center">
-                <button className="bg-color-three md:py-5 py-4 md:px-20 px-10 font-bold text-2xl rounded-xl text-white">
+                <button className="bg-color-three md:py-5 py-4 md:px-20 px-10 font-bold text-2xl rounded-xl text-white hover:text-color-three hover:bg-white hover:border-color-three hover:border border">
                   Enroll Now
                 </button>
               </div>
@@ -96,7 +96,7 @@ const CourseBody = () => {
                   Exercitation veniam consequat sunt nostrud amet.
                 </p>
                 <div className="flex justify-center">
-                  <button className="bg-color-three py-5 px-6 font-bold text-2xl rounded-xl text-white">
+                  <button className="bg-color-three py-5 px-6 font-bold text-2xl rounded-xl text-white hover:text-color-three border hover:bg-white hover:border-color-three hover:border">
                     Schedule A Meeting
                   </button>
                 </div>

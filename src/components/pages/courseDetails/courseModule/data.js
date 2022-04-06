@@ -12,6 +12,9 @@ export const Data = [
       five: "5. Welcome to the course 02:30 minutes",
     },
   },
+];
+
+export const Quiz = [
   {
     title: {
       name: "Quiz",
@@ -19,6 +22,8 @@ export const Data = [
     },
     classes: {
       one: "What does HTML stand for?",
+      two: "Who is making the Web standards?",
+      three: "Choose the correct HTML element for the largest heading:",
     },
   },
 ];

@@ -25,6 +25,7 @@ module.exports = {
         "color-ten": "#1EBCB4",
         "color-eleven": "#3F5983",
         "color-twelve": "#E3EEFC",
+        "color-thirteen": "#CFD3DD",
       },
     },
   },

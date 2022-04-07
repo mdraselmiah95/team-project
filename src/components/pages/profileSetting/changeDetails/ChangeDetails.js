@@ -1,6 +1,14 @@
 import React from "react";
 
 const ChangeDetails = () => {
+  const facebook =
+    "https://res.cloudinary.com/mdraselmia/image/upload/v1649326201/social/Facebook_xpxn6k.png";
+  const linkedin =
+    "https://res.cloudinary.com/mdraselmia/image/upload/v1649326201/social/LinkedIN_bn5vez.png";
+  const behance =
+    "https://res.cloudinary.com/mdraselmia/image/upload/v1649326201/social/Behance_xrmgik.png";
+  const gitHub =
+    "https://res.cloudinary.com/mdraselmia/image/upload/v1649326201/social/Github_si5mw9.png";
   return (
     <div className="px-5 py-10 md:px-36 md:py-32">
       <div className="grid md:grid-cols-2">
@@ -66,6 +74,41 @@ const ChangeDetails = () => {
           <h1 className="mb-6 text-2xl font-medium text-color-one">
             Social Details
           </h1>
+          <div className="flex items-center mb-6">
+            <img src={facebook} alt="facebook" className=" mr-7" />
+            <input
+              type="text"
+              placeholder="Enter facebook profile link"
+              className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            />
+          </div>
+
+          <div className="flex items-center mb-6">
+            <img src={linkedin} alt="linkedin" className=" mr-7" />
+            <input
+              type="text"
+              placeholder="Enter linkedin profile link"
+              className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            />
+          </div>
+
+          <div className="flex items-center mb-6">
+            <img src={behance} alt="bechance" className=" mr-7" />
+            <input
+              type="text"
+              placeholder="Enter behance profile link"
+              className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            />
+          </div>
+
+          <div className="flex items-center mb-6">
+            <img src={gitHub} alt="gitHub" className=" mr-7" />
+            <input
+              type="text"
+              placeholder="Enter github profile link"
+              className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -23,6 +23,7 @@ import CourseHome from "./components/pages/courseDetails/courseHome/CourseHome";
 import CoursesOverview from "./components/pages/courseDetails/coursesOverview/CoursesOverview";
 import CourseModule from "./components/pages/courseDetails/courseModule/CourseModule";
 import ProfileHome from "./components/pages/profile/profileHome/ProfileHome";
+import SettingHome from "./components/pages/profileSetting/settingHome/SettingHome";
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
             <Route path="login" element={<LoginHome />} />
             <Route path="register" element={<RegisterHome />} />
             <Route path="profile" element={<ProfileHome />} />
+            <Route path="profileSetting" element={<SettingHome />} />
           </Routes>
           <Footer />
         </NhostAuthProvider>

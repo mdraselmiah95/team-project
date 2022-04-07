@@ -14,7 +14,7 @@ const AMentor = () => {
           >
             No
           </label>
-          <div className="relative inline-block w-16 mx-3 align-middle transition duration-200 ease-in select-none">
+          <div className="relative inline-block w-16 mx-3 align-middle transition ease-in select-none duration-400">
             <input
               type="checkbox"
               name="toggle"

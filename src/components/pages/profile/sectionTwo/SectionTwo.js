@@ -14,7 +14,7 @@ const SectionTwo = () => {
           veniam consequat sunt nostrud amet.
         </p>
       </div>
-      <div className="relative bg-black rounded-xl md:-mt-60 md:ml-28">
+      <div className="relative bg-black rounded-xl md:-mt-96 md:ml-28">
         <img
           src={img}
           alt="videoImage"

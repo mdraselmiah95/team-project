@@ -13,7 +13,7 @@ const ChangeDetails = () => {
     <div className="px-5 py-10 md:px-36 md:py-32">
       <div className="grid md:grid-cols-2">
         {/* Change Details */}
-        <div className="mr-5 md:mr-36">
+        <div className="mr-5 md:mr-16">
           <h1 className="mb-6 text-2xl font-medium text-color-one">
             Change Details
           </h1>
@@ -70,7 +70,7 @@ const ChangeDetails = () => {
           </button>
         </div>
         {/* Social Details */}
-        <div className="">
+        <div className="ml-5 md:ml-16">
           <h1 className="mb-6 text-2xl font-medium text-color-one">
             Social Details
           </h1>

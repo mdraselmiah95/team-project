@@ -22,6 +22,7 @@ import VideoHome from "./components/pages/megaMenuContainer/videoEditing/videoHo
 import CourseHome from "./components/pages/courseDetails/courseHome/CourseHome";
 import CoursesOverview from "./components/pages/courseDetails/coursesOverview/CoursesOverview";
 import CourseModule from "./components/pages/courseDetails/courseModule/CourseModule";
+import ProfileHome from "./components/pages/profile/profileHome/ProfileHome";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
             <Route path="checkout" element={<CheckoutHome />} />
             <Route path="login" element={<LoginHome />} />
             <Route path="register" element={<RegisterHome />} />
+            <Route path="profile" element={<ProfileHome />} />
           </Routes>
           <Footer />
         </NhostAuthProvider>

@@ -81,7 +81,6 @@ const UploadCourse = () => {
               className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
           </div>
-
           <div className="mb-5 ">
             <label className="block mb-3 text-lg text-color-two">
               Video 01 Link:
@@ -93,7 +92,6 @@ const UploadCourse = () => {
               className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
           </div>
-
           <div className="mb-5 ">
             <label className="block mb-3 text-lg text-color-two">
               Video 02 Title:
@@ -105,7 +103,6 @@ const UploadCourse = () => {
               className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
           </div>
-
           <div className="mb-5 ">
             <label className="block mb-3 text-lg text-color-two">
               Video 02 Link:
@@ -120,6 +117,60 @@ const UploadCourse = () => {
           <button className="float-right px-4 py-2 font-medium text-white border rounded-lg hover:bg-white hover:border-color-three hover:text-color-three bg-color-three">
             Add More Video
           </button>
+          {/* Quiz */}
+          <div className="mt-24">
+            <h1 className="mb-6 text-2xl font-medium text-color-one">Quiz:</h1>
+            <div className="mb-5 ">
+              <label className="block mb-3 text-lg text-color-two">
+                Quiz 1: Question
+              </label>
+              <input
+                type="text"
+                name="Question"
+                placeholder="Quiz 1: Question"
+                className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              />
+            </div>
+
+            <div className="mb-5 ">
+              <label className="block mb-3 text-lg text-color-two">
+                Option 1:
+              </label>
+              <input
+                type="text"
+                name="option"
+                placeholder="Enter your option 1"
+                className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              />
+            </div>
+
+            <div className="mb-5 ">
+              <label className="block mb-3 text-lg text-color-two">
+                Option 2:
+              </label>
+              <input
+                type="text"
+                name="option"
+                placeholder="Enter your option 2"
+                className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              />
+            </div>
+
+            <div className="mb-5 ">
+              <label className="block mb-3 text-lg text-color-two">
+                Option 3:
+              </label>
+              <input
+                type="text"
+                name="option"
+                placeholder="Enter your option 3"
+                className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              />
+            </div>
+            <button className="float-right px-4 py-2 font-medium text-white border rounded-lg hover:bg-white hover:border-color-three hover:text-color-three bg-color-three">
+              Add More Questions
+            </button>
+          </div>
         </div>
       </div>
     </div>

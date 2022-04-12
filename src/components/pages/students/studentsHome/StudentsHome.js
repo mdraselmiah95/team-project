@@ -1,10 +1,11 @@
 import React from "react";
 import StudentsBanner from "../studentsBanner/StudentsBanner";
 import StudentsBody from "../studentsBody/StudentsBody";
+import "./StudentsHome.css";
 
 const StudentsHome = () => {
   return (
-    <div>
+    <div className="responsive">
       <StudentsBanner />
       <StudentsBody />
     </div>

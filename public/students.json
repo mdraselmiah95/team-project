@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "MD.Rasel",
+    "expertise": "Frontend Web Developer",
+    "points": 88,
+    "language": "English, Bangla",
+    "projects": 50,
+    "star": 5,
+    "totalStar": 20,
+    "image": "https://i.ibb.co/rmQSkfg/img1.png"
+  },
+  {
+    "id": 2,
+    "name": "Syed Mohammad Easin",
+    "expertise": "UI/UX Designer & Frontend Developer",
+    "points": 92,
+    "language": "English, Bangla",
+    "projects": 60,
+    "star": 5,
+    "totalStar": 60,
+    "image": "https://i.ibb.co/jRhzq7r/img2.png"
+  },
+  {
+    "id": 3,
+    "name": "Muktadir Shakib",
+    "expertise": "Frontend Web Developer",
+    "points": 82,
+    "language": "English, Bangla",
+    "projects": 70,
+    "star": 4,
+    "totalStar": 80,
+    "image": "https://i.ibb.co/ZWQhp5J/img3.png"
+  },
+  {
+    "id": 4,
+    "name": "Moniruzzaman Emon",
+    "expertise": "Backend Developer",
+    "points": 62,
+    "language": "English, Bangla",
+    "projects": 50,
+    "star": 5,
+    "totalStar": 74,
+    "image": "https://i.ibb.co/nMPTBVH/img4.png"
+  },
+  {
+    "id": 5,
+    "name": "Sabira Akter",
+    "expertise": "Content Writter",
+    "points": 78,
+    "language": "English, Bangla",
+    "projects": 69,
+    "star": 4,
+    "totalStar": 88,
+    "image": "https://i.ibb.co/rv3YF4k/img5.png"
+  },
+  {
+    "id": 6,
+    "name": "Spark Abdullah",
+    "expertise": "Lead Generater",
+    "points": 85,
+    "language": "English, Bangla",
+    "projects": 89,
+    "star": 5,
+    "totalStar": 79,
+    "image": "https://i.ibb.co/VvCfxZZ/img6.png"
+  },
+  {
+    "id": 7,
+    "name": "Basedur Rahman",
+    "expertise": "Wordpress Expert",
+    "points": 88,
+    "language": "English, Bangla",
+    "projects": 109,
+    "star": 4,
+    "totalStar": 99,
+    "image": "https://i.ibb.co/Yt5W9W3/img7.png"
+  },
+  {
+    "id": 8,
+    "name": "Manha Samrin",
+    "expertise": "Digital Artist",
+    "points": 77,
+    "language": "English, Bangla",
+    "projects": 79,
+    "star": 4,
+    "totalStar": 66,
+    "image": "https://i.ibb.co/CK038pV/img8.png"
+  }
+]

@@ -25,6 +25,7 @@ import CourseModule from "./components/pages/courseDetails/courseModule/CourseMo
 import ProfileHome from "./components/pages/profile/profileHome/ProfileHome";
 import SettingHome from "./components/pages/profileSetting/settingHome/SettingHome";
 import StudentsHome from "./components/pages/students/studentsHome/StudentsHome";
+import InstructorsHome from "./components/pages/instructors/instructorsHome/InstructorsHome";
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
             <Route path="cart" element={<CartHome />} />
             <Route path="checkout" element={<CheckoutHome />} />
             <Route path="studentsList" element={<StudentsHome />} />
+            <Route path="instructorsList" element={<InstructorsHome />} />
             <Route path="login" element={<LoginHome />} />
             <Route path="register" element={<RegisterHome />} />
             <Route path="profile" element={<ProfileHome />} />

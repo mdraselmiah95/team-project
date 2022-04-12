@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Service = ({ data }) => {
-  const { title, icon, details, backgroundImage, iconTwo } = data;
+  const { title, icon, details, backgroundImage, iconTwo, id } = data;
   // console.log(data);
   return (
     <>
@@ -18,11 +19,23 @@ const Service = ({ data }) => {
           {title}
         </h3>
         <p className="text-base text-color-two">{details}</p>
-        <img
-          className="mt-2 cursor-pointer hover:opacity-75"
-          src={iconTwo}
-          alt="icon"
-        />
+        {id === 1 ? (
+          <Link to="/studentsList">
+            <img
+              className="mt-2 cursor-pointer hover:opacity-75"
+              src={iconTwo}
+              alt="icon"
+            />
+          </Link>
+        ) : (
+          <Link to="/instructorsList">
+            <img
+              className="mt-2 cursor-pointer hover:opacity-75"
+              src={iconTwo}
+              alt="icon"
+            />
+          </Link>
+        )}
       </div>
     </>
   );

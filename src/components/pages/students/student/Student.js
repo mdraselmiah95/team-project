@@ -1,9 +1,20 @@
 import React from "react";
 
-const Student = () => {
+const Student = ({ data }) => {
+  const {
+    name,
+    expertise,
+    points,
+    language,
+    projects,
+    star,
+    totalStar,
+    image,
+  } = data;
   return (
     <div>
-      <h2>ee</h2>
+      <img src={image} alt="student" />
+      <div></div>
     </div>
   );
 };

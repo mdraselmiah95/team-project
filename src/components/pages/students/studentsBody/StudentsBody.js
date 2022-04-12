@@ -5,7 +5,7 @@ const StudentsBody = () => {
   const [students, setStudents] = useState([]);
 
   useEffect(() => {
-    fetch("./coursesDetails.json")
+    fetch("./students.json")
       .then((res) => res.json())
       .then((data) => setStudents(data));
   }, []);
@@ -35,7 +35,7 @@ const StudentsBody = () => {
         </div>
       </div>
       <div className="mt-12">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-9 md:grid-cols-2">
           {students.map((data) => (
             <Student key={data.id} data={data} />
           ))}

@@ -29,7 +29,7 @@ const Courses = () => {
           <input
             type="text"
             placeholder="Search categorically  courses"
-            className="px-4 w-64	 py-2 mr-1 border-2 rounded-md cursor-pointer md:px-6 md:py-3 border-color-two bg-color-four placeholder:text-color-two"
+            className="w-64 px-4 py-2 mr-1 border-2 rounded-md cursor-pointer md:px-6 md:py-3 border-color-two bg-color-four placeholder:text-color-two"
           />
           <button className="px-4 py-2 font-bold text-white border rounded-md shadow md:px-6 md:py-3 bg-color-one hover:bg-white hover:border-color-three hover:border hover:text-color-three ">
             Search Now
@@ -37,7 +37,7 @@ const Courses = () => {
         </div>
       </div>
       <div className="mt-12">
-        <div className="grid grid-cols-1 gap-4 lg:gap-10 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-4 lg:gap-10 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
           {courses.map((data) => (
             <Course key={data.id} data={data} />
           ))}

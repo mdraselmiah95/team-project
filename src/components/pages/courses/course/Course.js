@@ -8,7 +8,7 @@ const Course = ({ data }) => {
 
   return (
     <>
-      <div className="px-6 mx-auto lg:px-0">
+      <div className="px-6 lg:px-0">
         <img
           src={image}
           alt="icon"

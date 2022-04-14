@@ -27,7 +27,8 @@ const Footer = () => {
       <div className="flex justify-between">
         <div>
           <p className="text-base text-center text-color-two">
-            © 2021 Freelancer’s Solution.gov.bd. All rights reserved.
+            &copy; {new Date().getFullYear()} Freelancer’s Solution.gov.bd. All
+            rights reserved. Copyright
           </p>
         </div>
         <div className="md:flex">

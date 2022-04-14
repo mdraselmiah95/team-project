@@ -29,11 +29,11 @@ const CourseModule = () => {
     "https://res.cloudinary.com/mdraselmia/image/upload/v1649250262/Project-images/circle_btawqa.png";
 
   return (
-    <div className=" pt-10 pb-8 md:px-8 px-3 shadow-md">
+    <div className=" pt-10 pb-8 md:px-8 px-3 shadow-md ">
       {Data.map((item, index) => {
         return (
-          <>
-            <div onClick={() => toggle(index)} key={index}>
+          <div className="mb-2" key={index}>
+            <div onClick={() => toggle(index)}>
               <div className="flex items-center justify-between text-white font-medium bg-color-three py-6 px-5 cursor-pointer">
                 <h1>{item.title?.name}</h1>
                 <h1>{item.title?.time}</h1>
@@ -63,7 +63,7 @@ const CourseModule = () => {
                 </div>
               </>
             ) : null}
-          </>
+          </div>
         );
       })}
 

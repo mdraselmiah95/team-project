@@ -1,16 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import AMentor from "../aMentor/AMentor";
 import ChangeDetails from "../changeDetails/ChangeDetails";
 import SettingBanner from "../settingBanner/SettingBanner";
 import UploadCourse from "../uploadCourse/UploadCourse";
 
 const SettingHome = () => {
+  const [mentor, setMentor] = useState(false);
   return (
     <div>
       <SettingBanner />
       <ChangeDetails />
-      <AMentor />
-      <UploadCourse />
+      <AMentor setMentor={setMentor} mentor={mentor} />
+      {mentor && <UploadCourse />}
     </div>
   );
 };

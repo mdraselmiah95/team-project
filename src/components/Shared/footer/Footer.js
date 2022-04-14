@@ -28,7 +28,7 @@ const Footer = () => {
         <div>
           <p className="text-base text-center text-color-two">
             &copy; {new Date().getFullYear()} Freelancer’s Solution.gov.bd. All
-            rights reserved. Copyright
+            rights reserved.
           </p>
         </div>
         <div className="md:flex">

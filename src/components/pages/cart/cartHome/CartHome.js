@@ -16,4 +16,3 @@ const CartHome = () => {
 };
 
 export default CartHome;
-<h2>hi</h2>;

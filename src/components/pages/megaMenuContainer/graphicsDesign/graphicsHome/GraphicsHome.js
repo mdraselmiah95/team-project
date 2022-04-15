@@ -14,4 +14,3 @@ const GraphicsHome = () => {
 };
 
 export default GraphicsHome;
-<GraphicsBanner />;

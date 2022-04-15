@@ -14,4 +14,3 @@ const DigitalHome = () => {
 };
 
 export default DigitalHome;
-<DigitalBanner />;

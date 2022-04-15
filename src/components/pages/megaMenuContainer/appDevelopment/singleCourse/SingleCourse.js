@@ -1,5 +1,6 @@
 import React from "react";
 import Rating from "react-rating";
+import { Link } from "react-router-dom";
 
 const SingleCourse = ({ data }) => {
   const { image, star, starCount, title, description, wholePrice } = data;
@@ -28,9 +29,11 @@ const SingleCourse = ({ data }) => {
           {wholePrice}
         </h2>
       </div>
-      <button className="w-full py-4 mt-5 font-bold text-white border rounded shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three">
-        Course Details
-      </button>
+      <Link to="/courseDetails">
+        <button className="w-full py-4 mt-5 font-bold text-white border rounded shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three">
+          Course Details
+        </button>
+      </Link>
     </div>
   );
 };

@@ -53,7 +53,7 @@ const CourseBody = () => {
               </>
             ) : (
               <YouTube
-                videoId="VjvQ2xrgnec"
+                videoId="qta6D8SHhMI"
                 opts={opts}
                 onReady={onReady}
                 onError={(err) => console.log(err)}

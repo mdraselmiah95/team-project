@@ -24,6 +24,7 @@
     "react-scripts": "^5.0.1",
     "react-slick": "^0.28.1",
     "react-youtube": "^8.2.1",
+    "reactjs-popup": "^2.0.5",
     "slick-carousel": "^1.8.1",
     "sweetalert2": "^11.4.4",
     "sweetalert2-react-content": "^4.2.0",

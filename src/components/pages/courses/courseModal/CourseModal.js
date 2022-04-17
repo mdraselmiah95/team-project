@@ -1,6 +1,6 @@
 import React from "react";
 import Rating from "react-rating";
-import courseStore from "../../../../utils/courseStore";
+import courseStore from "../../../../utils/Store";
 import "./CourseModal.css";
 import { Link } from "react-router-dom";
 

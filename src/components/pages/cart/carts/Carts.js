@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import courseStore from "../../../../utils/courseStore";
+import courseStore from "../../../../utils/Store";
 
 const Carts = () => {
   const courses = courseStore((state) => state.courses);

@@ -2,17 +2,32 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import React from "react";
 import nhost from "../../../../../utils/Nhost";
+import { useNavigate } from "react-router-dom";
+import authStore from "../../../../../utils/Store";
 
 const Body = () => {
   const { register, handleSubmit, reset } = useForm();
+  const navigate = useNavigate();
+  const dispatch = authStore((state) => state.dispatch);
+  const getUser = authStore((state) => state.user);
+  console.log("getUser", getUser);
   const onSubmit = async (data) => {
     const { session, error } = await nhost.auth.signIn({
       email: data.email,
       password: data.password,
     });
 
-    console.log("session", session);
+    if (session) {
+      navigate("/profileSetting");
+    }
+
+    dispatch({
+      type: "add/user",
+      payload: session.user,
+    });
     localStorage.setItem("userInfo", JSON.stringify(session.user));
+    console.log("session", session);
+
     console.log("error", error);
     reset();
   };
@@ -54,7 +69,7 @@ const Body = () => {
               >
                 Password *
               </label>
-              {/* inputField Password */}
+
               <input
                 className="appearance-none block w-full text-color-one border rounded py-3 px-4 focus:outline placeholder:text-color-one"
                 type="password"

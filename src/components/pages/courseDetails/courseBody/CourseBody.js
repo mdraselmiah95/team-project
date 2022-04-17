@@ -32,8 +32,7 @@ const CourseBody = () => {
               </>
             ) : (
               <ReactPlayer
-                url="https://www.youtube.com/watch?v=CIgX8fRCKMM"
-                className="rounded-2xl"
+                url="https://www.youtube.com/watch?v=KkqS2bCbxZw"
                 onError={(err) => console.log(err)}
                 onEnded={() => setVideoBtn(false)}
                 controls

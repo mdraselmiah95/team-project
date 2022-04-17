@@ -9,27 +9,27 @@ export const Data = [
       {
         id: 1,
         title: "1. Welcome to the course 02:30 minutes",
-        url: "https://www.youtube.com/watch?v=HcOc7P5BMi4",
+        url: "https://www.youtube.com/watch?v=x9bTBcron78",
       },
       {
         id: 2,
         title: "2. How to set up your photoshop workspace 08:33 minutes",
-        url: "https://www.youtube.com/watch?v=oXum2jfm5Ec",
+        url: "https://www.youtube.com/watch?v=HcOc7P5BMi4&t=1s",
       },
       {
         id: 3,
         title: "3. Welcome to the course 02:30 minutes",
-        url: "https://www.youtube.com/watch?v=AeXEq0kQ8O0",
+        url: "https://www.youtube.com/watch?v=b4Rlq3KTSik",
       },
       {
         id: 4,
         title: "4. How to set up your photoshop workspace 08:33 minutes",
-        url: "https://www.youtube.com/watch?v=ffYdWJGtNYI",
+        url: "https://www.youtube.com/watch?v=qz0aGYrrlhU",
       },
       {
         id: 5,
         title: "5. Welcome to the course 02:30 minutes",
-        url: "https://www.youtube.com/watch?v=CQZxeoQeo5c",
+        url: "https://www.youtube.com/watch?v=VjvQ2xrgnec",
       },
     ],
   },

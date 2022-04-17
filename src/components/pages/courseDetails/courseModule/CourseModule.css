@@ -1,3 +1,11 @@
+.popup-content {
+  width: 60% !important;
+  border-radius: 16px !important;
+  padding: 0 !important;
+  background: none !important;
+  border: none !important;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;

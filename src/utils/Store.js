@@ -1,7 +1,11 @@
 import create from "zustand";
 import { redux } from "zustand/middleware";
 
-const initialState = { courses: [] };
+const userInfo = localStorage.getItem("userInfo")
+  ? JSON.parse(localStorage.getItem("userInfo"))
+  : [];
+
+const initialState = { courses: [], user: userInfo };
 
 function reducer(state, action) {
   if (action.type === "add/courses") {
@@ -11,6 +15,18 @@ function reducer(state, action) {
     return {
       ...state,
       courses: state.courses.filter((x) => x.id !== action.payload.id),
+    };
+  }
+  if (action.type === "add/user") {
+    return {
+      ...state,
+      user: action.payload,
+    };
+  }
+  if (action.type === "remove/user") {
+    return {
+      ...state,
+      user: action.payload,
     };
   }
 }

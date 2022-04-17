@@ -1,6 +1,7 @@
 import { NhostApolloProvider } from "@nhost/react-apollo";
 import { NhostAuthProvider } from "@nhost/react-auth";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "reactjs-popup/dist/index.css";
 import CoursesHome from "./components/pages/courses/coursesHome/CoursesHome";
 import Home from "./components/pages/Home/Home/Home";
 import Footer from "./components/Shared/footer/Footer";

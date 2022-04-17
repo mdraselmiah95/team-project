@@ -1,22 +1,21 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import nhost from "../../../utils/Nhost";
 import "./NavBar.css";
+import authStore from "../../../utils/Store";
 
 const NavBar = () => {
   const logo = "https://i.ibb.co/FYNmXRm/F.png";
   let [open, setOpen] = useState(false);
+  const logOut = authStore((state) => state.dispatch);
+  const user = authStore((state) => state?.user);
 
   const icon = "https://i.ibb.co/SB2YTTq/path2.png";
 
-  const user = localStorage.getItem("userInfo")
-    ? JSON.parse(localStorage.getItem("userInfo"))
-    : [];
-
   const handleSignOut = async () => {
-    await nhost.auth.singOut();
+    logOut({ type: "remove/user", payload: [] });
     localStorage.removeItem("userInfo");
   };
+
   return (
     <div className="fixed top-0 left-0 w-full z-30">
       <div className="items-center justify-between py-4 bg-white md:flex md:px-36 px-7">

@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import Popup from "reactjs-popup";
+import ReactPlayer from "react-player/youtube";
+
 import "./CourseModule.css";
 import { Data } from "./data";
 import { Quiz } from "./data";
@@ -41,26 +44,37 @@ const CourseModule = () => {
             </div>
             {clicked === index ? (
               <>
-                <div className="flex justify-between pl-5 cursor-pointer py-7 pr-7">
-                  <p>{item.classes?.one}</p>
-                  <img src={icon} alt="play-icon" className="w-4 h-4" />
-                </div>
-                <div className="flex justify-between pl-5 cursor-pointer py-7 pr-7 bg-color-four">
-                  <p>{item.classes?.two}</p>
-                  <img src={icon} alt="play-icon" className="w-4 h-4" />
-                </div>
-                <div className="flex justify-between pl-5 cursor-pointer py-7 pr-7">
-                  <p>{item.classes?.three}</p>
-                  <img src={icon} alt="play-icon" className="w-4 h-4" />
-                </div>
-                <div className="flex justify-between pl-5 cursor-pointer py-7 pr-7 bg-color-four">
-                  <p>{item.classes.four}</p>
-                  <img src={icon} alt="play-icon" className="w-4 h-4" />
-                </div>
-                <div className="flex justify-between pl-5 cursor-pointer py-7 pr-7">
-                  <p>{item.classes?.five}</p>
-                  <img src={icon} alt="play-icon" className="w-4 h-4" />
-                </div>
+                {item.classes.map((item) => (
+                  <Popup
+                    trigger={
+                      <div
+                        className={`flex justify-between pl-5 cursor-pointer py-7 pr-7 ${
+                          item.id % 2 === 0 && "bg-color-four"
+                        }`}
+                      >
+                        <p>{item.title}</p>
+                        <img src={icon} alt="play-icon" className="w-4 h-4" />
+                      </div>
+                    }
+                    modal
+                    nested
+                  >
+                    {(close) => (
+                      <div className="modal">
+                        <button className="close" onClick={close}>
+                          &times;
+                        </button>
+                        <ReactPlayer
+                          url={item.url}
+                          onEnded={close}
+                          controls
+                          playing
+                          height="416px"
+                        />
+                      </div>
+                    )}
+                  </Popup>
+                ))}
               </>
             ) : null}
           </div>

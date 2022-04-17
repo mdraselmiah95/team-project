@@ -8,9 +8,8 @@ import authStore from "../../../../../utils/Store";
 const Body = () => {
   const { register, handleSubmit, reset } = useForm();
   const navigate = useNavigate();
+
   const dispatch = authStore((state) => state.dispatch);
-  const getUser = authStore((state) => state.user);
-  console.log("getUser", getUser);
   const onSubmit = async (data) => {
     const { session, error } = await nhost.auth.signIn({
       email: data.email,
@@ -26,7 +25,6 @@ const Body = () => {
       payload: session.user,
     });
     localStorage.setItem("userInfo", JSON.stringify(session.user));
-    console.log("session", session);
 
     console.log("error", error);
     reset();
@@ -61,7 +59,6 @@ const Body = () => {
                 {...register("email", { required: true })}
               ></input>
             </div>
-
             <div className="w-full pr-0 mb-3 md:w-9/12">
               <label
                 className="block text-base text-color-one font-medium mb-3"

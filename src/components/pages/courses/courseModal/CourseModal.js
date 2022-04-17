@@ -115,7 +115,8 @@ const CourseModal = ({ data, setShowModal }) => {
                   Enroll Now
                 </button>
               </Link>
-              <Link to="/courseDetails">
+              {/* Changes required  */}
+              <Link to="/courseDetails/overView">
                 <button
                   onClick={() => {
                     setShowModal(false);

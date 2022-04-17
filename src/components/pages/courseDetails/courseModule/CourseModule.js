@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Popup from "reactjs-popup";
 import ReactPlayer from "react-player/youtube";
-
 import "./CourseModule.css";
 import { Data } from "./data";
 import { Quiz } from "./data";
@@ -30,7 +29,8 @@ const CourseModule = () => {
 
   const icon =
     "https://res.cloudinary.com/mdraselmia/image/upload/v1649250262/Project-images/circle_btawqa.png";
-
+  const button =
+    "https://res.cloudinary.com/mdraselmia/image/upload/v1650232375/Project-images/button_ugh2zy.png";
   return (
     <div className="px-3 pt-10 pb-8 shadow-md md:px-8">
       {Data.map((item, index) => {
@@ -45,35 +45,40 @@ const CourseModule = () => {
             {clicked === index ? (
               <>
                 {item.classes.map((item) => (
-                  <Popup
-                    trigger={
-                      <div
-                        className={`flex justify-between pl-5 cursor-pointer py-7 pr-7 ${
-                          item.id % 2 === 0 && "bg-color-four"
-                        }`}
-                      >
-                        <p>{item.title}</p>
-                        <img src={icon} alt="play-icon" className="w-4 h-4" />
-                      </div>
-                    }
-                    modal
-                    nested
+                  <div
+                    key={item.id}
+                    className={`flex justify-between pl-5 cursor-pointer py-7 pr-7 ${
+                      item.id % 2 === 0 && "bg-color-four"
+                    }`}
                   >
-                    {(close) => (
-                      <div className="modal">
-                        <button className="close" onClick={close}>
-                          &times;
-                        </button>
-                        <ReactPlayer
-                          url={item.url}
-                          onEnded={close}
-                          controls
-                          playing
-                          height="416px"
-                        />
-                      </div>
-                    )}
-                  </Popup>
+                    <p>{item.title}</p>
+                    <Popup
+                      trigger={
+                        <img src={icon} alt="play-icon" className="w-5 h-5" />
+                      }
+                      modal
+                      nested
+                    >
+                      {(close) => (
+                        <div>
+                          <button
+                            className="close absolute top-6 right-6"
+                            onClick={close}
+                          >
+                            <img src={button} alt="button" />
+                          </button>
+                          <ReactPlayer
+                            url={item.url}
+                            onEnded={close}
+                            controls
+                            playing
+                            width="100%"
+                            height="458px"
+                          />
+                        </div>
+                      )}
+                    </Popup>
+                  </div>
                 ))}
               </>
             ) : null}

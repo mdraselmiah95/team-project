@@ -18,7 +18,7 @@ const CourseBody = () => {
             {!video ? (
               <>
                 <img
-                  className="rounded-2xl object-fill w-full h-full opacity-60"
+                  className="object-fill w-full h-full rounded-2xl opacity-60"
                   src={img1}
                   alt="html and css"
                   style={{
@@ -32,7 +32,7 @@ const CourseBody = () => {
               </>
             ) : (
               <ReactPlayer
-                url="https://www.youtube.com/watch?v=KkqS2bCbxZw"
+                url="https://www.youtube.com/watch?v=HcOc7P5BMi4"
                 onError={(err) => console.log(err)}
                 onEnded={() => setVideoBtn(false)}
                 controls
@@ -47,34 +47,34 @@ const CourseBody = () => {
           </div>
         </div>
         <div className="md:w-96">
-          <div className="md:absolute  md:-mt-80">
-            <div className=" py-12 shadow-md rounded-xl bg-color-four mb-9">
+          <div className="md:absolute md:-mt-80">
+            <div className="py-12 shadow-md rounded-xl bg-color-four mb-9">
               <div className="flex items-center pl-7">
-                <img src={mentor} alt="mentor" className=" mr-2" />
+                <img src={mentor} alt="mentor" className="mr-2 " />
                 <div>
-                  <h2 className="text-color-one font-medium text-xl mb-1">
+                  <h2 className="mb-1 text-xl font-medium text-color-one">
                     Syeda Rabaya
                   </h2>
                   <h5 className="text-color-two">Frontend Web Developer</h5>
                 </div>
               </div>
-              <div className=" bg-color-twelve py-5 pl-7 pr-14 mt-3">
+              <div className="py-5 mt-3 bg-color-twelve pl-7 pr-14">
                 <img src={star} alt="star" />
               </div>
-              <div className=" px-7 pt-3 pb-12">
-                <h2 className=" text-xl font-medium mb-5 text-color-one">
+              <div className="pt-3 pb-12 px-7">
+                <h2 className="mb-5 text-xl font-medium text-color-one">
                   Course features:
                 </h2>
-                <h5 className="text-color-two mb-3">
+                <h5 className="mb-3 text-color-two">
                   1. Welcome to the course{" "}
                 </h5>
-                <h5 className="text-color-two mb-3">
+                <h5 className="mb-3 text-color-two">
                   2. How to set up your photoshop workspace{" "}
                 </h5>
-                <h5 className="text-color-two mb-3">
+                <h5 className="mb-3 text-color-two">
                   3. How to set up your photoshop workspace{" "}
                 </h5>
-                <h5 className="text-color-two mb-3">
+                <h5 className="mb-3 text-color-two">
                   4. How to set up your photoshop workspace{" "}
                 </h5>
                 <h5 className="text-color-two">
@@ -82,26 +82,26 @@ const CourseBody = () => {
                 </h5>
               </div>
               <div className="flex justify-center">
-                <button className="bg-color-three md:py-5 py-4 md:px-20 px-10 font-bold text-2xl rounded-xl text-white hover:text-color-three hover:bg-white hover:border-color-three hover:border border">
+                <button className="px-10 py-4 text-2xl font-bold text-white border bg-color-three md:py-5 md:px-20 rounded-xl hover:text-color-three hover:bg-white hover:border-color-three hover:border">
                   Enroll Now
                 </button>
               </div>
             </div>
             <div className="shadow-md rounded-xl bg-color-four md:w-96">
               <div className="flex items-center pl-7 mb-7 pt-7">
-                <img src={mentor} alt="mentor" className=" mr-2" />
+                <img src={mentor} alt="mentor" className="mr-2 " />
                 <div>
-                  <h2 className="text-color-one font-medium text-xl mb-1">
+                  <h2 className="mb-1 text-xl font-medium text-color-one">
                     Syeda Rabaya
                   </h2>
                   <h5 className="text-color-two">Web developer at fiverr</h5>
                 </div>
               </div>
-              <div className="bg-color-twelve rounded-xl px-7 pt-7  pb-12">
-                <h2 className="text-color-one text-xl font-medium mb-5">
+              <div className="pb-12 bg-color-twelve rounded-xl px-7 pt-7">
+                <h2 className="mb-5 text-xl font-medium text-color-one">
                   Mentor Details
                 </h2>
-                <p className="text-color-two mb-12">
+                <p className="mb-12 text-color-two">
                   Amet minim mollit non deserunt ullamco est sit aliqua dolor do
                   amet sint. Velit officia consequat duis enim velit mollit.{" "}
                   <br />
@@ -109,7 +109,7 @@ const CourseBody = () => {
                   Exercitation veniam consequat sunt nostrud amet.
                 </p>
                 <div className="flex justify-center">
-                  <button className="bg-color-three py-5 px-6 font-bold text-2xl rounded-xl text-white hover:text-color-three border hover:bg-white hover:border-color-three hover:border">
+                  <button className="px-6 py-5 text-2xl font-bold text-white border bg-color-three rounded-xl hover:text-color-three hover:bg-white hover:border-color-three hover:border">
                     Schedule A Meeting
                   </button>
                 </div>

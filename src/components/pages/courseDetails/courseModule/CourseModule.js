@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import Popup from "reactjs-popup";
+import ReactPlayer from "react-player/youtube";
+
 import "./CourseModule.css";
 import { Data } from "./data";
 import { Quiz } from "./data";
@@ -41,10 +44,32 @@ const CourseModule = () => {
             </div>
             {clicked === index ? (
               <>
-                <div className="flex justify-between pl-5 cursor-pointer py-7 pr-7">
-                  <p>{item.classes?.one}</p>
-                  <img src={icon} alt="play-icon" className="w-4 h-4" />
-                </div>
+                <Popup
+                  trigger={
+                    <div className="flex justify-between pl-5 cursor-pointer py-7 pr-7">
+                      <p>{item.classes?.one}</p>
+                      <img src={icon} alt="play-icon" className="w-4 h-4" />
+                    </div>
+                  }
+                  modal
+                  nested
+                >
+                  {(close) => (
+                    <div className="modal">
+                      <button className="close" onClick={close}>
+                        &times;
+                      </button>
+                      <ReactPlayer
+                        url="https://www.youtube.com/watch?v=HcOc7P5BMi4"
+                        onError={(err) => console.log(err)}
+                        // onEnded={() => setVideoBtn(false)}
+                        controls
+                        playing
+                        height="416px"
+                      />
+                    </div>
+                  )}
+                </Popup>
                 <div className="flex justify-between pl-5 cursor-pointer py-7 pr-7 bg-color-four">
                   <p>{item.classes?.two}</p>
                   <img src={icon} alt="play-icon" className="w-4 h-4" />

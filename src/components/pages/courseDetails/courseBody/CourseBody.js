@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CourseInformation from "../courseInformation/CourseInformation";
 import "./CourseBody.css";
-import YouTube from "react-youtube";
+import ReactPlayer from "react-player/youtube";
 
 const CourseBody = () => {
   const img1 = "https://i.ibb.co/0MyZxqL/img1.png";
@@ -9,17 +9,6 @@ const CourseBody = () => {
   const star = "https://i.ibb.co/x5dcfBW/Frame-152.png";
   const playButton = "https://i.ibb.co/Qvv15bs/play.png";
   const [video, setVideoBtn] = useState(false);
-
-  const opts = {
-    height: "416",
-    width: "629",
-    playerVars: {
-      autoplay: 1,
-    },
-  };
-  const onReady = (e) => {
-    e.target.pauseVideo();
-  };
 
   return (
     <div className="px-5 py-6 md:pt-16 md:pb-32 md:pl-36 md:pr-56">
@@ -37,28 +26,20 @@ const CourseBody = () => {
                     height: "416px",
                   }}
                 />
-                <button
-                  className="btn"
-                  onClick={() => {
-                    setVideoBtn(true);
-                    onReady();
-                  }}
-                >
-                  <img
-                    src={playButton}
-                    alt="play icon"
-                    // style={{ height: "75px" }}
-                  />
+                <button className="btn" onClick={() => setVideoBtn(true)}>
+                  <img src={playButton} alt="play icon" />
                 </button>
               </>
             ) : (
-              <YouTube
-                videoId="qta6D8SHhMI"
-                opts={opts}
-                onReady={onReady}
-                onError={(err) => console.log(err)}
-                onEnd={() => setVideoBtn(false)}
+              <ReactPlayer
+                url="https://www.youtube.com/watch?v=CIgX8fRCKMM"
                 className="rounded-2xl"
+                onError={(err) => console.log(err)}
+                onEnded={() => setVideoBtn(false)}
+                controls
+                playing
+                width="629px"
+                height="416px"
               />
             )}
           </div>

@@ -209,7 +209,12 @@ const NavBar = () => {
             </Link>
           </div>
         )}
-        <div>
+        {/* mentor Nav part */}
+        <div
+          className={`md:flex mt-56 md:mt-0 md:items-center md:pb-0 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-5 transition-all duration-500 ease-in ${
+            open ? "top-20 " : "top-[-490px]"
+          }`}
+        >
           <div className="flex items-center">
             <img src={cart} alt="shopping-cart" className=" mr-8" />
             <img src={mentor} alt="mentor" className=" mr-3 w-9 h-9" />

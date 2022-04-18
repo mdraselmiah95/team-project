@@ -5,6 +5,9 @@ import authStore from "../../../utils/Store";
 
 const NavBar = () => {
   const logo = "https://i.ibb.co/FYNmXRm/F.png";
+  const downArrow = "https://i.ibb.co/rfh773h/Arrow-Down.png";
+  const mentor = "https://i.ibb.co/9vGxYbf/mentor.png";
+  const cart = "https://i.ibb.co/5cZPtf6/shopping-car.png";
   let [open, setOpen] = useState(false);
   const logOut = authStore((state) => state.dispatch);
   const user = authStore((state) => state?.user);
@@ -199,37 +202,6 @@ const NavBar = () => {
                 Login
               </button>
             </Link>
-
-            {/* dropdown user  */}
-            {/* <div className="absolute flex flex-col  items-center justify-center bg-white rounded-md shadow-md profile-dropdown ">
-              <div className="p-6 ">
-                <NavLink
-                  to="/appDevelopment"
-                  style={({ isActive }) => {
-                    return {
-                      color: isActive ? "#FFB201" : "",
-                    };
-                  }}
-                >
-                  <a href="link" className="duration-500 hover:text-blue-400">
-                    Rabaya’s Profile
-                  </a>
-                </NavLink>
-                <NavLink
-                  to="/appDevelopment"
-                  style={({ isActive }) => {
-                    return {
-                      color: isActive ? "#FFB201" : "",
-                    };
-                  }}
-                >
-                  <a href="link" className="duration-500 hover:text-blue-400">
-                    Setting
-                  </a>
-                </NavLink>
-              </div>
-            </div> */}
-
             <Link to="/register">
               <button className="px-4 py-3 font-bold text-white border rounded-md cursor-pointer hover:text-color-three hover:bg-white hover:border-color-three hover:border md:px-8 md:py-4 bg-color-three">
                 Sign Up
@@ -237,6 +209,44 @@ const NavBar = () => {
             </Link>
           </div>
         )}
+        <div>
+          <div className="flex items-center">
+            <img src={cart} alt="shopping-cart" className=" mr-8" />
+            <img src={mentor} alt="mentor" className=" mr-3 w-9 h-9" />
+            <h2 className="text-color-one font-semibold mr-1">Rabaya</h2>
+            <img src={downArrow} alt="arrow" />
+          </div>
+
+          {/* dropdown user  */}
+          <div className="absolute flex flex-col  items-center justify-center bg-white rounded-md shadow-md profile-dropdown ">
+            <div className="p-6 ">
+              <NavLink
+                to="/appDevelopment"
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? "#FFB201" : "",
+                  };
+                }}
+              >
+                <a href="link" className="duration-500 hover:text-blue-400">
+                  Rabaya’s Profile
+                </a>
+              </NavLink>
+              <NavLink
+                to="/appDevelopment"
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? "#FFB201" : "",
+                  };
+                }}
+              >
+                <a href="link" className="duration-500 hover:text-blue-400">
+                  Setting
+                </a>
+              </NavLink>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

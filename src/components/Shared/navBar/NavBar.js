@@ -209,13 +209,14 @@ const NavBar = () => {
             </Link>
           </div>
         )}
+
         {/* mentor Nav part */}
         <div
           className={`md:flex mt-56 md:mt-0 md:items-center md:pb-0 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-5 transition-all duration-500 ease-in ${
             open ? "top-20 " : "top-[-490px]"
           }`}
         >
-          <div className="flex items-center cursor-pointer">
+          <div className="flex items-center cursor-pointer  userDropdown">
             <img
               src={cart}
               alt="shopping-cart"
@@ -232,7 +233,7 @@ const NavBar = () => {
             />
             {/* dropdown user  */}
             <div className="absolute  bg-white  profile-dropdown ">
-              <div className="p-6 flex flex-col  items-center justify-center">
+              <div className="py-6 pl-6 pr-11 flex flex-col  items-center justify-center">
                 <NavLink
                   to="/profile"
                   className="mb-5 pt-6"
@@ -242,7 +243,10 @@ const NavBar = () => {
                     };
                   }}
                 >
-                  <a href="link" className="duration-500 hover:text-blue-400">
+                  <a
+                    href="link"
+                    className="duration-500 hover:text-blue-400 font-medium"
+                  >
                     Rabaya’s Profile
                   </a>
                 </NavLink>
@@ -254,7 +258,10 @@ const NavBar = () => {
                     };
                   }}
                 >
-                  <a href="link" className="duration-500 hover:text-blue-400">
+                  <a
+                    href="link"
+                    className="duration-500 hover:text-blue-400 font-medium"
+                  >
                     Setting
                   </a>
                 </NavLink>

@@ -199,6 +199,37 @@ const NavBar = () => {
                 Login
               </button>
             </Link>
+
+            {/* dropdown user  */}
+            {/* <div className="absolute flex flex-col  items-center justify-center bg-white rounded-md shadow-md profile-dropdown ">
+              <div className="p-6 ">
+                <NavLink
+                  to="/appDevelopment"
+                  style={({ isActive }) => {
+                    return {
+                      color: isActive ? "#FFB201" : "",
+                    };
+                  }}
+                >
+                  <a href="link" className="duration-500 hover:text-blue-400">
+                    Rabaya’s Profile
+                  </a>
+                </NavLink>
+                <NavLink
+                  to="/appDevelopment"
+                  style={({ isActive }) => {
+                    return {
+                      color: isActive ? "#FFB201" : "",
+                    };
+                  }}
+                >
+                  <a href="link" className="duration-500 hover:text-blue-400">
+                    Setting
+                  </a>
+                </NavLink>
+              </div>
+            </div> */}
+
             <Link to="/register">
               <button className="px-4 py-3 font-bold text-white border rounded-md cursor-pointer hover:text-color-three hover:bg-white hover:border-color-three hover:border md:px-8 md:py-4 bg-color-three">
                 Sign Up

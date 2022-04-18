@@ -5,3 +5,13 @@
 .dropdown:hover .dropdown-content {
   display: flex;
 }
+
+/* .profile-dropdown {
+  right: 300px;
+  top: 72px;
+  display: none;
+}
+.userDropdown:hover.profile-dropdown {
+  display: block;
+  background-color: aquamarine;
+} */

@@ -215,40 +215,39 @@ const NavBar = () => {
             open ? "top-20 " : "top-[-490px]"
           }`}
         >
-          <div className="flex items-center">
+          <div className="flex items-center cursor-pointer">
             <img src={cart} alt="shopping-cart" className=" mr-8" />
             <img src={mentor} alt="mentor" className=" mr-3 w-9 h-9" />
             <h2 className="text-color-one font-semibold mr-1">Rabaya</h2>
             <img src={downArrow} alt="arrow" />
-          </div>
-
-          {/* dropdown user  */}
-          <div className="absolute flex flex-col  items-center justify-center bg-white rounded-md shadow-md profile-dropdown ">
-            <div className="p-6 ">
-              <NavLink
-                to="/appDevelopment"
-                style={({ isActive }) => {
-                  return {
-                    color: isActive ? "#FFB201" : "",
-                  };
-                }}
-              >
-                <a href="link" className="duration-500 hover:text-blue-400">
-                  Rabaya’s Profile
-                </a>
-              </NavLink>
-              <NavLink
-                to="/appDevelopment"
-                style={({ isActive }) => {
-                  return {
-                    color: isActive ? "#FFB201" : "",
-                  };
-                }}
-              >
-                <a href="link" className="duration-500 hover:text-blue-400">
-                  Setting
-                </a>
-              </NavLink>
+            {/* dropdown user  */}
+            <div className="absolute flex flex-col  items-center justify-center bg-white rounded-md shadow-md profile-dropdown ">
+              <div className="p-6 ">
+                <NavLink
+                  to="/appDevelopment"
+                  style={({ isActive }) => {
+                    return {
+                      color: isActive ? "#FFB201" : "",
+                    };
+                  }}
+                >
+                  <a href="link" className="duration-500 hover:text-blue-400">
+                    Rabaya’s Profile
+                  </a>
+                </NavLink>
+                <NavLink
+                  to="/appDevelopment"
+                  style={({ isActive }) => {
+                    return {
+                      color: isActive ? "#FFB201" : "",
+                    };
+                  }}
+                >
+                  <a href="link" className="duration-500 hover:text-blue-400">
+                    Setting
+                  </a>
+                </NavLink>
+              </div>
             </div>
           </div>
         </div>

@@ -2,18 +2,21 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./NavBar.css";
 import authStore from "../../../utils/Store";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const logo = "https://i.ibb.co/FYNmXRm/F.png";
   let [open, setOpen] = useState(false);
   const logOut = authStore((state) => state.dispatch);
   const user = authStore((state) => state?.user);
+  const navigate = useNavigate();
 
   const icon = "https://i.ibb.co/SB2YTTq/path2.png";
 
   const handleSignOut = async () => {
     logOut({ type: "remove/user", payload: [] });
     localStorage.removeItem("userInfo");
+    navigate("/");
   };
 
   return (

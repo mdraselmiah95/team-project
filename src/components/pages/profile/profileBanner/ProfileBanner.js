@@ -2,6 +2,7 @@ import React from "react";
 
 const ProfileBanner = () => {
   const mentor = "https://i.ibb.co/y6gKcFy/Ellipse-1841.png";
+
   return (
     <div className="mt-20 bg-color-three md:pt-28 md:pb-24 md:pl-36 py-12 px-9">
       <div className="flex items-center">

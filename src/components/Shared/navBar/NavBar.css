@@ -14,6 +14,7 @@
 .userDropdown:hover .profile-dropdown {
   display: flex;
 }
+/* useDropDown remove none and show the dropdown */
 .userDropdown {
   display: none;
 }

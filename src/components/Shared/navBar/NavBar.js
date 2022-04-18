@@ -216,15 +216,26 @@ const NavBar = () => {
           }`}
         >
           <div className="flex items-center cursor-pointer">
-            <img src={cart} alt="shopping-cart" className=" mr-8" />
+            <img
+              src={cart}
+              alt="shopping-cart"
+              className=" mr-8 duration-500 hover:text-blue-400"
+            />
             <img src={mentor} alt="mentor" className=" mr-3 w-9 h-9" />
-            <h2 className="text-color-one font-semibold mr-1">Rabaya</h2>
-            <img src={downArrow} alt="arrow" />
+            <h2 className="text-color-one font-semibold mr-1 duration-500 hover:text-blue-400">
+              Rabaya
+            </h2>
+            <img
+              src={downArrow}
+              alt="arrow"
+              className="duration-500 hover:text-blue-400"
+            />
             {/* dropdown user  */}
-            <div className="absolute flex flex-col  items-center justify-center bg-white rounded-md shadow-md profile-dropdown ">
-              <div className="p-6 ">
+            <div className="absolute  bg-white  profile-dropdown ">
+              <div className="p-6 flex flex-col  items-center justify-center">
                 <NavLink
-                  to="/appDevelopment"
+                  to="/profile"
+                  className="mb-5 pt-6"
                   style={({ isActive }) => {
                     return {
                       color: isActive ? "#FFB201" : "",
@@ -236,7 +247,7 @@ const NavBar = () => {
                   </a>
                 </NavLink>
                 <NavLink
-                  to="/appDevelopment"
+                  to="/profileSetting"
                   style={({ isActive }) => {
                     return {
                       color: isActive ? "#FFB201" : "",

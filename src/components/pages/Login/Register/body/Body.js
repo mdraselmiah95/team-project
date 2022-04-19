@@ -1,9 +1,13 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import React from "react";
 import nhost from "../../../../../utils/Nhost";
+import authStore from "../../../../../utils/Store";
+
 const Body = () => {
   const { register, handleSubmit, reset } = useForm();
+  const navigate = useNavigate();
+  const dispatch = authStore((state) => state.dispatch);
   const onSubmit = async (data) => {
     const { session, error } = await nhost.auth.signUp({
       email: data.email,
@@ -12,7 +16,15 @@ const Body = () => {
         displayName: `${data.name} ${data.lastName}`,
       },
     });
+    if (session) {
+      navigate("/profileSetting");
+    }
 
+    dispatch({
+      type: "add/user",
+      payload: session.user,
+    });
+    localStorage.setItem("userInfo", JSON.stringify(session.user));
     console.log("session", session);
     console.log("error", error);
     reset();

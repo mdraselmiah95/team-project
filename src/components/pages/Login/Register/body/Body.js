@@ -2,6 +2,8 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import React from "react";
 import nhost from "../../../../../utils/Nhost";
+import { ToastContainer, toast } from "react-toastify";
+
 const Body = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = async (data) => {
@@ -13,12 +15,15 @@ const Body = () => {
       },
     });
 
+    toast.success("Please, check your email");
+
     console.log("session", session);
     console.log("error", error);
     reset();
   };
   return (
     <div className="px-6 py-10 lg:pl-56 lg:pr-48 md:pt-32">
+      <ToastContainer />
       <div className="grid items-center grid-cols-1 md:grid-cols-2">
         <div className="">
           <img

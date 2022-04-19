@@ -27,6 +27,7 @@ import ProfileHome from "./components/pages/profile/profileHome/ProfileHome";
 import SettingHome from "./components/pages/profileSetting/settingHome/SettingHome";
 import StudentsHome from "./components/pages/students/studentsHome/StudentsHome";
 import InstructorsHome from "./components/pages/instructors/instructorsHome/InstructorsHome";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (

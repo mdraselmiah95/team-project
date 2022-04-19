@@ -1,13 +1,11 @@
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import React from "react";
 import nhost from "../../../../../utils/Nhost";
-import authStore from "../../../../../utils/Store";
+import { ToastContainer, toast } from "react-toastify";
 
 const Body = () => {
   const { register, handleSubmit, reset } = useForm();
-  const navigate = useNavigate();
-  const dispatch = authStore((state) => state.dispatch);
   const onSubmit = async (data) => {
     const { session, error } = await nhost.auth.signUp({
       email: data.email,
@@ -16,21 +14,16 @@ const Body = () => {
         displayName: `${data.name} ${data.lastName}`,
       },
     });
-    if (session) {
-      navigate("/profileSetting");
-    }
 
-    dispatch({
-      type: "add/user",
-      payload: session.user,
-    });
-    localStorage.setItem("userInfo", JSON.stringify(session.user));
+    toast.success("Please, check your email");
+
     console.log("session", session);
     console.log("error", error);
     reset();
   };
   return (
     <div className="px-6 py-10 lg:pl-56 lg:pr-48 md:pt-32">
+      <ToastContainer />
       <div className="grid items-center grid-cols-1 md:grid-cols-2">
         <div className="">
           <img

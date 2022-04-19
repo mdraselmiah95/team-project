@@ -6,12 +6,15 @@
   display: flex;
 }
 
-/* .profile-dropdown {
-  right: 300px;
-  top: 72px;
+.profile-dropdown {
+  right: 144px;
+  top: 64px;
   display: none;
 }
-.userDropdown:hover.profile-dropdown {
-  display: block;
-  background-color: aquamarine;
-} */
+.userDropdown:hover .profile-dropdown {
+  display: flex;
+}
+/* useDropDown remove none and show the dropdown */
+.userDropdown {
+  display: none;
+}

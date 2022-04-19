@@ -5,6 +5,9 @@ import authStore from "../../../utils/Store";
 
 const NavBar = () => {
   const logo = "https://i.ibb.co/FYNmXRm/F.png";
+  const downArrow = "https://i.ibb.co/rfh773h/Arrow-Down.png";
+  const mentor = "https://i.ibb.co/9vGxYbf/mentor.png";
+  const cart = "https://i.ibb.co/5cZPtf6/shopping-car.png";
   let [open, setOpen] = useState(false);
   const logOut = authStore((state) => state.dispatch);
   const user = authStore((state) => state?.user);
@@ -199,37 +202,6 @@ const NavBar = () => {
                 Login
               </button>
             </Link>
-
-            {/* dropdown user  */}
-            {/* <div className="absolute flex flex-col  items-center justify-center bg-white rounded-md shadow-md profile-dropdown ">
-              <div className="p-6 ">
-                <NavLink
-                  to="/appDevelopment"
-                  style={({ isActive }) => {
-                    return {
-                      color: isActive ? "#FFB201" : "",
-                    };
-                  }}
-                >
-                  <a href="link" className="duration-500 hover:text-blue-400">
-                    Rabaya’s Profile
-                  </a>
-                </NavLink>
-                <NavLink
-                  to="/appDevelopment"
-                  style={({ isActive }) => {
-                    return {
-                      color: isActive ? "#FFB201" : "",
-                    };
-                  }}
-                >
-                  <a href="link" className="duration-500 hover:text-blue-400">
-                    Setting
-                  </a>
-                </NavLink>
-              </div>
-            </div> */}
-
             <Link to="/register">
               <button className="px-4 py-3 font-bold text-white border rounded-md cursor-pointer hover:text-color-three hover:bg-white hover:border-color-three hover:border md:px-8 md:py-4 bg-color-three">
                 Sign Up
@@ -237,6 +209,66 @@ const NavBar = () => {
             </Link>
           </div>
         )}
+
+        {/* mentor Nav part */}
+        <div
+          className={`md:flex mt-56 md:mt-0 md:items-center md:pb-0 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-5 transition-all duration-500 ease-in ${
+            open ? "top-20 " : "top-[-490px]"
+          }`}
+        >
+          <div className="flex items-center cursor-pointer  userDropdown">
+            <img
+              src={cart}
+              alt="shopping-cart"
+              className=" mr-8 duration-500 hover:text-blue-400"
+            />
+            <img src={mentor} alt="mentor" className=" mr-3 w-9 h-9" />
+            <h2 className="text-color-one font-semibold mr-1 duration-500 hover:text-blue-400">
+              Rabaya
+            </h2>
+            <img
+              src={downArrow}
+              alt="arrow"
+              className="duration-500 hover:text-blue-400"
+            />
+            {/* dropdown user  */}
+            <div className="absolute  bg-white  profile-dropdown ">
+              <div className="py-6 pl-6 pr-11 flex flex-col  items-center justify-center">
+                <NavLink
+                  to="/profile"
+                  className="mb-5 pt-6"
+                  style={({ isActive }) => {
+                    return {
+                      color: isActive ? "#FFB201" : "",
+                    };
+                  }}
+                >
+                  <a
+                    href="link"
+                    className="duration-500 hover:text-blue-400 font-medium"
+                  >
+                    Rabaya’s Profile
+                  </a>
+                </NavLink>
+                <NavLink
+                  to="/profileSetting"
+                  style={({ isActive }) => {
+                    return {
+                      color: isActive ? "#FFB201" : "",
+                    };
+                  }}
+                >
+                  <a
+                    href="link"
+                    className="duration-500 hover:text-blue-400 font-medium"
+                  >
+                    Setting
+                  </a>
+                </NavLink>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

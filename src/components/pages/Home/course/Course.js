@@ -2,7 +2,6 @@ import React from "react";
 
 const Course = ({ data }) => {
   const { title, icon, details } = data;
-  console.log(data);
   return (
     <>
       <div

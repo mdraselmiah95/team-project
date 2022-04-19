@@ -20,7 +20,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full z-30">
+    <div className="fixed top-0 left-0 z-30 w-full">
       <div className="items-center justify-between py-4 bg-white md:flex md:px-36 px-7">
         <div
           className="font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
@@ -216,14 +216,14 @@ const NavBar = () => {
             open ? "top-20 " : "top-[-490px]"
           }`}
         >
-          <div className="flex items-center cursor-pointer  userDropdown">
+          <div className="flex items-center cursor-pointer userDropdown">
             <img
               src={cart}
               alt="shopping-cart"
-              className=" mr-8 duration-500 hover:text-blue-400"
+              className="mr-8 duration-500 hover:text-blue-400"
             />
-            <img src={mentor} alt="mentor" className=" mr-3 w-9 h-9" />
-            <h2 className="text-color-one font-semibold mr-1 duration-500 hover:text-blue-400">
+            <img src={mentor} alt="mentor" className="mr-3 w-9 h-9" />
+            <h2 className="mr-1 font-semibold duration-500 text-color-one hover:text-blue-400">
               Rabaya
             </h2>
             <img
@@ -232,11 +232,11 @@ const NavBar = () => {
               className="duration-500 hover:text-blue-400"
             />
             {/* dropdown user  */}
-            <div className="absolute  bg-white  profile-dropdown ">
-              <div className="py-6 pl-6 pr-11 flex flex-col  items-center justify-center">
+            <div className="absolute bg-white profile-dropdown ">
+              <div className="flex flex-col items-center justify-center py-6 pl-6 pr-11">
                 <NavLink
                   to="/profile"
-                  className="mb-5 pt-6"
+                  className="pt-6 mb-5"
                   style={({ isActive }) => {
                     return {
                       color: isActive ? "#FFB201" : "",
@@ -245,13 +245,14 @@ const NavBar = () => {
                 >
                   <a
                     href="link"
-                    className="duration-500 hover:text-blue-400 font-medium"
+                    className="font-medium duration-500 hover:text-blue-400"
                   >
                     Rabaya’s Profile
                   </a>
                 </NavLink>
                 <NavLink
                   to="/profileSetting"
+                  className="mb-5 "
                   style={({ isActive }) => {
                     return {
                       color: isActive ? "#FFB201" : "",
@@ -260,11 +261,17 @@ const NavBar = () => {
                 >
                   <a
                     href="link"
-                    className="duration-500 hover:text-blue-400 font-medium"
+                    className="font-medium duration-500 hover:text-blue-400"
                   >
                     Setting
                   </a>
                 </NavLink>
+                <a
+                  href="link"
+                  className="font-semibold duration-500 hover:text-blue-400 logOut"
+                >
+                  LogOut
+                </a>
               </div>
             </div>
           </div>

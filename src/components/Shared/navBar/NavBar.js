@@ -219,7 +219,7 @@ const NavBar = () => {
             open ? "top-20 " : "top-[-490px]"
           }`}
         >
-          <div className="flex items-center cursor-pointer  userDropdown">
+          <div className="flex items-center cursor-pointer ">
             <img
               src={cart}
               alt="shopping-cart"
@@ -265,7 +265,7 @@ const NavBar = () => {
                     href="link"
                     className="duration-500 hover:text-blue-400 font-medium"
                   >
-                    Setting
+                  Profile Setting 
                   </a>
                 </NavLink>
               </div>

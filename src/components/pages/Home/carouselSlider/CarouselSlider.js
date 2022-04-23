@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
+import Rating from "react-rating";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -35,6 +36,14 @@ function SamplePrevArrow(props) {
 }
 
 const CarouselSlider = () => {
+  const [courses, setCourses] = useState([]);
+
+  useEffect(() => {
+    fetch("./coursesDetails.json")
+      .then((res) => res.json())
+      .then((data) => setCourses(data));
+  }, []);
+
   var settings = {
     dots: true,
     infinite: true,
@@ -72,11 +81,6 @@ const CarouselSlider = () => {
       },
     ],
   };
-  const img1 = "https://i.ibb.co/gzzGCkL/image1.png";
-  const img2 = "https://i.ibb.co/F7SXcnh/image2.png";
-  const img3 = "https://i.ibb.co/4WnWz71/image3.png";
-  const star = "https://i.ibb.co/Tr4MksG/Frame-65.png";
-
   return (
     <>
       <div className="px-6 py-8 md:py-32 md:px-24">
@@ -94,168 +98,45 @@ const CarouselSlider = () => {
           {...settings}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
         >
-          {/* 1 */}
-          <div className="mx-auto lg:px-0">
-            <img
-              src={img1}
-              alt="icon"
-              className="cursor-pointer"
-              type="button"
-            />
-            <h2 className="mt-4 font-medium text-color-one">
-              Start Learning HTML, The Easy Way
-            </h2>
-            <p className="my-1 text-color-two">Framework Tech Media</p>
-            <img src={star} alt="star" />
-            <div className="flex mt-1.5">
-              <h2 className="mr-2 text-2xl font-bold text-color-eight">৳29</h2>
+          {courses.map((course) => (
+            <div key={course.id} className="px-5 mx-auto">
+              <img
+                src={course.image}
+                alt="icon"
+                className="cursor-pointer"
+                type="button"
+              />
+              <h2 className="mt-4 font-medium text-color-one">
+                {course.title}
+              </h2>
+              <p className="my-1 text-color-two">{course.description}</p>
+              <div className="flex items-center">
+                <h3 className="font-bold text-star-color">{course.star}</h3>
+                <p className="font-bold text-star-color">
+                  .0
+                  <Rating
+                    className="mx-3 text-star-color"
+                    initialRating={course.star}
+                    readonly
+                    emptySymbol="far fa-star text-warning"
+                    fullSymbol="fas fa-star text-warning"
+                  />
+                </p>
+                <p className="text-color-two">({course.starCount})</p>
+              </div>
+              <div className="flex mt-1.5">
+                <h2 className="mr-2 text-2xl font-bold text-color-eight">
+                  <span className="text-2xl font-bold">&#2547;</span>
+                  {course.wholePrice}
+                </h2>
+              </div>
+              <Link to="/courseDetails/overView">
+                <button className="w-full py-4 mt-5 font-bold text-white border rounded shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three">
+                  Course Details
+                </button>
+              </Link>
             </div>
-            <button className="px-16 py-4 mt-4 font-bold text-white border rounded shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three">
-              Course Details
-            </button>
-          </div>
-          {/* 2 */}
-          <div className="mx-auto lg:px-0">
-            <img
-              src={img2}
-              alt="icon"
-              className="cursor-pointer"
-              type="button"
-            />
-            <h2 className="mt-4 font-medium text-color-one">
-              Wordpress Customization with 10
-            </h2>
-            <p className="my-1 text-color-two">Journey IT</p>
-            <img src={star} alt="star" />
-            <div className="flex mt-1.5">
-              <h2 className="mr-2 text-2xl font-bold text-color-eight">৳119</h2>
-            </div>
-            <button className="px-16 py-4 mt-4 font-bold text-white border rounded shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three">
-              Course Details
-            </button>
-          </div>
-          {/* 3 */}
-
-          <div className="mx-auto lg:px-0">
-            <img
-              src={img3}
-              alt="icon"
-              className="cursor-pointer"
-              type="button"
-            />
-            <h2 className="mt-4 font-medium text-color-one">
-              Learn Shopify & Dropshipping with
-            </h2>
-            <p className="my-1 text-color-two">Codeman BD</p>
-            <img src={star} alt="star" />
-            <div className="flex mt-1.5">
-              <h2 className="mr-2 text-2xl font-bold text-color-eight">৳144</h2>
-            </div>
-            <button className="px-16 py-4 mt-4 font-bold text-white border rounded shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three">
-              Course Details
-            </button>
-          </div>
-          {/* 4 */}
-
-          <div className="mx-auto lg:px-0">
-            <img
-              src={img1}
-              alt="icon"
-              className="cursor-pointer"
-              type="button"
-            />
-            <h2 className="mt-4 font-medium text-color-one">
-              Start Learning HTML, The Easy Way
-            </h2>
-            <p className="my-1 text-color-two">Framework Tech Media</p>
-            <img src={star} alt="star" />
-            <div className="flex mt-1.5">
-              <h2 className="mr-2 text-2xl font-bold text-color-eight">৳29</h2>
-            </div>
-            <button className="px-16 py-4 mt-4 font-bold text-white border rounded shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three">
-              Course Details
-            </button>
-          </div>
-          {/* 5 */}
-          <div className="mx-auto lg:px-0">
-            <img
-              src={img2}
-              alt="icon"
-              className="cursor-pointer"
-              type="button"
-            />
-            <h2 className="mt-4 font-medium text-color-one">
-              Wordpress Customization with 10
-            </h2>
-            <p className="my-1 text-color-two">Journey IT</p>
-            <img src={star} alt="star" />
-            <div className="flex mt-1.5">
-              <h2 className="mr-2 text-2xl font-bold text-color-eight">৳119</h2>
-            </div>
-            <button className="px-16 py-4 mt-4 font-bold text-white border rounded shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three">
-              Course Details
-            </button>
-          </div>
-          {/* 6 */}
-          <div className="mx-auto lg:px-0">
-            <img
-              src={img1}
-              alt="icon"
-              className="cursor-pointer"
-              type="button"
-            />
-            <h2 className="mt-4 font-medium text-color-one">
-              Start Learning HTML, The Easy Way
-            </h2>
-            <p className="my-1 text-color-two">Framework Tech Media</p>
-            <img src={star} alt="star" />
-            <div className="flex mt-1.5">
-              <h2 className="mr-2 text-2xl font-bold text-color-eight">৳29</h2>
-            </div>
-            <button className="px-16 py-4 mt-4 font-bold text-white border rounded shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three">
-              Course Details
-            </button>
-          </div>
-          {/* 7 */}
-          <div className="mx-auto lg:px-0">
-            <img
-              src={img3}
-              alt="icon"
-              className="cursor-pointer"
-              type="button"
-            />
-            <h2 className="mt-4 font-medium text-color-one">
-              Learn Shopify & Dropshipping with
-            </h2>
-            <p className="my-1 text-color-two">Codeman BD</p>
-            <img src={star} alt="star" />
-            <div className="flex mt-1.5">
-              <h2 className="mr-2 text-2xl font-bold text-color-eight">৳144</h2>
-            </div>
-            <button className="px-16 py-4 mt-4 font-bold text-white border rounded shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three">
-              Course Details
-            </button>
-          </div>
-          {/* 8 */}
-          <div className="mx-auto lg:px-0">
-            <img
-              src={img1}
-              alt="icon"
-              className="cursor-pointer"
-              type="button"
-            />
-            <h2 className="mt-4 font-medium text-color-one">
-              Start Learning HTML, The Easy Way
-            </h2>
-            <p className="my-1 text-color-two">Framework Tech Media</p>
-            <img src={star} alt="star" />
-            <div className="flex mt-1.5">
-              <h2 className="mr-2 text-2xl font-bold text-color-eight">৳29</h2>
-            </div>
-            <button className="px-16 py-4 mt-4 font-bold text-white border rounded shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three">
-              Course Details
-            </button>
-          </div>
+          ))}
         </Slider>
       </div>
     </>

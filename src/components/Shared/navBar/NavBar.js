@@ -11,7 +11,8 @@ const NavBar = () => {
   const cart = "https://i.ibb.co/5cZPtf6/shopping-car.png";
   let [open, setOpen] = useState(false);
   const logOut = authStore((state) => state.dispatch);
-  const user = authStore((state) => state?.user);
+  const user = authStore((state) => state.user);
+  console.log("user", user);
   const navigate = useNavigate();
 
   const icon = "https://i.ibb.co/SB2YTTq/path2.png";
@@ -23,7 +24,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full z-30">
+    <div className="fixed top-0 left-0 z-30 w-full">
       <div className="items-center justify-between py-4 bg-white md:flex md:px-36 px-7">
         <div
           className="font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
@@ -179,20 +180,48 @@ const NavBar = () => {
           </li>
         </ul>
         {user.length !== 0 ? (
-          <div
-            className={`md:flex md:items-center md:pb-0 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-5 transition-all duration-500 ease-in ${
-              open ? "top-20 " : "top-[-490px]"
-            }`}
-          >
-            <button className="px-4 py-3 font-bold rounded-md cursor-pointer md:px-6 md:py-4 text-color-three hover:text-white hover:bg-color-three">
-              {user.displayName}
-            </button>
-            <button
-              onClick={handleSignOut}
-              className="px-4 py-3 font-bold text-white border rounded-md cursor-pointer hover:text-color-three hover:bg-white hover:border-color-three hover:border md:px-8 md:py-4 bg-color-three"
-            >
-              Sign Out
-            </button>
+          <div className="absolute bg-white profile-dropdown hidden">
+            <div className="flex flex-col items-center justify-center py-6 pl-6 pr-11">
+              <NavLink
+                to="/profile"
+                className="pt-6 mb-5"
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? "#FFB201" : "",
+                  };
+                }}
+              >
+                <a
+                  href="link"
+                  className="font-medium duration-500 hover:text-blue-400"
+                >
+                  {user.displayName}
+                </a>
+              </NavLink>
+              <NavLink
+                to="/profileSetting"
+                className="mb-5 "
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? "#FFB201" : "",
+                  };
+                }}
+              >
+                <a
+                  href="link"
+                  className="font-medium duration-500 hover:text-blue-400"
+                >
+                  Profile Setting
+                </a>
+              </NavLink>
+              <a
+                href="link"
+                className="font-semibold duration-500 hover:text-blue-400 logOut"
+                onClick={handleSignOut}
+              >
+                LogOut
+              </a>
+            </div>
           </div>
         ) : (
           <div
@@ -223,10 +252,10 @@ const NavBar = () => {
             <img
               src={cart}
               alt="shopping-cart"
-              className=" mr-8 duration-500 hover:text-blue-400"
+              className="mr-8 duration-500 hover:text-blue-400"
             />
-            <img src={mentor} alt="mentor" className=" mr-3 w-9 h-9" />
-            <h2 className="text-color-one font-semibold mr-1 duration-500 hover:text-blue-400">
+            <img src={mentor} alt="mentor" className="mr-3 w-9 h-9" />
+            <h2 className="mr-1 font-semibold duration-500 text-color-one hover:text-blue-400">
               Rabaya
             </h2>
             <img
@@ -234,42 +263,6 @@ const NavBar = () => {
               alt="arrow"
               className="duration-500 hover:text-blue-400"
             />
-            {/* dropdown user  */}
-            <div className="absolute  bg-white  profile-dropdown ">
-              <div className="py-6 pl-6 pr-11 flex flex-col  items-center justify-center">
-                <NavLink
-                  to="/profile"
-                  className="mb-5 pt-6"
-                  style={({ isActive }) => {
-                    return {
-                      color: isActive ? "#FFB201" : "",
-                    };
-                  }}
-                >
-                  <a
-                    href="link"
-                    className="duration-500 hover:text-blue-400 font-medium"
-                  >
-                    Rabaya’s Profile
-                  </a>
-                </NavLink>
-                <NavLink
-                  to="/profileSetting"
-                  style={({ isActive }) => {
-                    return {
-                      color: isActive ? "#FFB201" : "",
-                    };
-                  }}
-                >
-                  <a
-                    href="link"
-                    className="duration-500 hover:text-blue-400 font-medium"
-                  >
-                  Profile Setting 
-                  </a>
-                </NavLink>
-              </div>
-            </div>
           </div>
         </div>
       </div>

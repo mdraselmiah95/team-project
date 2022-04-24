@@ -16,8 +16,8 @@
 }
 /* useDropDown remove none and show the dropdown */
 .userDropdown {
-  display: none;
-}
+  display: none !important;
+ }
 .logOut {
   border-top: 2px solid white;
   border-bottom: 2px solid white;

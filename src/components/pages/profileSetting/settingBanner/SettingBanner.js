@@ -1,5 +1,7 @@
 import React from "react";
 import authStore from "../../../../utils/Store";
+import { Link } from "react-router-dom";
+import TextTruncate from "react-text-truncate";
 
 const SettingBanner = () => {
   const mentor = "https://i.ibb.co/y6gKcFy/Ellipse-1841.png";
@@ -13,11 +15,18 @@ const SettingBanner = () => {
         <div className="text-white">
           <h2 className="mb-2 text-3xl font-bold ">{user.displayName}</h2>
           <h5 className="mb-8 text-xl ">
-            UI/UX Designer & Frontend Web Developer
+            <TextTruncate
+              line={2}
+              element="span"
+              truncateText="…"
+              text={user.userInfo?.description}
+            />
           </h5>
-          <button className="px-8 py-3 font-semibold border border-white rounded hover:focus:ring">
-            Preview Profile
-          </button>
+          <Link to="/profile">
+            <button className="px-8 py-3 font-semibold border border-white rounded hover:focus:ring">
+              Preview Profile
+            </button>
+          </Link>
         </div>
       </div>
     </div>

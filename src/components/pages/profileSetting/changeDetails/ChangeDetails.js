@@ -3,10 +3,47 @@ import authStore from "../../../../utils/Store";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
+import { ADD_USERINFO } from "../api";
 
 const ChangeDetails = () => {
   const url = "https://lxnpjwwijxqnrluhcfsr.nhost.run/v1/graphql";
   const user = authStore((state) => state.user);
+  const dispatch = authStore((state) => state.dispatch);
+  (async () => {
+    // const { data } = await axios({
+    //   url: url,
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     "x-hasura-admin-secret": "3a590f26c50099fdc779b212c090c1bf",
+    //   },
+    //   method: "POST",
+    //   data: {
+    //     query: `
+    //     {
+    //       userInfo {
+    //         id
+    //         linkedin
+    //         title
+    //         github
+    //         facebook
+    //         description
+    //         behance
+    //         user_id
+    //       }
+    //     }
+    //     `,
+    //   },
+    // });
+    // if (data) {
+    //   const filterUserDetails = data.data.userInfo.filter(
+    //     (item) => item.user_id === user.id
+    //   );
+    //   dispatch({
+    //     type: "add/user",
+    //     payload: { ...user, ...Object.assign({}, ...filterUserDetails) },
+    //   });
+    // }
+  })();
 
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = async (formData) => {
@@ -23,38 +60,7 @@ const ChangeDetails = () => {
             ...formData,
             user_id: user.id,
           },
-          query: `
-          mutation ADD_USER(
-            $behance: String
-            $description: String
-            $facebook: String
-            $github: String
-            $linkedin: String
-            $title: String
-            $user_id: uuid!
-          ) {
-            insert_userInfo_one(
-              object: {
-                behance: $behance
-                description: $description
-                facebook: $facebook
-                github: $github
-                linkedin: $linkedin
-                title: $title
-                user_id: $user_id
-              }
-            ) {
-              behance
-              description
-              facebook
-              github
-              id
-              linkedin
-              title
-              user_id
-            }
-          }
-          `,
+          query: ADD_USERINFO,
         },
       });
       if (data) {

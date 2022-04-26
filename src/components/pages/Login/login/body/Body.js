@@ -4,9 +4,13 @@ import React from "react";
 import nhost from "../../../../../utils/Nhost";
 import { useNavigate } from "react-router-dom";
 import authStore from "../../../../../utils/Store";
+import { toast, ToastContainer } from "react-toastify";
+import axios from "axios";
 
 const Body = () => {
   const { register, handleSubmit, reset } = useForm();
+  const url = "https://lxnpjwwijxqnrluhcfsr.nhost.run/v1/graphql";
+
   const navigate = useNavigate();
 
   const dispatch = authStore((state) => state.dispatch);
@@ -20,18 +24,50 @@ const Body = () => {
       navigate("/profileSetting");
     }
 
+    const { data: userData } = await axios({
+      url: url,
+      headers: {
+        "Content-Type": "application/json",
+        "x-hasura-admin-secret": "3a590f26c50099fdc779b212c090c1bf",
+      },
+      method: "POST",
+      data: {
+        query: `
+        query UserData {
+          user(id: "${session?.user?.id}") {
+            id
+            email
+            displayName
+            userInfo {
+              id
+              linkedin
+              title
+              github
+              facebook
+              description
+              behance
+            }
+          }
+        }
+        `,
+      },
+    });
+
     dispatch({
       type: "add/user",
-      payload: session.user,
+      payload: userData.data?.user,
     });
-    localStorage.setItem("userInfo", JSON.stringify(session.user));
+    localStorage.setItem("userInfo", JSON.stringify(userData.data?.user));
 
-    console.log("error", error);
+    if (error) {
+      toast.error("Invalid user email and password");
+    }
     reset();
   };
 
   return (
     <div className="px-6 py-10 mt-20">
+      <ToastContainer />
       <div className="grid items-center grid-cols-1 md:grid-cols-2">
         <div className="">
           <img

@@ -9,39 +9,39 @@ const ChangeDetails = () => {
   const user = authStore((state) => state.user);
   const dispatch = authStore((state) => state.dispatch);
   (async () => {
-    const { data } = await axios({
-      url: url,
-      headers: {
-        "Content-Type": "application/json",
-        "x-hasura-admin-secret": "3a590f26c50099fdc779b212c090c1bf",
-      },
-      method: "POST",
-      data: {
-        query: `
-        {
-          userInfo {
-            id
-            linkedin
-            title
-            github
-            facebook
-            description
-            behance
-            user_id
-          }
-        }
-        `,
-      },
-    });
-    if (data) {
-      const filterUserDetails = data.data.userInfo.filter(
-        (item) => item.user_id === user.id
-      );
-      dispatch({
-        type: "add/user",
-        payload: { ...user, ...Object.assign({}, ...filterUserDetails) },
-      });
-    }
+    // const { data } = await axios({
+    //   url: url,
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     "x-hasura-admin-secret": "3a590f26c50099fdc779b212c090c1bf",
+    //   },
+    //   method: "POST",
+    //   data: {
+    //     query: `
+    //     {
+    //       userInfo {
+    //         id
+    //         linkedin
+    //         title
+    //         github
+    //         facebook
+    //         description
+    //         behance
+    //         user_id
+    //       }
+    //     }
+    //     `,
+    //   },
+    // });
+    // if (data) {
+    //   const filterUserDetails = data.data.userInfo.filter(
+    //     (item) => item.user_id === user.id
+    //   );
+    //   dispatch({
+    //     type: "add/user",
+    //     payload: { ...user, ...Object.assign({}, ...filterUserDetails) },
+    //   });
+    // }
   })();
 
   const { register, handleSubmit, reset } = useForm();

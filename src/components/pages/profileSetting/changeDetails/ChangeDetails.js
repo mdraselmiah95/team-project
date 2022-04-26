@@ -3,6 +3,7 @@ import authStore from "../../../../utils/Store";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
+import { ADD_USERINFO } from "../api";
 
 const ChangeDetails = () => {
   const url = "https://lxnpjwwijxqnrluhcfsr.nhost.run/v1/graphql";
@@ -59,38 +60,7 @@ const ChangeDetails = () => {
             ...formData,
             user_id: user.id,
           },
-          query: `
-          mutation ADD_USER(
-            $behance: String
-            $description: String
-            $facebook: String
-            $github: String
-            $linkedin: String
-            $title: String
-            $user_id: uuid!
-          ) {
-            insert_userInfo_one(
-              object: {
-                behance: $behance
-                description: $description
-                facebook: $facebook
-                github: $github
-                linkedin: $linkedin
-                title: $title
-                user_id: $user_id
-              }
-            ) {
-              behance
-              description
-              facebook
-              github
-              id
-              linkedin
-              title
-              user_id
-            }
-          }
-          `,
+          query: ADD_USERINFO,
         },
       });
       if (data) {

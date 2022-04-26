@@ -12,7 +12,6 @@ const NavBar = () => {
   let [open, setOpen] = useState(false);
   const logOut = authStore((state) => state.dispatch);
   const user = authStore((state) => state.user);
-  console.log("user", user);
   const navigate = useNavigate();
 
   const icon = "https://i.ibb.co/SB2YTTq/path2.png";

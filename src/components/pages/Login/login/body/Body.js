@@ -4,9 +4,11 @@ import React from "react";
 import nhost from "../../../../../utils/Nhost";
 import { useNavigate } from "react-router-dom";
 import authStore from "../../../../../utils/Store";
+import { toast, ToastContainer } from "react-toastify";
 
 const Body = () => {
   const { register, handleSubmit, reset } = useForm();
+
   const navigate = useNavigate();
 
   const dispatch = authStore((state) => state.dispatch);
@@ -26,12 +28,15 @@ const Body = () => {
     });
     localStorage.setItem("userInfo", JSON.stringify(session.user));
 
-    console.log("error", error);
+    if (error) {
+      toast.error("Invalid user email and password");
+    }
     reset();
   };
 
   return (
     <div className="px-6 py-10 mt-20">
+      <ToastContainer />
       <div className="grid items-center grid-cols-1 md:grid-cols-2">
         <div className="">
           <img

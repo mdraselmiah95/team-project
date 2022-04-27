@@ -12,7 +12,6 @@ const CourseModule = () => {
 
   const onSubmit = (data) => {
     setAnswer(Object.values(data).filter((item) => item !== null));
-    console.log(data);
   };
   //For Videos
   const [clicked, setClicked] = useState(false);

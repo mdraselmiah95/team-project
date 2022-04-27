@@ -3,62 +3,124 @@ import authStore from "../../../../utils/Store";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
+import { ADD_USERINFO } from "../api";
+import { useQuery, useQueryClient } from "react-query";
 
 const ChangeDetails = () => {
   const url = "https://lxnpjwwijxqnrluhcfsr.nhost.run/v1/graphql";
   const user = authStore((state) => state.user);
+  const userDetails = authStore((state) => state.userDetails);
+  const dispatch = authStore((state) => state.dispatch);
+  const queryClient = useQueryClient();
+
+  const { data } = useQuery(["userDetails", user.userInfo?.id], async () => {
+    const { data } = await axios({
+      url: url,
+      headers: {
+        "Content-Type": "application/json",
+        "x-hasura-admin-secret": "3a590f26c50099fdc779b212c090c1bf",
+      },
+      method: "POST",
+      data: {
+        query: `
+        {
+          userInfo_by_pk(id :${user.userInfo?.id}) {
+            linkedin
+            title
+            github
+            facebook
+            description
+            behance
+          }
+        }`,
+      },
+    });
+    dispatch({
+      type: "add/userDetails",
+      payload: data?.data?.userInfo_by_pk,
+    });
+    return data?.data?.userInfo_by_pk;
+  });
 
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = async (formData) => {
     try {
-      const { data } = await axios({
-        url: url,
-        headers: {
-          "Content-Type": "application/json",
-          "x-hasura-admin-secret": "3a590f26c50099fdc779b212c090c1bf",
-        },
-        method: "POST",
-        data: {
-          variables: {
-            ...formData,
-            user_id: user.id,
+      if (user.userInfo === null) {
+        const { data } = await axios({
+          url: url,
+          headers: {
+            "Content-Type": "application/json",
+            "x-hasura-admin-secret": "3a590f26c50099fdc779b212c090c1bf",
           },
-          query: `
-          mutation ADD_USER(
-            $behance: String
-            $description: String
-            $facebook: String
-            $github: String
-            $linkedin: String
-            $title: String
-            $user_id: uuid!
-          ) {
-            insert_userInfo_one(
-              object: {
-                behance: $behance
-                description: $description
-                facebook: $facebook
-                github: $github
-                linkedin: $linkedin
-                title: $title
-                user_id: $user_id
-              }
+          method: "POST",
+          data: {
+            variables: {
+              behance: formData.behance || userDetails?.behance,
+              description: formData.description || userDetails?.description,
+              facebook: formData.facebook || userDetails?.facebook,
+              github: formData.github || userDetails?.github,
+              linkedin: formData.linkedin || userDetails?.linkedin,
+              title: formData.title || userDetails?.title,
+              user_id: user.id,
+            },
+            query: ADD_USERINFO,
+          },
+        });
+        if (data) {
+          toast.success("Successfully details Created");
+          queryClient.invalidateQueries("userDetails");
+        }
+      } else {
+        const { data } = await axios({
+          url: url,
+          headers: {
+            "Content-Type": "application/json",
+            "x-hasura-admin-secret": "3a590f26c50099fdc779b212c090c1bf",
+          },
+          method: "POST",
+          data: {
+            variables: {
+              behance: formData.behance || userDetails?.behance,
+              description: formData.description || userDetails?.description,
+              facebook: formData.facebook || userDetails?.facebook,
+              github: formData.github || userDetails?.github,
+              linkedin: formData.linkedin || userDetails?.linkedin,
+              title: formData.title || userDetails?.title,
+            },
+            query: `mutation UPDATE_USER_INFO(
+              $behance: String
+              $description: String
+              $facebook: String
+              $github: String
+              $linkedin: String
+              $title: String
             ) {
-              behance
-              description
-              facebook
-              github
-              id
-              linkedin
-              title
-              user_id
-            }
-          }
-          `,
-        },
-      });
-      if (data) {
-        toast.success("Successfully details updated");
+              update_userInfo_by_pk(
+                pk_columns: {id: ${user.userInfo?.id}},
+                _set: {
+                  behance: $behance
+                  description: $description
+                  facebook: $facebook
+                  github: $github
+                  linkedin: $linkedin
+                  title: $title
+                }
+              ) {
+                behance
+                description
+                facebook
+                github
+                id
+                linkedin
+                title
+              }
+            }`,
+          },
+        });
+        if (data) {
+          toast.success("Successfully details Updated");
+          queryClient.invalidateQueries("userDetails");
+        }
       }
       reset();
     } catch (error) {
@@ -117,6 +179,7 @@ const ChangeDetails = () => {
                 {...register("title")}
                 placeholder="Enter profile title"
                 className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                defaultValue={data?.title}
               />
             </div>
             <div className="mb-5 ">
@@ -128,6 +191,7 @@ const ChangeDetails = () => {
                 {...register("description")}
                 placeholder="Write about yourself"
                 className="block w-full h-32 px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                defaultValue={data?.description}
               />
             </div>
             {/* <div className="flex items-center mb-16">
@@ -157,6 +221,7 @@ const ChangeDetails = () => {
                 placeholder="Enter facebook profile link"
                 className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 {...register("facebook")}
+                defaultValue={data?.facebook}
               />
             </div>
 
@@ -167,6 +232,7 @@ const ChangeDetails = () => {
                 placeholder="Enter linkedin profile link"
                 className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 {...register("linkedin")}
+                defaultValue={data?.linkedin}
               />
             </div>
 
@@ -177,6 +243,7 @@ const ChangeDetails = () => {
                 placeholder="Enter behance profile link"
                 className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 {...register("behance")}
+                defaultValue={data?.behance}
               />
             </div>
 
@@ -187,6 +254,7 @@ const ChangeDetails = () => {
                 placeholder="Enter github profile link"
                 className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 {...register("github")}
+                defaultValue={data?.github}
               />
             </div>
           </div>

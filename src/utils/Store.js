@@ -5,7 +5,7 @@ const userInfo = localStorage.getItem("userInfo")
   ? JSON.parse(localStorage.getItem("userInfo"))
   : [];
 
-const initialState = { courses: [], user: userInfo };
+const initialState = { courses: [], user: userInfo, userDetails: {} };
 
 function reducer(state, action) {
   if (action.type === "add/courses") {
@@ -21,6 +21,12 @@ function reducer(state, action) {
     return {
       ...state,
       user: action.payload,
+    };
+  }
+  if (action.type === "add/userDetails") {
+    return {
+      ...state,
+      userDetails: action.payload,
     };
   }
   if (action.type === "remove/user") {

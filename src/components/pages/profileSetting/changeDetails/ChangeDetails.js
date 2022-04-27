@@ -8,63 +8,101 @@ import { ADD_USERINFO } from "../api";
 const ChangeDetails = () => {
   const url = "https://lxnpjwwijxqnrluhcfsr.nhost.run/v1/graphql";
   const user = authStore((state) => state.user);
-  const dispatch = authStore((state) => state.dispatch);
+  console.log(user);
   (async () => {
-    // const { data } = await axios({
-    //   url: url,
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     "x-hasura-admin-secret": "3a590f26c50099fdc779b212c090c1bf",
-    //   },
-    //   method: "POST",
-    //   data: {
-    //     query: `
-    //     {
-    //       userInfo {
-    //         id
-    //         linkedin
-    //         title
-    //         github
-    //         facebook
-    //         description
-    //         behance
-    //         user_id
-    //       }
-    //     }
-    //     `,
-    //   },
-    // });
-    // if (data) {
-    //   const filterUserDetails = data.data.userInfo.filter(
-    //     (item) => item.user_id === user.id
-    //   );
-    //   dispatch({
-    //     type: "add/user",
-    //     payload: { ...user, ...Object.assign({}, ...filterUserDetails) },
-    //   });
-    // }
+    const { data } = await axios({
+      url: url,
+      headers: {
+        "Content-Type": "application/json",
+        "x-hasura-admin-secret": "3a590f26c50099fdc779b212c090c1bf",
+      },
+      method: "POST",
+      data: {
+        query: `
+        {
+          userInfo_by_pk(id :${user.userInfo?.id}) {
+            id
+            linkedin
+            title
+            user_id
+            github
+            facebook
+            description
+            behance
+          }
+        }`,
+      },
+    });
   })();
 
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = async (formData) => {
     try {
-      const { data } = await axios({
-        url: url,
-        headers: {
-          "Content-Type": "application/json",
-          "x-hasura-admin-secret": "3a590f26c50099fdc779b212c090c1bf",
-        },
-        method: "POST",
-        data: {
-          variables: {
-            ...formData,
-            user_id: user.id,
+      if (user.userInfo === null) {
+        const { data } = await axios({
+          url: url,
+          headers: {
+            "Content-Type": "application/json",
+            "x-hasura-admin-secret": "3a590f26c50099fdc779b212c090c1bf",
           },
-          query: ADD_USERINFO,
-        },
-      });
-      if (data) {
-        toast.success("Successfully details updated");
+          method: "POST",
+          data: {
+            variables: {
+              ...formData,
+              user_id: user.id,
+            },
+            query: ADD_USERINFO,
+          },
+        });
+        if (data) {
+          toast.success("Successfully details Created");
+        }
+      } else {
+        const { data } = await axios({
+          url: url,
+          headers: {
+            "Content-Type": "application/json",
+            "x-hasura-admin-secret": "3a590f26c50099fdc779b212c090c1bf",
+          },
+          method: "POST",
+          data: {
+            variables: {
+              ...formData,
+            },
+            query: `mutation UPDATE_USER_INFO(
+              $behance: String
+              $description: String
+              $facebook: String
+              $github: String
+              $linkedin: String
+              $title: String
+            ) {
+              update_userInfo_by_pk(
+                pk_columns: {id: ${user.userInfo?.id}},
+                _set: {
+                  behance: $behance
+                  description: $description
+                  facebook: $facebook
+                  github: $github
+                  linkedin: $linkedin
+                  title: $title
+                }
+              ) {
+                behance
+                description
+                facebook
+                github
+                id
+                linkedin
+                title
+              }
+            }`,
+          },
+        });
+        console.log(data);
+        if (data) {
+          toast.success("Successfully details Updated");
+        }
       }
       reset();
     } catch (error) {

@@ -62,7 +62,7 @@ function App() {
               <Route path="register" element={<RegisterHome />} />
               <Route path="profile" element={<ProfileHome />} />
               <Route path="profileSetting" element={<SettingHome />} />
-              <Route path="search" element={<SearchResult />} />
+              <Route path="search/:title" element={<SearchResult />} />
             </Routes>
             <Footer />
           </NhostAuthProvider>

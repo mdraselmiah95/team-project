@@ -1,9 +1,21 @@
 import "./Banner.css";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useQuery } from "react-query";
+import { useForm } from "react-hook-form";
 
 const Banner = () => {
   const HeroImage = "https://i.ibb.co/KzgCF3j/Hero-Image.png";
+  const navigate = useNavigate();
+  useQuery("courses", () => {
+    fetch("./coursesDetails.json").then((res) => res.json);
+  });
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = ({ title }) => {
+    navigate(`/search/${title}`);
+  };
+
   return (
     <div className="mt-20 lg:pb-20 bg-color-four">
       <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -31,16 +43,22 @@ const Banner = () => {
             </Link> */}
           </div>
           <div className="lg:absolute">
-            <div className="py-3 text-center bg-white rounded md:pl-3 lg:flex rapperInput">
-              <input
-                type="text"
-                placeholder="Search Courses/ Mentors/ Companies"
-                className="px-6 py-3 rounded cursor-pointer md:pl-3 mainInput bg-color-four placeholder:text-color-two"
-              />
-              <button className="px-6 py-3 mt-3 ml-3 font-bold text-white border rounded shadow md:mt-0 bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three">
-                Search Now
-              </button>
-            </div>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div className="py-3 text-center bg-white rounded md:pl-3 lg:flex rapperInput">
+                <input
+                  type="text"
+                  placeholder="Search Courses/ Mentors/ Companies"
+                  className="px-6 py-3 rounded cursor-pointer md:pl-3 mainInput bg-color-four placeholder:text-color-two"
+                  {...register("title", { required: true })}
+                />
+                <button
+                  type="submit"
+                  className="px-6 py-3 mt-3 ml-3 font-bold text-white border rounded shadow md:mt-0 bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three"
+                >
+                  Search Now
+                </button>
+              </div>
+            </form>
           </div>
         </div>
         <div className="hidden md:block">

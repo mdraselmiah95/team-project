@@ -1,54 +1,39 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useParams, Link } from "react-router-dom";
 import Course from "../../courses/course/Course";
-// import Course from "../course/Course";
 import "./Courses.css";
+import { fakeData } from "./fakeData";
 
 const SearchResult = () => {
-  const [courses, setCourses] = useState([]);
-  const [search, setSearch] = useState("");
+  const { title } = useParams();
 
-  const filterData = courses?.filter((item) =>
-    Object.values(item).join("").toLowerCase().includes(search.toLowerCase())
+  const filterData = fakeData?.filter((item) =>
+    Object.values(item).join("").toLowerCase().includes(title.toLowerCase())
   );
-
-  useEffect(() => {
-    fetch("./coursesDetails.json")
-      .then((res) => res.json())
-      .then((data) => setCourses(data));
-  }, []);
 
   return (
     <div className="px-6 py-8 lg:py-28 lg:px-36 bg-color-four">
       <div className="items-center justify-between flex-none md:flex">
         <div className="mb-8 text-center md:mb-0 md:text-left coursesTitle">
           <h1 className="text-xl font-medium md:text-4xl text-color-one">
-            Our All Courses
+            {filterData.length !== 0 ? title : "No Result Found"}
           </h1>
-          <p className="mt-5 text-color-two">
-            We believe in technology and our team to take care of your career
-            journey. We guarantee you will get the best service that you have
-            never experienced before
-          </p>
-        </div>
-
-        <div className="flex">
-          <input
-            type="text"
-            placeholder="Search categorically  courses"
-            className="w-72 px-4 py-2 mr-1 border-2 rounded-md cursor-pointer md:px-6 md:py-3 border-color-two bg-color-four placeholder:text-color-two"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-          {/* <button className="px-4 py-2 font-bold text-white border rounded-md shadow md:px-6 md:py-3 bg-color-one hover:bg-white hover:border-color-three hover:border hover:text-color-three ">
-            Search Now
-          </button> */}
         </div>
       </div>
       <div className="mt-12">
         <div className="grid grid-cols-1 gap-4 lg:gap-10 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
-          {filterData.map((data) => (
+          {filterData?.map((data) => (
             <Course key={data.id} data={data} />
           ))}
+        </div>
+        <div className="flex justify-center">
+          {filterData.length === 0 && (
+            <Link to="/">
+              <button className="py-4 my-12 ml-8 font-bold text-white rounded-md hover:text-color-three hover:bg-white hover:border-color-three hover:border border px-11 bg-color-three ">
+                Go Back
+              </button>
+            </Link>
+          )}
         </div>
       </div>
     </div>

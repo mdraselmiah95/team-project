@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Banner = () => {
-  const HeroImage = " https://i.ibb.co/KzgCF3j/Hero-Image.png";
+  const HeroImage = "https://i.ibb.co/KzgCF3j/Hero-Image.png";
   return (
     <div className="mt-20 lg:pb-20 bg-color-four">
       <div className="grid grid-cols-1 lg:grid-cols-2">

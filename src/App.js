@@ -30,6 +30,7 @@ import InstructorsHome from "./components/pages/instructors/instructorsHome/Inst
 import "react-toastify/dist/ReactToastify.css";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
+import SearchResult from "./components/pages/Home/searchResult";
 
 function App() {
   const queryClient = new QueryClient();
@@ -61,6 +62,7 @@ function App() {
               <Route path="register" element={<RegisterHome />} />
               <Route path="profile" element={<ProfileHome />} />
               <Route path="profileSetting" element={<SettingHome />} />
+              <Route path="search" element={<SearchResult />} />
             </Routes>
             <Footer />
           </NhostAuthProvider>

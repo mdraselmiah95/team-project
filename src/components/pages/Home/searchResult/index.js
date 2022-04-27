@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Course from "../course/Course";
+import Course from "../../courses/course/Course";
+// import Course from "../course/Course";
 import "./Courses.css";
 
-const Courses = () => {
+const SearchResult = () => {
   const [courses, setCourses] = useState([]);
   const [search, setSearch] = useState("");
 
@@ -54,4 +55,4 @@ const Courses = () => {
   );
 };
 
-export default Courses;
+export default SearchResult;

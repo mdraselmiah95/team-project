@@ -66,14 +66,11 @@ const UploadCourse = () => {
 
           <div className="flex items-center">
             <h3 className="text-lg text-color-two mr-14">Thumbnail Image:</h3>
-            <button className="px-4 py-2 font-medium text-white border rounded-lg hover:bg-white hover:border-color-three hover:text-color-three bg-color-three">
-              Choose File
-            </button>
-          </div>
-          <div className="flex items-center">
-            <button className="px-4 py-2 font-medium text-white border rounded-lg hover:bg-white hover:border-color-three hover:text-color-three bg-color-three">
-              Choose File
-            </button>
+            <input
+              type="file"
+              placeholder="Feature 01 .."
+              className="px-4 py-2 font-medium text-white border rounded-lg hover:bg-white hover:border-color-three hover:text-color-three bg-color-three"
+            />
           </div>
         </div>
         {/* Videos */}

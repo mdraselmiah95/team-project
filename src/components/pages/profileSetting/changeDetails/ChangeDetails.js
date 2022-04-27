@@ -1,39 +1,40 @@
-import React, { useState } from "react";
+import React from "react";
 import authStore from "../../../../utils/Store";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 import { ADD_USERINFO } from "../api";
+import { useQuery, useQueryClient } from "react-query";
 
 const ChangeDetails = () => {
   const url = "https://lxnpjwwijxqnrluhcfsr.nhost.run/v1/graphql";
   const user = authStore((state) => state.user);
-  const [userData, setUserData] = useState();
-  console.log(userData?.facebook);
-  // (async () => {
-  //   const { data } = await axios({
-  //     url: url,
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       "x-hasura-admin-secret": "3a590f26c50099fdc779b212c090c1bf",
-  //     },
-  //     method: "POST",
-  //     data: {
-  //       query: `
-  //       {
-  //         userInfo_by_pk(id :${user.userInfo?.id}) {
-  //           linkedin
-  //           title
-  //           github
-  //           facebook
-  //           description
-  //           behance
-  //         }
-  //       }`,
-  //     },
-  //   });
-  //   setUserData(data.data);
-  // })();
+  const queryClient = useQueryClient();
+
+  const { data } = useQuery(["userDetails", user.userInfo?.id], async () => {
+    const { data } = await axios({
+      url: url,
+      headers: {
+        "Content-Type": "application/json",
+        "x-hasura-admin-secret": "3a590f26c50099fdc779b212c090c1bf",
+      },
+      method: "POST",
+      data: {
+        query: `
+        {
+          userInfo_by_pk(id :${user.userInfo?.id}) {
+            linkedin
+            title
+            github
+            facebook
+            description
+            behance
+          }
+        }`,
+      },
+    });
+    return data?.data?.userInfo_by_pk;
+  });
 
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = async (formData) => {
@@ -56,6 +57,7 @@ const ChangeDetails = () => {
         });
         if (data) {
           toast.success("Successfully details Created");
+          queryClient.invalidateQueries("userDetails");
         }
       } else {
         const { data } = await axios({
@@ -99,9 +101,9 @@ const ChangeDetails = () => {
             }`,
           },
         });
-        console.log(data);
         if (data) {
           toast.success("Successfully details Updated");
+          queryClient.invalidateQueries("userDetails");
         }
       }
       reset();
@@ -161,6 +163,7 @@ const ChangeDetails = () => {
                 {...register("title")}
                 placeholder="Enter profile title"
                 className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                defaultValue={data?.title}
               />
             </div>
             <div className="mb-5 ">
@@ -172,6 +175,7 @@ const ChangeDetails = () => {
                 {...register("description")}
                 placeholder="Write about yourself"
                 className="block w-full h-32 px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                defaultValue={data?.description}
               />
             </div>
             {/* <div className="flex items-center mb-16">
@@ -201,6 +205,7 @@ const ChangeDetails = () => {
                 placeholder="Enter facebook profile link"
                 className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 {...register("facebook")}
+                defaultValue={data?.facebook}
               />
             </div>
 
@@ -211,6 +216,7 @@ const ChangeDetails = () => {
                 placeholder="Enter linkedin profile link"
                 className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 {...register("linkedin")}
+                defaultValue={data?.linkedin}
               />
             </div>
 
@@ -221,6 +227,7 @@ const ChangeDetails = () => {
                 placeholder="Enter behance profile link"
                 className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 {...register("behance")}
+                defaultValue={data?.behance}
               />
             </div>
 
@@ -231,6 +238,7 @@ const ChangeDetails = () => {
                 placeholder="Enter github profile link"
                 className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 {...register("github")}
+                defaultValue={data?.github}
               />
             </div>
           </div>

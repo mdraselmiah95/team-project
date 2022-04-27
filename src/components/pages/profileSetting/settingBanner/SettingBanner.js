@@ -2,12 +2,14 @@ import React from "react";
 import authStore from "../../../../utils/Store";
 import { Link } from "react-router-dom";
 import TextTruncate from "react-text-truncate";
+import { useQueryClient } from "react-query";
 
 const SettingBanner = () => {
   const mentor = "https://i.ibb.co/y6gKcFy/Ellipse-1841.png";
-
+  const queryClient = useQueryClient();
   const user = authStore((state) => state.user);
-
+  const userInfo = queryClient.getQueryData("userDetails");
+  console.log(userInfo);
   return (
     <div className="py-12 mt-20 bg-color-three md:pt-28 md:pb-24 md:pl-36 px-9">
       <div className="flex items-center">
@@ -19,7 +21,7 @@ const SettingBanner = () => {
               line={2}
               element="span"
               truncateText="…"
-              text={user.userInfo?.description}
+              text={userInfo?.description}
             />
           </h5>
           <Link to="/profile">

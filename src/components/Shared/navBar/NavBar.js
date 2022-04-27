@@ -181,12 +181,6 @@ const NavBar = () => {
             >
               Careers
             </NavLink>
-            {/* <a
-              href="gkk"
-              className="py-3 text-base font-medium duration-500 text-color-three hover:text-blue-400"
-            >
-              Careers
-            </a> */}
 
             {user.length !== 0 && (
               <>

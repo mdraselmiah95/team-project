@@ -1,6 +1,10 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 
 const UploadCourse = () => {
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = (data) => console.log(data);
   return (
     <div className="px-4 py-10 md:px-36 md:pt-20 md:pb-12">
       <h1 className="text-4xl font-medium text-center text-color-one">
@@ -62,6 +66,11 @@ const UploadCourse = () => {
 
           <div className="flex items-center">
             <h3 className="text-lg text-color-two mr-14">Thumbnail Image:</h3>
+            <button className="px-4 py-2 font-medium text-white border rounded-lg hover:bg-white hover:border-color-three hover:text-color-three bg-color-three">
+              Choose File
+            </button>
+          </div>
+          <div className="flex items-center">
             <button className="px-4 py-2 font-medium text-white border rounded-lg hover:bg-white hover:border-color-three hover:text-color-three bg-color-three">
               Choose File
             </button>

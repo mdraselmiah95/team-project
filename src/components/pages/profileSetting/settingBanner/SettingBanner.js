@@ -12,7 +12,7 @@ const SettingBanner = () => {
         <img src={mentor} alt="mentor" className="w-32 h-32 mr-5" />
         <div className="text-white">
           <h2 className="mb-2 text-3xl font-bold ">{user.displayName}</h2>
-          <h5 className="mb-8 text-xl ">{userDetails?.description}</h5>
+          <h5 className="mb-8 text-xl ">{userDetails?.title}</h5>
           <Link to="/profile">
             <button className="px-8 py-3 font-semibold border border-white rounded hover:focus:ring">
               Preview Profile

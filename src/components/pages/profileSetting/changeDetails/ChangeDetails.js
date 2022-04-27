@@ -55,7 +55,12 @@ const ChangeDetails = () => {
           method: "POST",
           data: {
             variables: {
-              ...formData,
+              behance: formData.behance || userDetails?.behance,
+              description: formData.description || userDetails?.description,
+              facebook: formData.facebook || userDetails?.facebook,
+              github: formData.github || userDetails?.github,
+              linkedin: formData.linkedin || userDetails?.linkedin,
+              title: formData.title || userDetails?.title,
               user_id: user.id,
             },
             query: ADD_USERINFO,
@@ -75,7 +80,12 @@ const ChangeDetails = () => {
           method: "POST",
           data: {
             variables: {
-              ...formData,
+              behance: formData.behance || userDetails?.behance,
+              description: formData.description || userDetails?.description,
+              facebook: formData.facebook || userDetails?.facebook,
+              github: formData.github || userDetails?.github,
+              linkedin: formData.linkedin || userDetails?.linkedin,
+              title: formData.title || userDetails?.title,
             },
             query: `mutation UPDATE_USER_INFO(
               $behance: String
@@ -169,7 +179,7 @@ const ChangeDetails = () => {
                 {...register("title")}
                 placeholder="Enter profile title"
                 className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                defaultValue={userDetails?.title}
+                defaultValue={data?.title}
               />
             </div>
             <div className="mb-5 ">
@@ -181,7 +191,7 @@ const ChangeDetails = () => {
                 {...register("description")}
                 placeholder="Write about yourself"
                 className="block w-full h-32 px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                defaultValue={userDetails?.description}
+                defaultValue={data?.description}
               />
             </div>
             {/* <div className="flex items-center mb-16">
@@ -211,7 +221,7 @@ const ChangeDetails = () => {
                 placeholder="Enter facebook profile link"
                 className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 {...register("facebook")}
-                defaultValue={userDetails?.facebook}
+                defaultValue={data?.facebook}
               />
             </div>
 
@@ -222,7 +232,7 @@ const ChangeDetails = () => {
                 placeholder="Enter linkedin profile link"
                 className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 {...register("linkedin")}
-                defaultValue={userDetails?.linkedin}
+                defaultValue={data?.linkedin}
               />
             </div>
 
@@ -233,7 +243,7 @@ const ChangeDetails = () => {
                 placeholder="Enter behance profile link"
                 className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 {...register("behance")}
-                defaultValue={userDetails?.behance}
+                defaultValue={data?.behance}
               />
             </div>
 
@@ -244,7 +254,7 @@ const ChangeDetails = () => {
                 placeholder="Enter github profile link"
                 className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 {...register("github")}
-                defaultValue={userDetails?.github}
+                defaultValue={data?.github}
               />
             </div>
           </div>

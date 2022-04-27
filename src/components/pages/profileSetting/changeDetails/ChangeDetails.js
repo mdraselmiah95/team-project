@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 import { ADD_USERINFO } from "../api";
 import { useQuery, useQueryClient } from "react-query";
+import { useNavigate } from "react-router-dom";
 
 const ChangeDetails = () => {
   const url = "https://lxnpjwwijxqnrluhcfsr.nhost.run/v1/graphql";
@@ -12,6 +13,7 @@ const ChangeDetails = () => {
   const userDetails = authStore((state) => state.userDetails);
   const dispatch = authStore((state) => state.dispatch);
   const queryClient = useQueryClient();
+  const navigate = useNavigate();
 
   const { data } = useQuery(["userDetails", user.userInfo?.id], async () => {
     const { data } = await axios({
@@ -69,6 +71,8 @@ const ChangeDetails = () => {
         if (data) {
           toast.success("Successfully details Created");
           queryClient.invalidateQueries("userDetails");
+          localStorage.removeItem("userInfo");
+          navigate("/");
         }
       } else {
         const { data } = await axios({

@@ -9,6 +9,7 @@ import { useQuery, useQueryClient } from "react-query";
 const ChangeDetails = () => {
   const url = "https://lxnpjwwijxqnrluhcfsr.nhost.run/v1/graphql";
   const user = authStore((state) => state.user);
+  const userDetails = authStore((state) => state.userDetails);
   const dispatch = authStore((state) => state.dispatch);
   const queryClient = useQueryClient();
 
@@ -168,7 +169,7 @@ const ChangeDetails = () => {
                 {...register("title")}
                 placeholder="Enter profile title"
                 className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                defaultValue={data?.title}
+                defaultValue={userDetails?.title}
               />
             </div>
             <div className="mb-5 ">
@@ -180,7 +181,7 @@ const ChangeDetails = () => {
                 {...register("description")}
                 placeholder="Write about yourself"
                 className="block w-full h-32 px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                defaultValue={data?.description}
+                defaultValue={userDetails?.description}
               />
             </div>
             {/* <div className="flex items-center mb-16">
@@ -210,7 +211,7 @@ const ChangeDetails = () => {
                 placeholder="Enter facebook profile link"
                 className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 {...register("facebook")}
-                defaultValue={data?.facebook}
+                defaultValue={userDetails?.facebook}
               />
             </div>
 
@@ -221,7 +222,7 @@ const ChangeDetails = () => {
                 placeholder="Enter linkedin profile link"
                 className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 {...register("linkedin")}
-                defaultValue={data?.linkedin}
+                defaultValue={userDetails?.linkedin}
               />
             </div>
 
@@ -232,7 +233,7 @@ const ChangeDetails = () => {
                 placeholder="Enter behance profile link"
                 className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 {...register("behance")}
-                defaultValue={data?.behance}
+                defaultValue={userDetails?.behance}
               />
             </div>
 
@@ -243,7 +244,7 @@ const ChangeDetails = () => {
                 placeholder="Enter github profile link"
                 className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 {...register("github")}
-                defaultValue={data?.github}
+                defaultValue={userDetails?.github}
               />
             </div>
           </div>

@@ -165,7 +165,7 @@ const NavBar = () => {
                       href="link"
                       className="block mt-3 duration-500 hover:text-blue-400"
                     >
-                      Video Editing
+                      Software Testing
                     </a>
                   </NavLink>
                 </div>
@@ -180,7 +180,7 @@ const NavBar = () => {
           </li>
         </ul>
         {user.length !== 0 ? (
-          <div className="absolute bg-white profile-dropdown hidden">
+          <div className="absolute hidden bg-white profile-dropdown">
             <div className="flex flex-col items-center justify-center py-6 pl-6 pr-11">
               <NavLink
                 to="/profile"

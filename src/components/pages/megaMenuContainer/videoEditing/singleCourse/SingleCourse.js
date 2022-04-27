@@ -29,7 +29,7 @@ const SingleCourse = ({ data }) => {
           {wholePrice}
         </h2>
       </div>
-      <Link to="/courseDetails">
+      <Link to="/courseDetails/overview">
         <button className="w-full py-4 mt-5 font-bold text-white border rounded shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three">
           Course Details
         </button>

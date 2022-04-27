@@ -9,6 +9,7 @@ import { useQuery, useQueryClient } from "react-query";
 const ChangeDetails = () => {
   const url = "https://lxnpjwwijxqnrluhcfsr.nhost.run/v1/graphql";
   const user = authStore((state) => state.user);
+  const dispatch = authStore((state) => state.dispatch);
   const queryClient = useQueryClient();
 
   const { data } = useQuery(["userDetails", user.userInfo?.id], async () => {
@@ -32,6 +33,10 @@ const ChangeDetails = () => {
           }
         }`,
       },
+    });
+    dispatch({
+      type: "add/userDetails",
+      payload: data?.data?.userInfo_by_pk,
     });
     return data?.data?.userInfo_by_pk;
   });

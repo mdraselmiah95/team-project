@@ -9,7 +9,8 @@ const CourseBanner = () => {
     <div className="px-5 py-6 mt-20 bg-color-three md:pt-28 md:pb-20 md:pl-36 ">
       <div className="text-white ">
         <h1 className="mb-5 text-3xl font-semibold md:text-4xl">
-          Start Learning HTML, <br /> The Easy Way
+          {/* Start Learning HTML, <br /> The Easy Way */}
+          Start Learning Software Testing, <br /> The Easy Way
         </h1>
         <div className="flex items-center">
           <div className="flex items-center">

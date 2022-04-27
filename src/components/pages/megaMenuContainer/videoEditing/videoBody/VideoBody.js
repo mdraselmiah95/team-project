@@ -17,7 +17,7 @@ const VideoBody = () => {
       <div className="items-center justify-between flex-none md:flex">
         <div className="mb-8 text-center md:mb-0 md:text-left coursesTitle">
           <h1 className="text-xl font-medium md:text-4xl text-color-one">
-            Video Editing
+            Software Testing
           </h1>
           <p className="mt-5 text-color-two">
             We believe in technology and our team to take care of your career

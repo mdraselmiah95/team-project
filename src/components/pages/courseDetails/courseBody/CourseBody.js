@@ -6,6 +6,7 @@ import ReactPlayer from "react-player/youtube";
 const CourseBody = () => {
   const img1 = "https://i.ibb.co/0MyZxqL/img1.png";
   const mentor = "https://i.ibb.co/9vGxYbf/mentor.png";
+  const mentorTwo = "https://i.ibb.co/m5QSj5n/mentor.png";
   const star = "https://i.ibb.co/x5dcfBW/Frame-152.png";
   const playButton = "https://i.ibb.co/Qvv15bs/play.png";
   const [video, setVideoBtn] = useState(false);
@@ -49,7 +50,7 @@ const CourseBody = () => {
         <div className="md:w-96">
           <div className="md:absolute md:-mt-80">
             <div className="py-12 shadow-md rounded-xl bg-color-four mb-9">
-              <div className="flex items-center pl-7">
+              {/* <div className="flex items-center pl-7">
                 <img src={mentor} alt="mentor" className="mr-2 " />
                 <div>
                   <h2 className="mb-1 text-xl font-medium text-color-one">
@@ -57,28 +58,65 @@ const CourseBody = () => {
                   </h2>
                   <h5 className="text-color-two">Frontend Web Developer</h5>
                 </div>
+              </div> */}
+
+              <div className="flex items-center pl-7 mb-7 pt-7">
+                <img
+                  src={mentorTwo}
+                  alt="mentor"
+                  className="mr-2 rounded-full"
+                />
+                <div>
+                  <h2 className="mb-1 text-xl font-medium text-color-one">
+                    Ripon-al-wasim
+                  </h2>
+                  <h5 className="text-color-two">
+                    Lead software designer (SQA)
+                  </h5>
+                </div>
               </div>
               <div className="py-5 mt-3 bg-color-twelve pl-7 pr-14">
                 <img src={star} alt="star" />
               </div>
+              {/* <div className="pt-3 pb-12 px-7">
+                <h2 className="mb-5 text-xl font-medium text-color-one">
+                  Course features:
+                </h2>
+                <h5 className="mb-3 text-color-two">
+                  1. Welcome to the course.
+                </h5>
+                <h5 className="mb-3 text-color-two">
+                  2. How to set up your photoshop workspace.
+                </h5>
+                <h5 className="mb-3 text-color-two">
+                  3. How to set up your photoshop workspace.
+                </h5>
+                <h5 className="mb-3 text-color-two">
+                  4. How to set up your photoshop workspace.
+                </h5>
+                <h5 className="text-color-two">
+                  5. How to set up your photoshop workspace.
+                </h5>
+              </div> */}
+
               <div className="pt-3 pb-12 px-7">
                 <h2 className="mb-5 text-xl font-medium text-color-one">
                   Course features:
                 </h2>
                 <h5 className="mb-3 text-color-two">
-                  1. Welcome to the course{" "}
+                  1. Practice an online cloud environment
                 </h5>
                 <h5 className="mb-3 text-color-two">
-                  2. How to set up your photoshop workspace{" "}
+                  2. Task based course outline
                 </h5>
                 <h5 className="mb-3 text-color-two">
-                  3. How to set up your photoshop workspace{" "}
+                  3. Testing tools for automatic testing
                 </h5>
                 <h5 className="mb-3 text-color-two">
-                  4. How to set up your photoshop workspace{" "}
+                  4. Professional Instructor
                 </h5>
                 <h5 className="text-color-two">
-                  5. How to set up your photoshop workspace{" "}
+                  5. Vendor Certification help for ISTQB-CTFL
                 </h5>
               </div>
               <div className="flex justify-center">
@@ -88,7 +126,7 @@ const CourseBody = () => {
               </div>
             </div>
             <div className="shadow-md rounded-xl bg-color-four md:w-96">
-              <div className="flex items-center pl-7 mb-7 pt-7">
+              {/* <div className="flex items-center pl-7 mb-7 pt-7">
                 <img src={mentor} alt="mentor" className="mr-2 " />
                 <div>
                   <h2 className="mb-1 text-xl font-medium text-color-one">
@@ -96,17 +134,44 @@ const CourseBody = () => {
                   </h2>
                   <h5 className="text-color-two">Web developer at fiverr</h5>
                 </div>
+              </div> */}
+              <div className="flex items-center pl-7 mb-7 pt-7">
+                <img
+                  src={mentorTwo}
+                  alt="mentor"
+                  className="mr-2 rounded-full"
+                />
+                <div>
+                  <h2 className="mb-1 text-xl font-medium text-color-one">
+                    Ripon-al-wasim
+                  </h2>
+                  <h5 className="text-color-two">
+                    Lead software designer (SQA)
+                  </h5>
+                </div>
               </div>
               <div className="pb-12 bg-color-twelve rounded-xl px-7 pt-7">
                 <h2 className="mb-5 text-xl font-medium text-color-one">
                   Mentor Details
                 </h2>
-                <p className="mb-12 text-color-two">
+                {/* <p className="mb-12 text-color-two">
                   Amet minim mollit non deserunt ullamco est sit aliqua dolor do
                   amet sint. Velit officia consequat duis enim velit mollit.{" "}
                   <br />
                   <br />
                   Exercitation veniam consequat sunt nostrud amet.
+                </p> */}
+                <p className="mb-12 text-color-two">
+                  1. About 16 years development experience in java platform.{" "}
+                  <br /> 2. Expertise in design development OA (Orthogonal
+                  Array), BVA (Boundary Value Analysis), EP (Equivalence
+                  Partitioning), Decision Table technique, State Transition, Use
+                  Case, Error Guessing, Exploratory testing etc. <br /> 3.
+                  Expertise in QA Documentation <br /> 4. Strong exposure in
+                  designing and writing Automated Test Case using Selenium 3
+                  (WebDriver) with Java. <br /> 5. Very good experience and
+                  strong understanding of the all phases of SDLC, STLC and Agile
+                  (Scrum) development methodologies.
                 </p>
                 <div className="flex justify-center">
                   <button className="px-6 py-5 text-2xl font-bold text-white border bg-color-three rounded-xl hover:text-color-three hover:bg-white hover:border-color-three hover:border">

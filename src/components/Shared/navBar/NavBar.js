@@ -164,7 +164,7 @@ const NavBar = () => {
                       href="link"
                       className="block mt-3 duration-500 hover:text-blue-400"
                     >
-                      Video Editing
+                      Software Testing
                     </a>
                   </NavLink>
                 </div>

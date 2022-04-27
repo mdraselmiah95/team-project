@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import authStore from "../../../../utils/Store";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
@@ -8,32 +8,32 @@ import { ADD_USERINFO } from "../api";
 const ChangeDetails = () => {
   const url = "https://lxnpjwwijxqnrluhcfsr.nhost.run/v1/graphql";
   const user = authStore((state) => state.user);
-  console.log(user);
-  (async () => {
-    const { data } = await axios({
-      url: url,
-      headers: {
-        "Content-Type": "application/json",
-        "x-hasura-admin-secret": "3a590f26c50099fdc779b212c090c1bf",
-      },
-      method: "POST",
-      data: {
-        query: `
-        {
-          userInfo_by_pk(id :${user.userInfo?.id}) {
-            id
-            linkedin
-            title
-            user_id
-            github
-            facebook
-            description
-            behance
-          }
-        }`,
-      },
-    });
-  })();
+  const [userData, setUserData] = useState();
+  console.log(userData?.facebook);
+  // (async () => {
+  //   const { data } = await axios({
+  //     url: url,
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       "x-hasura-admin-secret": "3a590f26c50099fdc779b212c090c1bf",
+  //     },
+  //     method: "POST",
+  //     data: {
+  //       query: `
+  //       {
+  //         userInfo_by_pk(id :${user.userInfo?.id}) {
+  //           linkedin
+  //           title
+  //           github
+  //           facebook
+  //           description
+  //           behance
+  //         }
+  //       }`,
+  //     },
+  //   });
+  //   setUserData(data.data);
+  // })();
 
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = async (formData) => {

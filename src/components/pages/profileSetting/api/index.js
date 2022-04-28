@@ -30,3 +30,26 @@ mutation ADD_USER(
     }
   }
 `;
+
+export const ADD_PRODUCT = `
+mutation ADD_PRODUCT($image :String!, $title:String!, $description :String!, $user_id :uuid!, $price:Int!) {
+  insert_products_one(object: {image: $image, title: $title, description: $description, price: $price, user_id: $user_id}) {
+    base64
+    category
+    courseOverview
+    creator
+    description
+    descriptionTow
+    id
+    image
+    language
+    price
+    star
+    starCount
+    students
+    subtitle
+    title
+    user_id
+    wholePrice
+  }
+}`;

@@ -39,3 +39,10 @@
 .scrollbar-thumb:hover {
   background: #b473ce;
 }
+
+@media screen and (min-width: 480px) {
+  .ReactPlayer {
+    width: 319px;
+    height: 260px;
+  }
+}

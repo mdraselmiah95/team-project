@@ -9,7 +9,7 @@
 .profile-dropdown {
   right: 144px;
   top: 64px;
-  display: none;
+  /* display: none; */
 }
 .userDropdown:hover .profile-dropdown {
   display: flex;

@@ -9,7 +9,7 @@ const Courses = () => {
 
   const [courses, setCourses] = useState([]);
   const [search, setSearch] = useState("");
-  const { data } = useQuery("products", async () => {
+  const { data, isLoading } = useQuery("products", async () => {
     const { data } = await axios({
       url: url,
       headers: {
@@ -44,13 +44,23 @@ const Courses = () => {
     });
     return data;
   });
-  const newAddedProducts = courses.concat(
+  const newAddedProducts = courses?.concat(
     data?.data?.products.map((item) => item)
   );
 
-  const filterData = newAddedProducts?.filter((item) =>
-    Object.values(item).join("").toLowerCase().includes(search.toLowerCase())
-  );
+  const filterData = isLoading
+    ? courses?.filter((item) =>
+        Object.values(item)
+          .join("")
+          .toLowerCase()
+          .includes(search.toLowerCase())
+      )
+    : newAddedProducts?.filter((item) =>
+        Object.values(item)
+          .join("")
+          .toLowerCase()
+          .includes(search.toLowerCase())
+      );
 
   useEffect(() => {
     fetch("./coursesDetails.json")

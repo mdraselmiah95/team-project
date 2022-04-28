@@ -10,7 +10,7 @@ const SearchResult = () => {
   const { title } = useParams();
   const url = "https://lxnpjwwijxqnrluhcfsr.nhost.run/v1/graphql";
 
-  const { data } = useQuery("products", async () => {
+  const { data, isLoading } = useQuery("products", async () => {
     const { data } = await axios({
       url: url,
       headers: {
@@ -48,10 +48,14 @@ const SearchResult = () => {
   const newAddedProducts = fakeData.concat(
     data?.data?.products.map((item) => item)
   );
-  const filterData = newAddedProducts?.filter((item) =>
-    Object.values(item).join("").toLowerCase().includes(title.toLowerCase())
-  );
 
+  const filterData = isLoading
+    ? fakeData?.filter((item) =>
+        Object.values(item).join("").toLowerCase().includes(title.toLowerCase())
+      )
+    : newAddedProducts?.filter((item) =>
+        Object.values(item).join("").toLowerCase().includes(title.toLowerCase())
+      );
   return (
     <div className="px-6 py-8 lg:py-28 lg:px-36 bg-color-four">
       <div className="items-center justify-between flex-none md:flex">

@@ -7,6 +7,8 @@ import { fakeData } from "../../../../data/fakeData";
 const SearchResult = () => {
   const { title } = useParams();
 
+  // const testing = [...fakeData, test];
+  // console.log(testing);
   const filterData = fakeData?.filter((item) =>
     Object.values(item).join("").toLowerCase().includes(title.toLowerCase())
   );

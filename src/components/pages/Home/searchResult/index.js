@@ -2,7 +2,7 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import Course from "../../courses/course/Course";
 import "./Courses.css";
-import { fakeData } from "./fakeData";
+import { fakeData } from "../../../../data/fakeData";
 
 const SearchResult = () => {
   const { title } = useParams();

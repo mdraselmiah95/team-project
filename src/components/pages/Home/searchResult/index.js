@@ -2,15 +2,60 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import Course from "../../courses/course/Course";
 import "./Courses.css";
-import { fakeData } from "./fakeData";
+import { fakeData } from "../../../../data/fakeData";
+import { useQuery } from "react-query";
+import axios from "axios";
 
 const SearchResult = () => {
   const { title } = useParams();
+  const url = "https://lxnpjwwijxqnrluhcfsr.nhost.run/v1/graphql";
 
-  const filterData = fakeData?.filter((item) =>
-    Object.values(item).join("").toLowerCase().includes(title.toLowerCase())
+  const { data, isLoading } = useQuery("products", async () => {
+    const { data } = await axios({
+      url: url,
+      headers: {
+        "Content-Type": "application/json",
+        "x-hasura-admin-secret": "3a590f26c50099fdc779b212c090c1bf",
+      },
+      method: "POST",
+      data: {
+        query: `
+        {
+          products {
+            base64
+            category
+            courseOverview
+            creator
+            description
+            descriptionTow
+            id
+            image
+            language
+            price
+            star
+            starCount
+            students
+            subtitle
+            title
+            user_id
+            wholePrice
+          }
+        }`,
+      },
+    });
+    return data;
+  });
+  const newAddedProducts = fakeData.concat(
+    data?.data?.products.map((item) => item)
   );
 
+  const filterData = isLoading
+    ? fakeData?.filter((item) =>
+        Object.values(item).join("").toLowerCase().includes(title.toLowerCase())
+      )
+    : newAddedProducts?.filter((item) =>
+        Object.values(item).join("").toLowerCase().includes(title.toLowerCase())
+      );
   return (
     <div className="px-6 py-8 lg:py-28 lg:px-36 bg-color-four">
       <div className="items-center justify-between flex-none md:flex">

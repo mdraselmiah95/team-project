@@ -1,14 +1,66 @@
 import React, { useEffect, useState } from "react";
 import Course from "../course/Course";
 import "./Courses.css";
+import axios from "axios";
+import { useQuery } from "react-query";
 
 const Courses = () => {
+  const url = "https://lxnpjwwijxqnrluhcfsr.nhost.run/v1/graphql";
+
   const [courses, setCourses] = useState([]);
   const [search, setSearch] = useState("");
-
-  const filterData = courses?.filter((item) =>
-    Object.values(item).join("").toLowerCase().includes(search.toLowerCase())
+  const { data, isLoading } = useQuery("products", async () => {
+    const { data } = await axios({
+      url: url,
+      headers: {
+        "Content-Type": "application/json",
+        "x-hasura-admin-secret": "3a590f26c50099fdc779b212c090c1bf",
+      },
+      method: "POST",
+      data: {
+        query: `
+        {
+          products {
+            base64
+            category
+            courseOverview
+            creator
+            description
+            descriptionTow
+            id
+            image
+            language
+            price
+            star
+            starCount
+            students
+            subtitle
+            title
+            user_id
+            wholePrice
+          }
+        }`,
+      },
+    });
+    return data;
+  });
+  const newAddedProducts = courses?.concat(
+    data?.data?.products.map((item) => item)
   );
+
+  const filterData = isLoading
+    ? courses?.filter((item) =>
+        Object.values(item)
+          .join("")
+          .toLowerCase()
+          .includes(search.toLowerCase())
+      )
+    : newAddedProducts?.filter((item) =>
+        Object.values(item)
+          .join("")
+          .toLowerCase()
+          .includes(search.toLowerCase())
+      );
 
   useEffect(() => {
     fetch("./coursesDetails.json")

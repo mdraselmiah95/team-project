@@ -170,4 +170,24 @@ export const fakeData = [
     courseOverview:
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
   },
+  {
+    id: 8,
+    image: "https://i.ibb.co/LrQ5WNS/Software-Tests.jpg",
+    title: "Learn software testing By Ripon-al-wasim",
+    description: "Codeman BD",
+    star: 4,
+    starCount: 380,
+    wholePrice: 103,
+    price: 144,
+    titleTwo: "Software testing for Beginners: Start Learning Software testing",
+    descriptionTwo: "Learn the Basics of Software testing By Ripon-al-wasim",
+    students: 131800,
+    creator: "Codeman IT",
+    lastUpdate: "19, May 2021",
+    language: "English, Bangla",
+    subtitle: "English (Default)",
+    category: "video",
+    courseOverview:
+      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+  },
 ];

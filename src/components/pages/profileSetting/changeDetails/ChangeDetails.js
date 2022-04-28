@@ -11,6 +11,7 @@ const ChangeDetails = () => {
   const url = "https://lxnpjwwijxqnrluhcfsr.nhost.run/v1/graphql";
   const user = authStore((state) => state.user);
   const userDetails = authStore((state) => state.userDetails);
+  const logOut = authStore((state) => state.dispatch);
   const dispatch = authStore((state) => state.dispatch);
   const queryClient = useQueryClient();
   const navigate = useNavigate();
@@ -71,6 +72,7 @@ const ChangeDetails = () => {
         if (data) {
           toast.success("Successfully details Created");
           queryClient.invalidateQueries("userDetails");
+          logOut({ type: "remove/user", payload: [] });
           localStorage.removeItem("userInfo");
           navigate("/");
         }

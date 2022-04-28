@@ -6,3 +6,10 @@
   -ms-transform: translate(-50%, -50%);
   cursor: pointer;
 }
+
+@media screen and (min-width: 1200px) {
+  .courseModal {
+    width: 1015px;
+    margin: auto;
+  }
+}

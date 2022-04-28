@@ -24,7 +24,7 @@ const CourseModal = ({ data, setShowModal }) => {
   const addCourse = courseStore((state) => state.dispatch);
 
   return (
-    <div className="fixed inset-0 z-50 items-center justify-center w-9/12 m-auto overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
+    <div className="fixed inset-0 z-50 items-center justify-center w-9/12 m-auto overflow-x-hidden overflow-y-auto outline-none focus:outline-none courseModal">
       <div className="px-5 bg-white border shadow-lg outline-none py-7 focus:outline-none rounded-xl ">
         <img
           src={img}
@@ -34,11 +34,11 @@ const CourseModal = ({ data, setShowModal }) => {
           onClick={() => setShowModal(false)}
         />
         <div className="flex flex-col md:flex-row lg:py-10 lg:px-7">
-          <div className="md:w-6/12 relative bg-black ">
+          <div className="relative bg-black md:w-6/12 ">
             <img
               src={image}
               alt="icon"
-              className="object-fill w-full h-full opacity-50 cursor-pointer"
+              className="object-fill w-full h-full opacity-50 cursor-pointer "
               type="button"
               style={{
                 width: "307.26px",

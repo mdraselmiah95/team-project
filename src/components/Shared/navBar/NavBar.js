@@ -211,22 +211,6 @@ const NavBar = () => {
           </li>
         </ul>
         {user.length !== 0 ? (
-<<<<<<< HEAD
-          <div className="absolute bg-white profile-dropdown">
-            <div className="flex flex-col items-center justify-center py-6 pl-6 pr-11">
-              <NavLink
-                to="/profile"
-                className="pt-6 mb-5"
-                style={({ isActive }) => {
-                  return {
-                    color: isActive ? "#FFB201" : "",
-                  };
-                }}
-              >
-                <a
-                  href="link"
-                  className="font-medium duration-500 hover:text-blue-400"
-=======
           <>
             <div
               className={`md:flex mt-56 md:mt-0 md:items-center md:pb-0 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-5 transition-all duration-500 ease-in ${
@@ -243,7 +227,6 @@ const NavBar = () => {
                 <h2
                   onClick={handleSignOut}
                   className="mr-1 font-semibold duration-500 text-color-one hover:text-blue-400"
->>>>>>> 7feea340a8bea3f218f55d0c990a9d1718d02b10
                 >
                   Logout
                 </h2>
@@ -254,7 +237,7 @@ const NavBar = () => {
                 /> */}
               </div>
             </div>
-            <div className="absolute bg-white profile-dropdown hidden">
+            <div className="absolute hidden bg-white profile-dropdown">
               <div className="flex flex-col items-center justify-center py-6 pl-6 pr-11">
                 <NavLink
                   to="/profile"

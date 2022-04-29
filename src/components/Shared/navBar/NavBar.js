@@ -237,7 +237,7 @@ const NavBar = () => {
                 /> */}
               </div>
             </div>
-            <div className="absolute bg-white profile-dropdown hidden">
+            <div className="absolute hidden bg-white profile-dropdown">
               <div className="flex flex-col items-center justify-center py-6 pl-6 pr-11">
                 <NavLink
                   to="/profile"

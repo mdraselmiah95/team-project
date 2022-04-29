@@ -12,7 +12,7 @@ const InstructorsBody = () => {
 
   return (
     <div className="px-6 py-8 lg:py-28 lg:px-36 ">
-      <div className="text-center">
+      {/* <div className="text-center">
         <h1 className="text-4xl font-medium text-color-one">
           Our Expert Instructors
         </h1>
@@ -21,7 +21,7 @@ const InstructorsBody = () => {
           journey. We guarantee you will get the best service that you have
           never experienced before
         </p>
-      </div>
+      </div> */}
       <div className="items-center justify-between flex-none mt-16 md:flex">
         <div className="mb-8 text-center md:mb-0 md:text-left coursesTitle">
           <h1 className="text-xl font-medium md:text-4xl text-color-one">

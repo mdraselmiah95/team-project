@@ -4,11 +4,13 @@ import CourseBody from "../courseBody/CourseBody";
 import "./CourseHome.css";
 import { useParams } from "react-router-dom";
 import { fakeData } from "../../../../data/fakeData";
-import { useQuery } from "react-query";
+import { useQueryClient, useQuery } from "react-query";
 import axios from "axios";
 
 const CourseHome = () => {
   const { id } = useParams();
+  const queryClient = useQueryClient();
+  // const { data } = queryClient.getQueryData("products");
 
   const url = "https://lxnpjwwijxqnrluhcfsr.nhost.run/v1/graphql";
 
@@ -50,10 +52,13 @@ const CourseHome = () => {
   const newAddedProducts = fakeData.concat(
     data?.data?.products.map((item) => item)
   );
-
+  // const newAddedProducts = fakeData.concat(data?.products.map((item) => item));
   const findProduct = isLoading
     ? fakeData?.find((item) => item.id === id)
     : newAddedProducts?.find((item) => item.id === id);
+
+  // const findProduct = newAddedProducts?.find((item) => item.id === id);
+
   return (
     <div className="responsive">
       <CourseBanner findProduct={findProduct} />

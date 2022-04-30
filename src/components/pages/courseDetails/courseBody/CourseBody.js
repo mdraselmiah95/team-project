@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CourseInformation from "../courseInformation/CourseInformation";
 import "./CourseBody.css";
 import ReactPlayer from "react-player/youtube";
+import courseStore from "../../../../utils/Store";
 
 const CourseBody = ({ findProduct }) => {
   // const img1 = "https://i.ibb.co/0MyZxqL/img1.png";
@@ -9,6 +10,9 @@ const CourseBody = ({ findProduct }) => {
   const star = "https://i.ibb.co/x5dcfBW/Frame-152.png";
   const playButton = "https://i.ibb.co/Qvv15bs/play.png";
   const [video, setVideoBtn] = useState(false);
+  const dispatch = courseStore((state) => state.dispatch);
+  const courses = courseStore((state) => state.courses);
+  const disableBtn = courses?.find((item) => item.id === findProduct.id);
 
   return (
     <div className="px-5 py-6 md:pt-16 md:pb-32 md:pl-36 md:pr-56">
@@ -89,7 +93,16 @@ const CourseBody = ({ findProduct }) => {
                 </h5>
               </div>
               <div className="flex justify-center">
-                <button className="px-10 py-4 text-2xl font-bold text-white border bg-color-three md:py-5 md:px-20 rounded-xl hover:text-color-three hover:bg-white hover:border-color-three hover:border">
+                <button
+                  onClick={() =>
+                    dispatch({
+                      type: "add/courses",
+                      payload: findProduct,
+                    })
+                  }
+                  disabled={disableBtn}
+                  className="px-10 py-4 text-2xl font-bold text-white border bg-color-three md:py-5 md:px-20 rounded-xl hover:text-color-three hover:bg-white hover:border-color-three hover:border disabled:cursor-not-allowed"
+                >
                   Enroll Now
                 </button>
               </div>

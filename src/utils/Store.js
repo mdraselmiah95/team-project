@@ -9,7 +9,12 @@ const initialState = { courses: [], user: userInfo, userDetails: {} };
 
 function reducer(state, action) {
   if (action.type === "add/courses") {
-    return { ...state, courses: [...state.courses, action.payload] };
+    return {
+      ...state,
+      courses: state.courses?.find((item) => item.id === action.payload.id)
+        ? [...state.courses]
+        : [...state.courses, action.payload],
+    };
   }
   if (action.type === "remove/courses") {
     return {

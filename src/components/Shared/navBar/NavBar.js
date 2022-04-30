@@ -12,6 +12,7 @@ const NavBar = () => {
   const logOut = authStore((state) => state.dispatch);
   const user = authStore((state) => state.user);
   const navigate = useNavigate();
+  const courses = authStore((state) => state.courses);
 
   const icon = "https://i.ibb.co/SB2YTTq/path2.png";
 
@@ -191,13 +192,15 @@ const NavBar = () => {
             >
               <div className="flex items-center cursor-pointer ">
                 <span className="relative inline-block">
-                  <img
-                    src={cart}
-                    alt="shopping-cart"
-                    className="mr-8 duration-500 hover:text-blue-400 relative"
-                  />
+                  <NavLink to="cart">
+                    <img
+                      src={cart}
+                      alt="shopping-cart"
+                      className="mr-8 duration-500 hover:text-blue-400 relative"
+                    />
+                  </NavLink>
                   <span className="absolute top-0 left-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
-                    9
+                    {courses.length === 0 ? 0 : courses.length}
                   </span>
                 </span>
                 <NavLink to="profile">

@@ -9,7 +9,7 @@ import axios from "axios";
 
 const CourseHome = () => {
   const { id } = useParams();
-  const queryClient = useQueryClient();
+  // const queryClient = useQueryClient();
   // const { data } = queryClient.getQueryData("products");
 
   const url = "https://lxnpjwwijxqnrluhcfsr.nhost.run/v1/graphql";

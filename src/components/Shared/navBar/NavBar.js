@@ -3,16 +3,48 @@ import { Link, NavLink } from "react-router-dom";
 import "./NavBar.css";
 import authStore from "../../../utils/Store";
 import { useNavigate } from "react-router-dom";
+import { useQuery } from "react-query";
+import axios from "axios";
 
 const NavBar = () => {
   const logo = "https://i.ibb.co/FYNmXRm/F.png";
-  const mentor = "https://i.ibb.co/9vGxYbf/mentor.png";
   const cart = "https://i.ibb.co/5cZPtf6/shopping-car.png";
   let [open, setOpen] = useState(false);
   const logOut = authStore((state) => state.dispatch);
   const user = authStore((state) => state.user);
   const navigate = useNavigate();
   const courses = authStore((state) => state.courses);
+  const dispatch = authStore((state) => state.dispatch);
+  const userDetails = authStore((state) => state.userDetails);
+  useQuery(["userDetails", user.userInfo?.id], async () => {
+    const { data } = await axios({
+      url: "https://lxnpjwwijxqnrluhcfsr.nhost.run/v1/graphql",
+      headers: {
+        "Content-Type": "application/json",
+        "x-hasura-admin-secret": "3a590f26c50099fdc779b212c090c1bf",
+      },
+      method: "POST",
+      data: {
+        query: `
+        {
+          userInfo_by_pk(id :${user.userInfo?.id}) {
+            linkedin
+            title
+            github
+            facebook
+            description
+            behance
+            image
+          }
+        }`,
+      },
+    });
+    dispatch({
+      type: "add/userDetails",
+      payload: data?.data?.userInfo_by_pk,
+    });
+    return data?.data?.userInfo_by_pk;
+  });
 
   const icon = "https://i.ibb.co/SB2YTTq/path2.png";
 
@@ -203,9 +235,23 @@ const NavBar = () => {
                     {courses.length === 0 ? 0 : courses.length}
                   </span>
                 </span>
-                <NavLink to="profile">
-                  <img src={mentor} alt="mentor" className="mr-3 w-9 h-9" />
-                </NavLink>
+                {userDetails?.image !== null ? (
+                  <NavLink to="profile">
+                    <img
+                      src={userDetails?.image}
+                      alt="mentor"
+                      className="mr-3 w-9 h-9 rounded-full"
+                    />
+                  </NavLink>
+                ) : (
+                  <NavLink
+                    to="profile"
+                    className="mr-8 duration-500 hover:text-blue-400 relative font-semibold"
+                  >
+                    Profile
+                  </NavLink>
+                )}
+
                 <h2
                   onClick={handleSignOut}
                   className="mr-1 font-semibold duration-500 text-color-one hover:text-blue-400"

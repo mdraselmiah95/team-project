@@ -1,16 +1,52 @@
 import React, { useEffect, useState } from "react";
 import MyCourse from "../myCourse/MyCourse";
+import authStore from "../../../../utils/Store";
+import { useQuery } from "react-query";
+import axios from "axios";
 
 const MyCourses = () => {
-  const [courses, setCourses] = useState([]);
+  const url = "https://lxnpjwwijxqnrluhcfsr.nhost.run/v1/graphql";
 
-  useEffect(() => {
-    fetch("./coursesDetails.json")
-      .then((res) => res.json())
-      .then((data) => setCourses(data));
-  }, []);
+  const user = authStore((state) => state.user);
 
-  const filterItems = courses.filter((data) => data.creator === "Creative IT");
+  const { data, isLoading } = useQuery("products", async () => {
+    const { data } = await axios({
+      url: url,
+      headers: {
+        "Content-Type": "application/json",
+        "x-hasura-admin-secret": "3a590f26c50099fdc779b212c090c1bf",
+      },
+      method: "POST",
+      data: {
+        query: `
+        {
+          products {
+            base64
+            category
+            courseOverview
+            creator
+            description
+            descriptionTow
+            id
+            image
+            language
+            price
+            star
+            starCount
+            students
+            subtitle
+            title
+            user_id
+            wholePrice
+          }
+        }`,
+      },
+    });
+    return data?.data?.products;
+  });
+
+  const filterItems =
+    !isLoading && data.filter((item) => item.user_id === user.id);
 
   return (
     <div className=" md:px-36 md:py-16 px-10 py-6">

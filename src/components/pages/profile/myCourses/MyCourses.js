@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import MyCourse from "../myCourse/MyCourse";
 import authStore from "../../../../utils/Store";
 import { useQuery } from "react-query";
@@ -45,8 +45,11 @@ const MyCourses = () => {
     return data?.data?.products;
   });
 
-  const filterItems =
-    !isLoading && data.filter((item) => item.user_id === user.id);
+  if (isLoading) {
+    return "Loading...";
+  }
+
+  const filterItems = data.filter((item) => item.user_id === user.id);
 
   return (
     <div className=" md:px-36 md:py-16 px-10 py-6">

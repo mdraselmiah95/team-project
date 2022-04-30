@@ -1,7 +1,7 @@
 import React from "react";
 import authStore from "../../../../utils/Store";
 import { Link } from "react-router-dom";
-import TextTruncate from "react-text-truncate";
+// import TextTruncate from "react-text-truncate";
 
 const ProfileBanner = () => {
   const user = authStore((state) => state.user);
@@ -21,14 +21,15 @@ const ProfileBanner = () => {
         )}
         <div className="text-white">
           <h2 className=" text-3xl font-bold mb-2">{user.displayName}</h2>
-          <h5 className=" text-xl mb-8">
-            {" "}
+          <h5 className=" text-xl mb-4">
+            {/* {" "}
             <TextTruncate
               line={2}
               element="span"
               truncateText="…"
               text={userDetails?.title}
-            />
+            /> */}
+            {userDetails?.title}
           </h5>
           <Link to="/profileSetting">
             <button className=" py-3 px-8 font-semibold border-white rounded border hover:focus:ring ">

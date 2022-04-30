@@ -28,6 +28,7 @@ import SettingHome from "./components/pages/profileSetting/settingHome/SettingHo
 import StudentsHome from "./components/pages/students/studentsHome/StudentsHome";
 import InstructorsHome from "./components/pages/instructors/instructorsHome/InstructorsHome";
 import "react-toastify/dist/ReactToastify.css";
+// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import SearchResult from "./components/pages/Home/searchResult";

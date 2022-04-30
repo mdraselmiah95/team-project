@@ -1,6 +1,7 @@
 import React from "react";
 import Rating from "react-rating";
 import CourseModal from "../courseModal/CourseModal";
+import TextTruncate from "react-text-truncate";
 
 const Course = ({ data }) => {
   const { image, star, starCount, title, description, wholePrice } = data;
@@ -9,15 +10,16 @@ const Course = ({ data }) => {
   return (
     <>
       <div className="px-6 lg:px-0">
-        <img
-          src={image}
-          alt="icon"
-          className="cursor-pointer"
-          type="button"
-          // onClick={() => setShowModal(true)}
-        />
+        <img src={image} alt="icon" className="cursor-pointer" type="button" />
         <h2 className="mt-4 font-medium text-color-one">{title}</h2>
-        <p className="my-1 text-color-two">{description}</p>
+        <p className="my-1 text-color-two">
+          <TextTruncate
+            line={2}
+            element="span"
+            truncateText="…"
+            text={description}
+          />
+        </p>
         <div className="flex items-center">
           <h3 className="font-bold text-star-color">{star}</h3>
           <p className="font-bold text-star-color">

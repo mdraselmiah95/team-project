@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import authStore from "../../../../utils/Store";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
@@ -15,6 +15,17 @@ const ChangeDetails = () => {
   const dispatch = authStore((state) => state.dispatch);
   const queryClient = useQueryClient();
   const navigate = useNavigate();
+
+  const [image, setImage] = useState(null);
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onloadend = () => {
+      setImage(reader.result);
+    };
+  };
 
   const { data } = useQuery(["userDetails", user.userInfo?.id], async () => {
     const { data } = await axios({
@@ -34,6 +45,7 @@ const ChangeDetails = () => {
             facebook
             description
             behance
+            image
           }
         }`,
       },
@@ -64,6 +76,7 @@ const ChangeDetails = () => {
               github: formData.github || userDetails?.github,
               linkedin: formData.linkedin || userDetails?.linkedin,
               title: formData.title || userDetails?.title,
+              image: image || userDetails?.image,
               user_id: user.id,
             },
             query: ADD_USERINFO,
@@ -91,6 +104,7 @@ const ChangeDetails = () => {
               facebook: formData.facebook || userDetails?.facebook,
               github: formData.github || userDetails?.github,
               linkedin: formData.linkedin || userDetails?.linkedin,
+              image: image || userDetails?.image,
               title: formData.title || userDetails?.title,
             },
             query: `mutation UPDATE_USER_INFO(
@@ -99,6 +113,7 @@ const ChangeDetails = () => {
               $facebook: String
               $github: String
               $linkedin: String
+              $image: String
               $title: String
             ) {
               update_userInfo_by_pk(
@@ -109,6 +124,7 @@ const ChangeDetails = () => {
                   facebook: $facebook
                   github: $github
                   linkedin: $linkedin
+                  image : $image
                   title: $title
                 }
               ) {
@@ -119,6 +135,7 @@ const ChangeDetails = () => {
                 id
                 linkedin
                 title
+                image
               }
             }`,
           },
@@ -200,14 +217,15 @@ const ChangeDetails = () => {
                 defaultValue={data?.description}
               />
             </div>
-            {/* <div className="flex items-center mb-16">
-            <h3 className="mr-4 text-lg text-color-two">
-              Upload featured video:
-            </h3>
-            <button className="px-4 py-2 font-medium text-white border rounded-lg hover:bg-white hover:border-color-three hover:text-color-three bg-color-three">
-              Choose File
-            </button>
-          </div> */}
+            <div className="flex items-center mb-4">
+              <h3 className="text-lg text-color-two mr-14">Profile Picture</h3>
+              <input
+                type="file"
+                placeholder="Feature 01 ..."
+                className="px-4 py-2 font-medium text-white border rounded-lg hover:bg-white hover:border-color-three hover:text-color-three bg-color-three"
+                onChange={handleImageChange}
+              />
+            </div>
             <button
               type="submit"
               className="py-6 font-bold text-white border rounded-md hover:bg-white hover:border-color-three hover:text-color-three px-14 bg-color-three"

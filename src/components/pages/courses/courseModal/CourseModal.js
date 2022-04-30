@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 const CourseModal = ({ data, setShowModal }) => {
   const {
+    id,
     image,
     star,
     starCount,
@@ -15,6 +16,7 @@ const CourseModal = ({ data, setShowModal }) => {
     students,
     subtitle,
     titleTwo,
+    title,
     creator,
     lastUpdate,
   } = data;
@@ -22,6 +24,8 @@ const CourseModal = ({ data, setShowModal }) => {
   const imgTwo = "https://i.ibb.co/Qvv15bs/play.png";
 
   const addCourse = courseStore((state) => state.dispatch);
+  const courses = courseStore((state) => state.courses);
+  const disableBtn = courses?.find((item) => item.id === id);
 
   return (
     <div className="fixed inset-0 z-50 items-center justify-center w-9/12 m-auto overflow-x-hidden overflow-y-auto outline-none focus:outline-none courseModal">
@@ -56,7 +60,7 @@ const CourseModal = ({ data, setShowModal }) => {
           </div>
           <div className="md:ml-6">
             <h1 className="text-2xl font-medium text-color-one md:text-4xl">
-              {titleTwo}
+              {titleTwo || title}
             </h1>
             <h4 className="mt-6 text-xl text-color-one">{descriptionTwo}</h4>
 
@@ -110,13 +114,14 @@ const CourseModal = ({ data, setShowModal }) => {
                     setShowModal(false);
                     addCourse({ type: "add/courses", payload: data });
                   }}
-                  className="px-6 py-3 mr-4 font-bold text-white border rounded-lg shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three"
+                  className="px-6 py-3 mr-4 font-bold text-white border rounded-lg shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three disabled:cursor-not-allowed"
+                  disabled={disableBtn}
                 >
                   Enroll Now
                 </button>
               </Link>
               {/* Changes required  */}
-              <Link to="/courseDetails/overView">
+              <Link to={`/courseDetails/${id}`}>
                 <button
                   onClick={() => {
                     setShowModal(false);

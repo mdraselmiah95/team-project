@@ -6,6 +6,7 @@ mutation ADD_USER(
     $github: String
     $linkedin: String
     $title: String
+    $image : String
     $user_id: uuid!
   ) {
     insert_userInfo_one(
@@ -16,6 +17,7 @@ mutation ADD_USER(
         github: $github
         linkedin: $linkedin
         title: $title
+        image : $image
         user_id: $user_id
       }
     ) {
@@ -26,6 +28,7 @@ mutation ADD_USER(
       id
       linkedin
       title
+      image
       user_id
     }
   }

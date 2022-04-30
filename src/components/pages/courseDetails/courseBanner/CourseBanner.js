@@ -10,7 +10,7 @@ const CourseBanner = ({ findProduct }) => {
       <div className="text-white ">
         <h1 className="mb-5 text-3xl font-semibold md:text-4xl">
           {/* Start Learning HTML, <br /> The Easy Way */}
-          {findProduct?.title || findProduct?.titleTwo}
+          {findProduct?.title}
         </h1>
         <div className="flex items-center">
           <div className="flex items-center">

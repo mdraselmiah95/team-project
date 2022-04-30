@@ -1,6 +1,6 @@
 export const fakeData = [
   {
-    id: 1,
+    id: " 1",
     image: "https://i.ibb.co/0MyZxqL/img1.png",
     title: "Start Learning HTML, The Easy Way",
     description: "Framework Tech Media",
@@ -22,7 +22,7 @@ export const fakeData = [
   },
 
   {
-    id: 2,
+    id: "2",
     image: "https://i.ibb.co/WgXb1jb/img2.png",
     title: "Begineers UI/UX Design Using Figma",
     description: "Framework Tech Media",
@@ -44,7 +44,7 @@ export const fakeData = [
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
   },
   {
-    id: 3,
+    id: "3",
     image: "https://i.ibb.co/wNPkCp5/img3.png",
     title: "Best Flutter App Development Course",
     description: "Learn from industry experts",
@@ -66,7 +66,7 @@ export const fakeData = [
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
   },
   {
-    id: 4,
+    id: "4",
     image: " https://i.ibb.co/SKCf3Gd/img4.png",
     title: "Learn Logo Design online course from home",
     description: "Codeman IT",
@@ -86,7 +86,7 @@ export const fakeData = [
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
   },
   {
-    id: 5,
+    id: "5",
     image: "https://i.ibb.co/tMrQB7S/img5.png",
     title: "Be a Javascript Hero into 3 months",
     description: "Framework Tech Media",
@@ -107,7 +107,7 @@ export const fakeData = [
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
   },
   {
-    id: 6,
+    id: "6",
     image: "https://i.ibb.co/vzgdLkH/img6.png",
     title: "Content Writing Fundamentals with Priyom",
     description: "Bohubrihi",
@@ -128,7 +128,7 @@ export const fakeData = [
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
   },
   {
-    id: 7,
+    id: "7",
     image: "https://i.ibb.co/ZWtmGVy/img7.png",
     title: "Wordpress Customization with 10 Projects",
     description: "Journey IT",
@@ -150,7 +150,7 @@ export const fakeData = [
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
   },
   {
-    id: 8,
+    id: "8",
     image: "https://i.ibb.co/5kNq1GF/img8.png",
     title: "Learn Video Making & Editing By Namra Nasyr",
     description: "Codeman BD",
@@ -171,7 +171,7 @@ export const fakeData = [
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
   },
   {
-    id: 8,
+    id: "9",
     image: "https://i.ibb.co/LrQ5WNS/Software-Tests.jpg",
     title: "Learn software testing By Ripon-al-wasim",
     description: "Codeman BD",

@@ -9,9 +9,10 @@ import axios from "axios";
 
 const CourseHome = () => {
   const { id } = useParams();
+
   const url = "https://lxnpjwwijxqnrluhcfsr.nhost.run/v1/graphql";
 
-  const { data, isLoading } = useQuery("products", async () => {
+  const { data, isLoading } = useQuery(["products", id], async () => {
     const { data } = await axios({
       url: url,
       headers: {
@@ -51,9 +52,8 @@ const CourseHome = () => {
   );
 
   const findProduct = isLoading
-    ? fakeData?.find((item) => item.id === +id)
-    : newAddedProducts?.find((item) => item.id === id || +id);
-  console.log(findProduct);
+    ? fakeData?.find((item) => item.id === id)
+    : newAddedProducts?.find((item) => item.id === id);
   return (
     <div className="responsive">
       <CourseBanner findProduct={findProduct} />

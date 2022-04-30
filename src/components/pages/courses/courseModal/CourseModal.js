@@ -121,7 +121,7 @@ const CourseModal = ({ data, setShowModal }) => {
                 </button>
               </Link>
               {/* Changes required  */}
-              <Link to="/courseDetails/overView">
+              <Link to={`/courseDetails/${id}`}>
                 <button
                   onClick={() => {
                     setShowModal(false);

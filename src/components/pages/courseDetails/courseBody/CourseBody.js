@@ -6,7 +6,7 @@ import ReactPlayer from "react-player/youtube";
 const CourseBody = ({ findProduct }) => {
   // const img1 = "https://i.ibb.co/0MyZxqL/img1.png";
   const mentorTwo = "https://i.ibb.co/m5QSj5n/mentor.png";
-  // const star = "https://i.ibb.co/x5dcfBW/Frame-152.png";
+  const star = "https://i.ibb.co/x5dcfBW/Frame-152.png";
   const playButton = "https://i.ibb.co/Qvv15bs/play.png";
   const [video, setVideoBtn] = useState(false);
 
@@ -65,7 +65,7 @@ const CourseBody = ({ findProduct }) => {
                 </div>
               </div>
               <div className="py-5 mt-3 bg-color-twelve pl-7 pr-14">
-                <img src={findProduct?.star} alt="star" />
+                <img src={star} alt="star" />
               </div>
 
               <div className="pt-3 pb-12 px-7">

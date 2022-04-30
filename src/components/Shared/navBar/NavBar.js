@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const logo = "https://i.ibb.co/FYNmXRm/F.png";
-  const downArrow = "https://i.ibb.co/rfh773h/Arrow-Down.png";
   const mentor = "https://i.ibb.co/9vGxYbf/mentor.png";
   const cart = "https://i.ibb.co/5cZPtf6/shopping-car.png";
   let [open, setOpen] = useState(false);
@@ -170,7 +169,7 @@ const NavBar = () => {
                 </div>
               </div>
             </NavLink>
-            <NavLink
+            {/* <NavLink
               to="gkk"
               style={({ isActive }) => {
                 return {
@@ -180,34 +179,7 @@ const NavBar = () => {
               className="py-3 text-base font-medium duration-500 text-color-three hover:text-blue-400 md:pr-11"
             >
               Careers
-            </NavLink>
-
-            {user.length !== 0 && (
-              <>
-                <NavLink
-                  to="/profile"
-                  style={({ isActive }) => {
-                    return {
-                      color: isActive ? "#FFB201" : "",
-                    };
-                  }}
-                  className="py-3 text-base font-medium duration-500 text-color-three hover:text-blue-400 md:pr-11"
-                >
-                  Profile
-                </NavLink>
-                <NavLink
-                  to="/profileSetting"
-                  style={({ isActive }) => {
-                    return {
-                      color: isActive ? "#FFB201" : "",
-                    };
-                  }}
-                  className="py-3 text-base font-medium duration-500 text-color-three hover:text-blue-400 md:pr-11"
-                >
-                  Profile Settings
-                </NavLink>
-              </>
-            )}
+            </NavLink> */}
           </li>
         </ul>
         {user.length !== 0 ? (
@@ -218,12 +190,19 @@ const NavBar = () => {
               }`}
             >
               <div className="flex items-center cursor-pointer ">
-                <img
-                  src={cart}
-                  alt="shopping-cart"
-                  className="mr-8 duration-500 hover:text-blue-400"
-                />
-                <img src={mentor} alt="mentor" className="mr-3 w-9 h-9" />
+                <span className="relative inline-block">
+                  <img
+                    src={cart}
+                    alt="shopping-cart"
+                    className="mr-8 duration-500 hover:text-blue-400 relative"
+                  />
+                  <span className="absolute top-0 left-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
+                    9
+                  </span>
+                </span>
+                <NavLink to="profile">
+                  <img src={mentor} alt="mentor" className="mr-3 w-9 h-9" />
+                </NavLink>
                 <h2
                   onClick={handleSignOut}
                   className="mr-1 font-semibold duration-500 text-color-one hover:text-blue-400"

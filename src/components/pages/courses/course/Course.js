@@ -2,6 +2,7 @@ import React from "react";
 import Rating from "react-rating";
 import CourseModal from "../courseModal/CourseModal";
 import TextTruncate from "react-text-truncate";
+import { NavLink } from "react-router-dom";
 
 const Course = ({ data }) => {
   const { image, star, starCount, title, description, wholePrice } = data;
@@ -10,8 +11,20 @@ const Course = ({ data }) => {
   return (
     <>
       <div className="px-6 lg:px-0">
-        <img src={image} alt="icon" className="cursor-pointer" type="button" />
-        <h2 className="mt-4 font-medium text-color-one">{title}</h2>
+        <NavLink to="/courseDetails/overView">
+          <img
+            src={image}
+            alt="icon"
+            className="cursor-pointer"
+            type="button"
+          />
+        </NavLink>
+        <NavLink to="/courseDetails/overView">
+          <h2 className="mt-4 font-medium text-color-one hover:text-blue-500 transition">
+            {title}
+          </h2>
+        </NavLink>
+
         <p className="my-1 text-color-two">
           <TextTruncate
             line={2}

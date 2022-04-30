@@ -16,6 +16,7 @@ const CourseModal = ({ data, setShowModal }) => {
     students,
     subtitle,
     titleTwo,
+    title,
     creator,
     lastUpdate,
   } = data;
@@ -59,7 +60,7 @@ const CourseModal = ({ data, setShowModal }) => {
           </div>
           <div className="md:ml-6">
             <h1 className="text-2xl font-medium text-color-one md:text-4xl">
-              {titleTwo}
+              {titleTwo || title}
             </h1>
             <h4 className="mt-6 text-xl text-color-one">{descriptionTwo}</h4>
 

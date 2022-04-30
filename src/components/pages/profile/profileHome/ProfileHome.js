@@ -12,7 +12,7 @@ const ProfileHome = () => {
   const url = "https://lxnpjwwijxqnrluhcfsr.nhost.run/v1/graphql";
   const user = authStore((state) => state.user);
   const dispatch = authStore((state) => state.dispatch);
-  useQuery("userProfile", async () => {
+  useQuery(["userDetails", user.userInfo?.id], async () => {
     const { data } = await axios({
       url: url,
       headers: {

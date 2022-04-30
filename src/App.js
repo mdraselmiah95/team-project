@@ -51,7 +51,7 @@ function App() {
               <Route path="contentWriting" element={<ContentHome />} />
               <Route path="appDevelopment" element={<AppHome />} />
               <Route path="videoEditing" element={<VideoHome />} />
-              <Route path="courseDetails" element={<CourseHome />}>
+              <Route path="courseDetails/:id" element={<CourseHome />}>
                 <Route path="overview" element={<CoursesOverview />} />
                 <Route path="module" element={<CourseModule />} />
               </Route>

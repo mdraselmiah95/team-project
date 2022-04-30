@@ -1,6 +1,6 @@
 import React from "react";
 
-const CourseBanner = () => {
+const CourseBanner = ({ findProduct }) => {
   const img1 = "https://i.ibb.co/nwzQy0Z/clock.png";
   const img2 = "https://i.ibb.co/YZ5TJ9n/book.png";
   const img3 = "https://i.ibb.co/7Q3mtMh/language.png";
@@ -10,7 +10,7 @@ const CourseBanner = () => {
       <div className="text-white ">
         <h1 className="mb-5 text-3xl font-semibold md:text-4xl">
           {/* Start Learning HTML, <br /> The Easy Way */}
-          Start Learning Software Testing, <br /> The Easy Way
+          {findProduct?.title || findProduct?.titleTwo}
         </h1>
         <div className="flex items-center">
           <div className="flex items-center">

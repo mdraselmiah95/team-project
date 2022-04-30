@@ -3,11 +3,10 @@ import CourseInformation from "../courseInformation/CourseInformation";
 import "./CourseBody.css";
 import ReactPlayer from "react-player/youtube";
 
-const CourseBody = () => {
-  const img1 = "https://i.ibb.co/0MyZxqL/img1.png";
-  const mentor = "https://i.ibb.co/9vGxYbf/mentor.png";
+const CourseBody = ({ findProduct }) => {
+  // const img1 = "https://i.ibb.co/0MyZxqL/img1.png";
   const mentorTwo = "https://i.ibb.co/m5QSj5n/mentor.png";
-  const star = "https://i.ibb.co/x5dcfBW/Frame-152.png";
+  // const star = "https://i.ibb.co/x5dcfBW/Frame-152.png";
   const playButton = "https://i.ibb.co/Qvv15bs/play.png";
   const [video, setVideoBtn] = useState(false);
 
@@ -20,7 +19,7 @@ const CourseBody = () => {
               <>
                 <img
                   className="object-fill w-full h-full rounded-2xl opacity-60"
-                  src={img1}
+                  src={findProduct?.image}
                   alt="html and css"
                   style={{
                     width: "629px",
@@ -50,16 +49,6 @@ const CourseBody = () => {
         <div className="md:w-96">
           <div className="md:absolute md:-mt-80">
             <div className="py-12 shadow-md rounded-xl bg-color-four mb-9">
-              {/* <div className="flex items-center pl-7">
-                <img src={mentor} alt="mentor" className="mr-2 " />
-                <div>
-                  <h2 className="mb-1 text-xl font-medium text-color-one">
-                    Syeda Rabaya
-                  </h2>
-                  <h5 className="text-color-two">Frontend Web Developer</h5>
-                </div>
-              </div> */}
-
               <div className="flex items-center pl-7 mb-7 pt-7">
                 <img
                   src={mentorTwo}
@@ -76,28 +65,8 @@ const CourseBody = () => {
                 </div>
               </div>
               <div className="py-5 mt-3 bg-color-twelve pl-7 pr-14">
-                <img src={star} alt="star" />
+                <img src={findProduct?.star} alt="star" />
               </div>
-              {/* <div className="pt-3 pb-12 px-7">
-                <h2 className="mb-5 text-xl font-medium text-color-one">
-                  Course features:
-                </h2>
-                <h5 className="mb-3 text-color-two">
-                  1. Welcome to the course.
-                </h5>
-                <h5 className="mb-3 text-color-two">
-                  2. How to set up your photoshop workspace.
-                </h5>
-                <h5 className="mb-3 text-color-two">
-                  3. How to set up your photoshop workspace.
-                </h5>
-                <h5 className="mb-3 text-color-two">
-                  4. How to set up your photoshop workspace.
-                </h5>
-                <h5 className="text-color-two">
-                  5. How to set up your photoshop workspace.
-                </h5>
-              </div> */}
 
               <div className="pt-3 pb-12 px-7">
                 <h2 className="mb-5 text-xl font-medium text-color-one">
@@ -126,15 +95,6 @@ const CourseBody = () => {
               </div>
             </div>
             <div className="shadow-md rounded-xl bg-color-four md:w-96">
-              {/* <div className="flex items-center pl-7 mb-7 pt-7">
-                <img src={mentor} alt="mentor" className="mr-2 " />
-                <div>
-                  <h2 className="mb-1 text-xl font-medium text-color-one">
-                    Syeda Rabaya
-                  </h2>
-                  <h5 className="text-color-two">Web developer at fiverr</h5>
-                </div>
-              </div> */}
               <div className="flex items-center pl-7 mb-7 pt-7">
                 <img
                   src={mentorTwo}
@@ -154,13 +114,7 @@ const CourseBody = () => {
                 <h2 className="mb-5 text-xl font-medium text-color-one">
                   Mentor Details
                 </h2>
-                {/* <p className="mb-12 text-color-two">
-                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                  amet sint. Velit officia consequat duis enim velit mollit.{" "}
-                  <br />
-                  <br />
-                  Exercitation veniam consequat sunt nostrud amet.
-                </p> */}
+
                 <p className="mb-12 text-color-two">
                   1. About 16 years development experience in java platform.{" "}
                   <br /> 2. Expertise in design development OA (Orthogonal

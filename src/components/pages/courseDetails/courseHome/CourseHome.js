@@ -4,7 +4,7 @@ import CourseBody from "../courseBody/CourseBody";
 import "./CourseHome.css";
 import { useParams } from "react-router-dom";
 import { fakeData } from "../../../../data/fakeData";
-import { useQueryClient, useQuery } from "react-query";
+import { useQuery } from "react-query";
 import axios from "axios";
 
 const CourseHome = () => {

@@ -9,7 +9,7 @@ const MyCourses = () => {
 
   const user = authStore((state) => state.user);
 
-  const { data, isLoading } = useQuery("products", async () => {
+  const { data, isLoading } = useQuery("productsHome", async () => {
     const { data } = await axios({
       url: url,
       headers: {

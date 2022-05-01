@@ -13,7 +13,7 @@ const Home = () => {
     toast.success("Successfully logged, Please login with your account");
   }
   return (
-    <div className="responsive">
+    <div>
       <ToastContainer />
       <Banner />
       <CarouselSlider />

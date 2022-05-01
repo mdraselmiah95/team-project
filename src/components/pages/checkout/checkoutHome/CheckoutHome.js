@@ -1,5 +1,4 @@
 import React from "react";
-import SectionFour from "../../courses/sectionFour/SectionFour";
 import CheckoutBanner from "../checkoutBanner/CheckoutBanner";
 import CheckoutBody from "../checkoutBody/CheckoutBody";
 
@@ -8,7 +7,7 @@ const CheckoutHome = () => {
     <>
       <CheckoutBanner />
       <CheckoutBody />
-      <SectionFour />
+      {/* <SectionFour /> */}
       {/* <SectionEight /> */}
     </>
   );

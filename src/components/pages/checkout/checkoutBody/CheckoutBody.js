@@ -234,7 +234,10 @@ const CheckoutBody = () => {
           </form>
         </div>
         {/* Order Summery */}
-        <div className="p-5 border rounded-md md:ml-8 h-1/2">
+        <div
+          className="p-5 border rounded-md md:ml-8"
+          style={{ height: "55%" }}
+        >
           <h2 className="text-xl text-color-one mb-7">Order Summery</h2>
           <h5 className="mb-4">
             <span className="font-medium text-color-one">Courses: </span>
@@ -251,7 +254,7 @@ const CheckoutBody = () => {
           </h4>
           <button className="text-sm text-color-one">
             Have a coupon?
-            <span className="text-color-eight">
+            <span className="text-color-eight ml-1">
               Click here to enter your code
             </span>
           </button>
@@ -260,11 +263,11 @@ const CheckoutBody = () => {
               Enroll
             </button>
           </Link>
-          <Link to="/checkout">
+          {/* <Link to="/checkout">
             <button className="px-16 py-3 mt-5 italic font-extrabold text-blue-600 bg-yellow-400 border rounded-md shadow hover:bg-white hover:border-yellow-500 hover:border hover:text-color-three">
               Paypal
             </button>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

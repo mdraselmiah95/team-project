@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Rating from "react-rating";
 import courseStore from "../../../../utils/Store";
 import "./CourseModal.css";
+import ReactPlayer from "react-player/youtube";
 import { Link } from "react-router-dom";
 
 const CourseModal = ({ data, setShowModal }) => {
+  const [video, setVideoBtn] = useState(false);
   const {
     id,
     image,
@@ -23,6 +25,8 @@ const CourseModal = ({ data, setShowModal }) => {
   const img = "https://i.ibb.co/RDNh0GQ/Group-1000002095.png";
   const imgTwo = "https://i.ibb.co/Qvv15bs/play.png";
 
+  const url = "https://www.youtube.com/watch?v=qz0aGYrrlhU&t=11s";
+
   const addCourse = courseStore((state) => state.dispatch);
   const courses = courseStore((state) => state.courses);
   const disableBtn = courses?.find((item) => item.id === id);
@@ -39,24 +43,38 @@ const CourseModal = ({ data, setShowModal }) => {
         />
         <div className="flex flex-col md:flex-row lg:py-10 lg:px-7">
           <div className="relative bg-black md:w-6/12 ">
-            <img
-              src={image}
-              alt="icon"
-              className="object-fill w-full h-full opacity-50 cursor-pointer "
-              type="button"
-              style={{
-                width: "307.26px",
-                height: "438.65px",
-              }}
-            />
-            <button className="btn">
-              <img
-                src={imgTwo}
-                alt="play icon"
-                style={{ height: "75px" }}
-                // onClick={() => setShowModal(false)}
+            {!video ? (
+              <>
+                <img
+                  src={image}
+                  alt="icon"
+                  className="object-fill w-full h-full opacity-50 cursor-pointer "
+                  type="button"
+                  style={{
+                    width: "307.26px",
+                    height: "438.65px",
+                  }}
+                />
+
+                <button className="btn" onClick={() => setVideoBtn(true)}>
+                  <img
+                    src={imgTwo}
+                    alt="play icon"
+                    style={{ height: "75px" }}
+                  />
+                </button>
+              </>
+            ) : (
+              <ReactPlayer
+                url={url}
+                onError={(err) => console.log(err)}
+                onEnded={() => setVideoBtn(false)}
+                controls
+                playing
+                width="307.26px"
+                height="438.65px"
               />
-            </button>
+            )}
           </div>
           <div className="md:ml-6">
             <h1 className="text-2xl font-medium text-color-one md:text-4xl">

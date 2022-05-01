@@ -42,7 +42,7 @@ const CourseModal = ({ data, setShowModal }) => {
           onClick={() => setShowModal(false)}
         />
         <div className="flex flex-col md:flex-row lg:py-10 lg:px-7">
-          <div className="relative bg-black md:w-6/12 ">
+          <div className="relative bg-black md:w-4/6 ">
             {!video ? (
               <>
                 <img
@@ -51,8 +51,8 @@ const CourseModal = ({ data, setShowModal }) => {
                   className="object-fill w-full h-full opacity-50 cursor-pointer "
                   type="button"
                   style={{
-                    width: "307.26px",
-                    height: "438.65px",
+                    width: "340px",
+                    height: "480px",
                   }}
                 />
 
@@ -71,8 +71,8 @@ const CourseModal = ({ data, setShowModal }) => {
                 onEnded={() => setVideoBtn(false)}
                 controls
                 playing
-                width="307.26px"
-                height="438.65px"
+                width="340px"
+                height="480px"
               />
             )}
           </div>

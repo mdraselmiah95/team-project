@@ -5,7 +5,12 @@ import nhost from "../../../../../utils/Nhost";
 import { ToastContainer, toast } from "react-toastify";
 
 const Body = () => {
-  const { register, handleSubmit, reset } = useForm();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
   const onSubmit = async (data) => {
     const { session, error } = await nhost.auth.signUp({
       email: data.email,
@@ -138,8 +143,17 @@ const Body = () => {
                 required
                 placeholder="Password"
                 name="password"
-                {...register("password", { required: true })}
+                {...register("password", {
+                  required: true,
+                  pattern:
+                    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/i,
+                })}
               ></input>
+              {errors.password && (
+                <p className="text-red-500 mt-2 text-xs italic">
+                  Password should be (Example@123)
+                </p>
+              )}
             </div>
 
             {/* <div className="w-full pr-0 mb-3">

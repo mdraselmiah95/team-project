@@ -1,6 +1,6 @@
 export const fakeData = [
   {
-    id: " 1",
+    id: "1",
     image: "https://i.ibb.co/0MyZxqL/img1.png",
     title: "Start Learning HTML, The Easy Way",
     description: "Framework Tech Media",

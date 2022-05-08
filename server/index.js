@@ -6,7 +6,7 @@ const port = 5000;
 
 app.post("/", (req, res) => {
   let settings = {
-    isSandboxMode: false, //false if live version
+    isSandboxMode: true,
     store_id: "freel626ec40abfe63",
     store_passwd: "freel626ec40abfe63@ssl",
   };
@@ -35,7 +35,7 @@ app.post("/", (req, res) => {
   sslcommerz
     .init_transaction(post_body)
     .then((response) => {
-      console.log(response);
+      res.send(response.GatewayPageURL);
     })
     .catch((error) => {
       console.log(error);

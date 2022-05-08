@@ -20,7 +20,7 @@ const Body = () => {
       password: data.password,
     });
 
-    if (session) {
+    if (session !== null) {
       navigate("/profileSetting");
     }
 
@@ -53,11 +53,13 @@ const Body = () => {
       },
     });
 
-    dispatch({
-      type: "add/user",
-      payload: userData.data?.user,
-    });
-    localStorage.setItem("userInfo", JSON.stringify(userData.data?.user));
+    if (userData.data?.user) {
+      dispatch({
+        type: "add/user",
+        payload: userData.data?.user,
+      });
+      localStorage.setItem("userInfo", JSON.stringify(userData.data?.user));
+    }
 
     if (error) {
       toast.error("Invalid user email and password");

@@ -12,10 +12,12 @@ const NavBar = () => {
   let [open, setOpen] = useState(false);
   const logOut = authStore((state) => state.dispatch);
   const user = authStore((state) => state.user);
+
   const navigate = useNavigate();
   const courses = authStore((state) => state.courses);
   const dispatch = authStore((state) => state.dispatch);
   const userDetails = authStore((state) => state.userDetails);
+
   useQuery(["userDetails", user.userInfo?.id], async () => {
     const { data } = await axios({
       url: "https://lxnpjwwijxqnrluhcfsr.nhost.run/v1/graphql",
@@ -235,7 +237,7 @@ const NavBar = () => {
                     {courses.length === 0 ? 0 : courses.length}
                   </span>
                 </span>
-                {userDetails?.image !== null ? (
+                {user.userInfo !== null ? (
                   <NavLink to="profile">
                     <img
                       src={userDetails?.image}

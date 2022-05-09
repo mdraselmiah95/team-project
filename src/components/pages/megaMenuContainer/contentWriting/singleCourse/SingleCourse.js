@@ -3,7 +3,7 @@ import Rating from "react-rating";
 import { Link } from "react-router-dom";
 
 const SingleCourse = ({ data }) => {
-  const { image, star, starCount, title, description, wholePrice } = data;
+  const { image, star, starCount, title, description, wholePrice, id } = data;
   return (
     <div className="px-6 mx-auto lg:px-0">
       <img src={image} alt="icon" className="cursor-pointer" type="button" />
@@ -29,7 +29,7 @@ const SingleCourse = ({ data }) => {
           {wholePrice}
         </h2>
       </div>
-      <Link to="/courseDetails">
+      <Link to={`/courseDetails/${id}`}>
         <button className="w-full py-4 mt-5 font-bold text-white border rounded shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three">
           Course Details
         </button>

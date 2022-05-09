@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import courseStore from "../../../../utils/Store";
 import axios from "axios";
 
 const CheckoutBody = () => {
+  const [loading, setLoading] = useState(false);
   const courses = courseStore((state) => state.courses);
 
   const total = courses
@@ -10,13 +11,16 @@ const CheckoutBody = () => {
     .reduce((acc, cc) => acc + cc, 0);
 
   const MobilePayment = async () => {
+    setLoading(true);
     const { data } = await axios.post(
       "https://freelancer-solutions.herokuapp.com/payment",
       {
         total,
       }
     );
+
     if (data) {
+      setLoading(false);
       window.location.replace(data);
     }
   };
@@ -275,7 +279,7 @@ const CheckoutBody = () => {
             onClick={MobilePayment}
             className="px-16 py-3 mt-20 font-bold text-white border rounded-md shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three "
           >
-            Payment
+            {loading ? "Loading..." : "Payment"}
           </button>
           {/* </Link> */}
           {/* <Link to="/checkout">

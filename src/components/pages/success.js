@@ -1,9 +1,10 @@
 import React from "react";
 import "./success.css";
+
 const Success = () => {
   return (
     <div className="mt-20 body">
-      <div class="card">
+      <div className="card">
         <div className="main">
           <i className="checkmark">✓</i>
         </div>

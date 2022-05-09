@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import courseStore from "../../../../utils/Store";
+import axios from "axios";
 
 const CheckoutBody = () => {
   const courses = courseStore((state) => state.courses);
@@ -8,6 +8,15 @@ const CheckoutBody = () => {
   const total = courses
     .map((item) => item.wholePrice)
     .reduce((acc, cc) => acc + cc, 0);
+
+  const MobilePayment = async () => {
+    const { data } = await axios.post("http://localhost:5000/payment", {
+      total,
+    });
+    if (data) {
+      window.location.replace(data);
+    }
+  };
   return (
     <div className="px-4 py-8 md:py-32 md:px-36">
       <h3 className="mb-8 text-lg font-medium text-color-one md:text-3xl">
@@ -258,14 +267,17 @@ const CheckoutBody = () => {
               Click here to enter your code
             </span>
           </button>
-          <Link to="/checkout">
-            <button className="px-16 py-3 mt-10 font-bold text-white border rounded-md shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three ">
-              Enroll
-            </button>
-          </Link>
+          {/* <Link to="/checkout"> */}
+          <button
+            onClick={MobilePayment}
+            className="px-16 py-3 mt-10 font-bold text-white border rounded-md shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three "
+          >
+            Payment
+          </button>
+          {/* </Link> */}
           {/* <Link to="/checkout">
             <button className="px-16 py-3 mt-5 italic font-extrabold text-blue-600 bg-yellow-400 border rounded-md shadow hover:bg-white hover:border-yellow-500 hover:border hover:text-color-three">
-              Paypal
+              Checkout
             </button>
           </Link> */}
         </div>

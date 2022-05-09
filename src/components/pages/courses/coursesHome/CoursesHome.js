@@ -6,7 +6,7 @@ import "./CoursesHome.css";
 
 const CoursesHome = () => {
   return (
-    <div className="responsive">
+    <div>
       <SectionOne />
       <Courses />
       {/* <Course /> */}

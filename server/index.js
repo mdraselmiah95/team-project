@@ -53,7 +53,7 @@ app.post("/payment", (req, res) => {
 });
 
 app.post("/success", (req, res) => {
-  res.redirect(301, "https://gilded-trifle-eca6a9.netlify.app");
+  res.redirect(301, "https://gilded-trifle-eca6a9.netlify.app/success");
 });
 
 app.post("/fail", (req, res) => {

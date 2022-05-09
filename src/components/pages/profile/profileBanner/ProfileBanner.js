@@ -10,7 +10,7 @@ const ProfileBanner = () => {
   return (
     <div className="mt-20 bg-color-three md:pt-28 md:pb-24 md:pl-36 py-12 px-9">
       <div className="flex items-center">
-        {userDetails?.image !== null ? (
+        {user.userInfo !== null ? (
           <img
             src={userDetails?.image}
             alt="mentor"

@@ -9,7 +9,6 @@ const CoursesHome = () => {
     <div>
       <SectionOne />
       <Courses />
-      {/* <Course /> */}
     </div>
   );
 };

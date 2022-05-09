@@ -8,7 +8,7 @@ const SettingBanner = () => {
   return (
     <div className="py-12 mt-20 bg-color-three md:pt-28 md:pb-24 md:pl-36 px-9">
       <div className="flex items-center">
-        {userDetails?.image !== null ? (
+        {user.userInfo !== null ? (
           <img
             src={userDetails?.image}
             alt="mentor"

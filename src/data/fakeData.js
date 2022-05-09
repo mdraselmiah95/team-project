@@ -17,6 +17,7 @@ export const fakeData = [
     language: "English, Bangla",
     subtitle: "English (Default)",
     category: "development",
+    videoLink: "https://www.youtube.com/watch?v=qz0aGYrrlhU",
     courseOverview:
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
   },
@@ -40,6 +41,7 @@ export const fakeData = [
     language: "English, Bangla",
     subtitle: "English (Default)",
     category: "digital",
+    videoLink: "https://www.youtube.com/watch?v=qz0aGYrrlhU",
     courseOverview:
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
   },
@@ -62,6 +64,7 @@ export const fakeData = [
     language: "English, Bangla",
     subtitle: "English (Default)",
     category: "app",
+    videoLink: "https://www.youtube.com/watch?v=qz0aGYrrlhU",
     courseOverview:
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
   },
@@ -82,6 +85,7 @@ export const fakeData = [
     language: "English, Bangla",
     subtitle: "English (Default)",
     category: "graphics",
+    videoLink: "https://www.youtube.com/watch?v=qz0aGYrrlhU",
     courseOverview:
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
   },
@@ -103,6 +107,7 @@ export const fakeData = [
     language: "English, Bangla",
     subtitle: "English (Default)",
     category: "development",
+    videoLink: "https://www.youtube.com/watch?v=qz0aGYrrlhU",
     courseOverview:
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
   },
@@ -124,6 +129,7 @@ export const fakeData = [
     language: " English, Bangla",
     subtitle: "English (Default)",
     category: "content",
+    videoLink: "https://www.youtube.com/watch?v=qz0aGYrrlhU",
     courseOverview:
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
   },
@@ -146,6 +152,7 @@ export const fakeData = [
     language: "English, Bangla",
     subtitle: "English (Default)",
     category: "development",
+    videoLink: "https://www.youtube.com/watch?v=qz0aGYrrlhU",
     courseOverview:
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
   },
@@ -167,6 +174,7 @@ export const fakeData = [
     language: "English, Bangla",
     subtitle: "English (Default)",
     category: "video",
+    videoLink: "https://www.youtube.com/watch?v=qz0aGYrrlhU",
     courseOverview:
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
   },
@@ -187,6 +195,7 @@ export const fakeData = [
     language: "English, Bangla",
     subtitle: "English (Default)",
     category: "video",
+    videoLink: "https://www.youtube.com/watch?v=qz0aGYrrlhU",
     courseOverview:
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
   },

@@ -30,6 +30,9 @@ import "react-datepicker/dist/react-datepicker.css";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import SearchResult from "./components/pages/Home/searchResult";
+import Success from "./components/pages/success";
+import Fail from "./components/pages/fail";
+import Cancel from "./components/pages/cancel";
 
 function App() {
   const queryClient = new QueryClient();
@@ -60,6 +63,9 @@ function App() {
               <Route path="profile" element={<ProfileHome />} />
               <Route path="profileSetting" element={<SettingHome />} />
               <Route path="search/:title" element={<SearchResult />} />
+              <Route path="success" element={<Success />} />
+              <Route path="fail" element={<Fail />} />
+              <Route path="cancel" element={<Cancel />} />
             </Routes>
             <Footer />
           </NhostAuthProvider>

@@ -3,7 +3,7 @@ import "./fail.css";
 const Fail = () => {
   return (
     <div className="mt-20 body">
-      <div class="card">
+      <div class="failCard">
         <div className="main">
           <i className="crossMark">X</i>
         </div>

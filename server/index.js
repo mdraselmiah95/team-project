@@ -53,14 +53,14 @@ app.post("/payment", (req, res) => {
 });
 
 app.post("/success", (req, res) => {
-  res.redirect(301, "http://localhost:3000/success");
+  res.redirect(301, "https://gilded-trifle-eca6a9.netlify.app");
 });
 
 app.post("/fail", (req, res) => {
-  res.redirect(301, "http://localhost:3000/fail");
+  res.redirect(301, "https://gilded-trifle-eca6a9.netlify.app/fail");
 });
 app.post("/cancel", (req, res) => {
-  res.redirect(301, "http://localhost:3000/cancel");
+  res.redirect(301, "https://gilded-trifle-eca6a9.netlify.app/cancel");
 });
 
 app.listen(port, () => {

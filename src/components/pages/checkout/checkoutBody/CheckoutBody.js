@@ -10,9 +10,12 @@ const CheckoutBody = () => {
     .reduce((acc, cc) => acc + cc, 0);
 
   const MobilePayment = async () => {
-    const { data } = await axios.post("http://localhost:5000/payment", {
-      total,
-    });
+    const { data } = await axios.post(
+      "https://smart-immense-flea.glitch.me/payment",
+      {
+        total,
+      }
+    );
     if (data) {
       window.location.replace(data);
     }

@@ -37,6 +37,7 @@ const UploadCourse = () => {
             title: product.title,
             price: +product.price,
             description: product.description,
+            videoLink: product.videoLink,
             image,
             user_id: user.id,
           },
@@ -114,6 +115,18 @@ const UploadCourse = () => {
 
             <div className="mb-5 ">
               <label className="block mb-3 text-lg text-color-two">
+                Video Link
+              </label>
+              <input
+                type="text"
+                placeholder="Enter course youtube video link"
+                className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                {...register("videoLink", { required: true })}
+              />
+            </div>
+
+            <div className="mb-5 ">
+              <label className="block mb-3 text-lg text-color-two">
                 Course Description:
               </label>
               <textarea
@@ -146,8 +159,8 @@ const UploadCourse = () => {
         </form>
         {/* Videos */}
         <div className="md:ml-12">
-          <h1 className="mb-6 text-2xl font-medium text-color-one">Videos:</h1>
-          <div className="mb-5 ">
+          {/* <h1 className="mb-6 text-2xl font-medium text-color-one">Videos:</h1> */}
+          {/* <div className="mb-5 ">
             <label className="block mb-3 text-lg text-color-two">
               Video 01 Title:
             </label>
@@ -157,8 +170,8 @@ const UploadCourse = () => {
               placeholder="Enter video title"
               className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
-          </div>
-          <div className="mb-5 ">
+          </div> */}
+          {/* <div className="mb-5 ">
             <label className="block mb-3 text-lg text-color-two">
               Video 01 Link:
             </label>
@@ -168,8 +181,8 @@ const UploadCourse = () => {
               placeholder="Enter video link"
               className="block w-full px-5 py-4 border rounded-lg shadow-sm border-color-thirteen focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
-          </div>
-          <div className="mb-5 ">
+          </div> */}
+          {/* <div className="mb-5 ">
             <label className="block mb-3 text-lg text-color-two">
               Video 02 Title:
             </label>
@@ -193,7 +206,7 @@ const UploadCourse = () => {
           </div>
           <button className="float-right px-4 py-2 font-medium text-white border rounded-lg hover:bg-white hover:border-color-three hover:text-color-three bg-color-three">
             Add More Video
-          </button>
+          </button> */}
           {/* Quiz */}
           <div className="mt-24">
             <h1 className="mb-6 text-2xl font-medium text-color-one">Quiz:</h1>

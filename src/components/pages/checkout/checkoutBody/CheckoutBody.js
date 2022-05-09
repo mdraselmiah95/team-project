@@ -11,7 +11,7 @@ const CheckoutBody = () => {
 
   const MobilePayment = async () => {
     const { data } = await axios.post(
-      "https://smart-immense-flea.glitch.me/payment",
+      "https://freelancer-solutions.herokuapp.com/payment",
       {
         total,
       }

@@ -3,10 +3,14 @@ const SSLCommerz = require("sslcommerz-nodejs");
 const cors = require("cors");
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(cors());
+
+app.get("/", (req, res) => {
+  res.send("API is running....");
+});
 
 app.post("/payment", (req, res) => {
   const { total } = req.body;
@@ -21,9 +25,10 @@ app.post("/payment", (req, res) => {
   post_body["total_amount"] = total.toString();
   post_body["currency"] = "BDT";
   post_body["tran_id"] = "12345";
-  post_body["success_url"] = "http://localhost:5000/success";
-  post_body["fail_url"] = "http://localhost:5000/fail";
-  post_body["cancel_url"] = "http://localhost:5000/cancel";
+  post_body["success_url"] =
+    "https://freelancer-solutions.herokuapp.com/success";
+  post_body["fail_url"] = "https://freelancer-solutions.herokuapp.com/fail";
+  post_body["cancel_url"] = "https://freelancer-solutions.herokuapp.com/cancel";
   post_body["emi_option"] = 0;
   post_body["cus_name"] = "test";
   post_body["cus_email"] = "test@test.com";

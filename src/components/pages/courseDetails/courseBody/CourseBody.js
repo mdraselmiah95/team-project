@@ -26,8 +26,8 @@ const CourseBody = ({ findProduct }) => {
   };
 
   return (
-    <div className="px-5 py-6 md:pt-16 md:pb-32 md:pl-36 md:pr-56">
-      <div className="grid grid-cols-1 md:grid-cols-3">
+    <div className="px-5 py-6 md:pt-16 md:pb-32 md:pl-36 md:pr-56 responsive">
+      <div className="grid grid-cols-1 mb-40 md:grid-cols-3">
         <div className="col-span-2 mr-4 md:mr-12">
           <div className="relative bg-black rounded-2xl">
             {!video ? (
@@ -164,7 +164,7 @@ const CourseBody = ({ findProduct }) => {
                   ) : (
                     <button
                       onClick={() => setIsOpen(false)}
-                      className="px-2 py-2  text-md mb-2 font-bold text-white border bg-color-three rounded-xl hover:text-color-three hover:bg-white hover:border-color-three hover:border"
+                      className="px-2 py-2 mb-2 font-bold text-white border text-md bg-color-three rounded-xl hover:text-color-three hover:bg-white hover:border-color-three hover:border"
                     >
                       Cancel Meeting
                     </button>

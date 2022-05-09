@@ -9,3 +9,10 @@
 iframe {
   border-radius: 16px;
 }
+
+@media screen and (min-width: 1200px) {
+  .responsive {
+    width: 1350px;
+    margin: auto;
+  }
+}

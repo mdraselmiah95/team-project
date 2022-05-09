@@ -1,10 +1,15 @@
 const express = require("express");
 const SSLCommerz = require("sslcommerz-nodejs");
+const cors = require("cors");
 
 const app = express();
 const port = 5000;
 
-app.post("/", (req, res) => {
+app.use(express.json());
+app.use(cors());
+
+app.post("/payment", (req, res) => {
+  const { total } = req.body;
   let settings = {
     isSandboxMode: true,
     store_id: "freel626ec40abfe63",
@@ -13,10 +18,10 @@ app.post("/", (req, res) => {
 
   let sslcommerz = new SSLCommerz(settings);
   let post_body = {};
-  post_body["total_amount"] = 100.26;
+  post_body["total_amount"] = total.toString();
   post_body["currency"] = "BDT";
   post_body["tran_id"] = "12345";
-  post_body["success_url"] = "your success url";
+  post_body["success_url"] = "http://localhost:5000/success";
   post_body["fail_url"] = "your fail url";
   post_body["cancel_url"] = "your cancel url";
   post_body["emi_option"] = 0;
@@ -40,6 +45,10 @@ app.post("/", (req, res) => {
     .catch((error) => {
       console.log(error);
     });
+});
+
+app.post("/success", (req, res) => {
+  res.redirect(301, "http://localhost:3000");
 });
 
 app.listen(port, () => {

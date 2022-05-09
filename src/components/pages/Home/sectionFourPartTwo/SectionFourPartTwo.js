@@ -12,7 +12,7 @@ const SectionFourPartTwo = () => {
   // console.log(services); JSON response
   return (
     <div className="px-5 py-5 lg:px-36 md:py-32 bg-color-four">
-      <div className="container">
+      <div className="container mx-auto ">
         <h1 className="mb-12 text-3xl font-medium text-center lg:text-4xl text-color-one">
           Service That Help You
         </h1>

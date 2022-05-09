@@ -266,14 +266,14 @@ const CheckoutBody = () => {
           </h4>
           <button className="text-sm text-color-one">
             Have a coupon?
-            <span className="text-color-eight ml-1">
+            <span className="ml-1 text-color-eight">
               Click here to enter your code
             </span>
           </button>
           {/* <Link to="/checkout"> */}
           <button
             onClick={MobilePayment}
-            className="px-16 py-3 mt-10 font-bold text-white border rounded-md shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three "
+            className="px-16 py-3 mt-20 font-bold text-white border rounded-md shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three "
           >
             Payment
           </button>

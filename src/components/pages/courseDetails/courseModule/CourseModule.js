@@ -70,7 +70,7 @@ const CourseModule = () => {
                       {(close) => (
                         <div>
                           <button
-                            className="close absolute top-6 right-6"
+                            className="absolute close top-6 right-6"
                             onClick={close}
                           >
                             <img src={button} alt="button" />
@@ -611,7 +611,7 @@ const CourseModule = () => {
                   </div>
                   <button
                     type="submit"
-                    className="py-4 my-12 ml-8 font-bold text-white rounded-md hover:text-color-three hover:bg-white hover:border-color-three hover:border border px-11 bg-color-three "
+                    className="py-4 my-12 ml-8 font-bold text-white border rounded-md hover:text-color-three hover:bg-white hover:border-color-three hover:border px-11 bg-color-three "
                   >
                     Submit Now
                   </button>

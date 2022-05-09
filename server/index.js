@@ -22,8 +22,8 @@ app.post("/payment", (req, res) => {
   post_body["currency"] = "BDT";
   post_body["tran_id"] = "12345";
   post_body["success_url"] = "http://localhost:5000/success";
-  post_body["fail_url"] = "your fail url";
-  post_body["cancel_url"] = "your cancel url";
+  post_body["fail_url"] = "http://localhost:5000/fail";
+  post_body["cancel_url"] = "http://localhost:5000/cancel";
   post_body["emi_option"] = 0;
   post_body["cus_name"] = "test";
   post_body["cus_email"] = "test@test.com";
@@ -48,7 +48,14 @@ app.post("/payment", (req, res) => {
 });
 
 app.post("/success", (req, res) => {
-  res.redirect(301, "http://localhost:3000");
+  res.redirect(301, "http://localhost:3000/success");
+});
+
+app.post("/fail", (req, res) => {
+  res.redirect(301, "http://localhost:3000/fail");
+});
+app.post("/cancel", (req, res) => {
+  res.redirect(301, "http://localhost:3000/cancel");
 });
 
 app.listen(port, () => {

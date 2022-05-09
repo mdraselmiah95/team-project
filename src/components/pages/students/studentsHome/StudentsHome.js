@@ -5,7 +5,7 @@ import "./StudentsHome.css";
 
 const StudentsHome = () => {
   return (
-    <div className="responsive">
+    <div>
       <StudentsBanner />
       <StudentsBody />
     </div>

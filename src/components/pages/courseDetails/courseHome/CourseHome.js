@@ -60,7 +60,7 @@ const CourseHome = () => {
   // const findProduct = newAddedProducts?.find((item) => item.id === id);
 
   return (
-    <div className="responsive">
+    <div>
       <CourseBanner findProduct={findProduct} />
       <CourseBody findProduct={findProduct} />
     </div>

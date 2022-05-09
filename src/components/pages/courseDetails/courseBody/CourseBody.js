@@ -4,6 +4,7 @@ import "./CourseBody.css";
 import ReactPlayer from "react-player/youtube";
 import courseStore from "../../../../utils/Store";
 import DatePicker from "react-datepicker";
+import { Link } from "react-router-dom";
 
 const CourseBody = ({ findProduct }) => {
   // const img1 = "https://i.ibb.co/0MyZxqL/img1.png";
@@ -17,7 +18,6 @@ const CourseBody = ({ findProduct }) => {
   const [startDate, setStartDate] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   const handleChange = (e) => {
-    // setIsOpen(!isOpen);
     setStartDate(e);
   };
   const handleClick = (e) => {
@@ -104,18 +104,20 @@ const CourseBody = ({ findProduct }) => {
                 </h5>
               </div>
               <div className="flex justify-center">
-                <button
-                  onClick={() =>
-                    dispatch({
-                      type: "add/courses",
-                      payload: findProduct,
-                    })
-                  }
-                  disabled={disableBtn}
-                  className="px-10 py-4 text-2xl font-bold text-white border bg-color-three md:py-5 md:px-20 rounded-xl hover:text-color-three hover:bg-white hover:border-color-three hover:border disabled:cursor-not-allowed"
-                >
-                  Enroll Now
-                </button>
+                <Link to="/cart">
+                  <button
+                    onClick={() =>
+                      dispatch({
+                        type: "add/courses",
+                        payload: findProduct,
+                      })
+                    }
+                    disabled={disableBtn}
+                    className="px-10 py-4 text-2xl font-bold text-white border bg-color-three md:py-5 md:px-20 rounded-xl hover:text-color-three hover:bg-white hover:border-color-three hover:border disabled:cursor-not-allowed"
+                  >
+                    Enroll Now
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="shadow-md rounded-xl bg-color-four md:w-96">

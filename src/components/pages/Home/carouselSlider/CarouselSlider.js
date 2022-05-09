@@ -130,7 +130,7 @@ const CarouselSlider = () => {
                   {course.wholePrice}
                 </h2>
               </div>
-              <Link to="/courseDetails/overView">
+              <Link to={`/courseDetails/${course.id}`}>
                 <button className="w-full py-4 mt-5 font-bold text-white border rounded shadow bg-color-three hover:bg-white hover:border-color-three hover:border hover:text-color-three">
                   Course Details
                 </button>

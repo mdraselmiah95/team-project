@@ -5,13 +5,13 @@ import TextTruncate from "react-text-truncate";
 import { NavLink } from "react-router-dom";
 
 const Course = ({ data }) => {
-  const { image, star, starCount, title, description, wholePrice } = data;
+  const { image, star, starCount, title, description, wholePrice, id } = data;
   const [showModal, setShowModal] = React.useState(false);
 
   return (
     <>
       <div className="px-6 lg:px-0">
-        <NavLink to="/courseDetails/overView">
+        <NavLink to={`/courseDetails/${id}`}>
           <img
             src={image}
             alt="icon"
@@ -19,7 +19,7 @@ const Course = ({ data }) => {
             type="button"
           />
         </NavLink>
-        <NavLink to="/courseDetails/overView">
+        <NavLink to={`/courseDetails/${id}`}>
           <h2 className="mt-4 font-medium text-color-one hover:text-blue-500 transition">
             {title}
           </h2>

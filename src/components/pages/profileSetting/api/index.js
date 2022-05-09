@@ -35,8 +35,8 @@ mutation ADD_USER(
 `;
 
 export const ADD_PRODUCT = `
-mutation ADD_PRODUCT($image :String!, $title:String!, $description :String!, $user_id :uuid!, $price:Int!) {
-  insert_products_one(object: {image: $image, title: $title, description: $description, price: $price, user_id: $user_id}) {
+mutation ADD_PRODUCT($image :String!, $title:String!, $description :String!, $videoLink :String! $user_id :uuid!, $price:Int!) {
+  insert_products_one(object: {image: $image, title: $title, description: $description, videoLink: $videoLink, price: $price, user_id: $user_id}) {
     base64
     category
     courseOverview
@@ -52,6 +52,7 @@ mutation ADD_PRODUCT($image :String!, $title:String!, $description :String!, $us
     students
     subtitle
     title
+    videoLink
     user_id
     wholePrice
   }

@@ -21,11 +21,10 @@ const CourseModal = ({ data, setShowModal }) => {
     title,
     creator,
     lastUpdate,
+    videoLink,
   } = data;
   const img = "https://i.ibb.co/RDNh0GQ/Group-1000002095.png";
   const imgTwo = "https://i.ibb.co/Qvv15bs/play.png";
-
-  const url = "https://www.youtube.com/watch?v=qz0aGYrrlhU&t=11s";
 
   const addCourse = courseStore((state) => state.dispatch);
   const courses = courseStore((state) => state.courses);
@@ -66,7 +65,7 @@ const CourseModal = ({ data, setShowModal }) => {
               </>
             ) : (
               <ReactPlayer
-                url={url}
+                url={videoLink}
                 onError={(err) => console.log(err)}
                 onEnded={() => setVideoBtn(false)}
                 controls

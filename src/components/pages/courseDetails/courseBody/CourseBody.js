@@ -16,7 +16,6 @@ const CourseBody = ({ findProduct }) => {
   const disableBtn = courses?.find((item) => item.id === findProduct.id);
   const [startDate, setStartDate] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
-
   const handleChange = (e) => {
     // setIsOpen(!isOpen);
     setStartDate(e);
@@ -48,7 +47,7 @@ const CourseBody = ({ findProduct }) => {
               </>
             ) : (
               <ReactPlayer
-                url="https://www.youtube.com/watch?v=qz0aGYrrlhU&t=11s"
+                url={findProduct?.videoLink}
                 onError={(err) => console.log(err)}
                 onEnded={() => setVideoBtn(false)}
                 controls

@@ -43,6 +43,7 @@ const CourseHome = () => {
             students
             subtitle
             title
+            videoLink
             user_id
             wholePrice
           }

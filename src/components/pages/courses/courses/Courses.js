@@ -38,11 +38,11 @@ const Courses = () => {
             title
             user_id
             wholePrice
+            videoLink
           }
         }`,
       },
     });
-    console.log(data);
     return data;
   });
   const newAddedProducts = courses?.concat(

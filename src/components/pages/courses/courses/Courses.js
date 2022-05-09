@@ -43,7 +43,6 @@ const Courses = () => {
         }`,
       },
     });
-    console.log(data);
     return data;
   });
   const newAddedProducts = courses?.concat(

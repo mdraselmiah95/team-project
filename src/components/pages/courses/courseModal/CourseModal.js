@@ -41,7 +41,10 @@ const CourseModal = ({ data, setShowModal }) => {
           onClick={() => setShowModal(false)}
         />
         <div className="flex flex-col md:flex-row lg:py-10 lg:px-7">
-          <div className="relative bg-black md:w-6/12 ">
+          <div
+            className="relative bg-black "
+            style={{ width: "307.26px", height: "438.65px" }}
+          >
             {!video ? (
               <>
                 <img

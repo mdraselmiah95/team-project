@@ -3,6 +3,7 @@ import CourseInformation from "../courseInformation/CourseInformation";
 import "./CourseBody.css";
 import ReactPlayer from "react-player/youtube";
 import courseStore from "../../../../utils/Store";
+import DatePicker from "react-datepicker";
 
 const CourseBody = ({ findProduct }) => {
   // const img1 = "https://i.ibb.co/0MyZxqL/img1.png";
@@ -13,6 +14,17 @@ const CourseBody = ({ findProduct }) => {
   const dispatch = courseStore((state) => state.dispatch);
   const courses = courseStore((state) => state.courses);
   const disableBtn = courses?.find((item) => item.id === findProduct.id);
+  const [startDate, setStartDate] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleChange = (e) => {
+    // setIsOpen(!isOpen);
+    setStartDate(e);
+  };
+  const handleClick = (e) => {
+    e.preventDefault();
+    setIsOpen(!isOpen);
+  };
 
   return (
     <div className="px-5 py-6 md:pt-16 md:pb-32 md:pl-36 md:pr-56">
@@ -141,9 +153,31 @@ const CourseBody = ({ findProduct }) => {
                   (Scrum) development methodologies.
                 </p>
                 <div className="flex justify-center">
-                  <button className="px-6 py-5 text-2xl font-bold text-white border bg-color-three rounded-xl hover:text-color-three hover:bg-white hover:border-color-three hover:border">
-                    Schedule A Meeting
-                  </button>
+                  {!isOpen ? (
+                    <button
+                      onClick={handleClick}
+                      className="px-6 py-5 text-2xl font-bold text-white border bg-color-three rounded-xl hover:text-color-three hover:bg-white hover:border-color-three hover:border"
+                    >
+                      Schedule A Meeting
+                    </button>
+                  ) : (
+                    <button
+                      onClick={() => setIsOpen(false)}
+                      className="px-2 py-2  text-md mb-2 font-bold text-white border bg-color-three rounded-xl hover:text-color-three hover:bg-white hover:border-color-three hover:border"
+                    >
+                      Cancel Meeting
+                    </button>
+                  )}
+                </div>
+                <div className="flex justify-center">
+                  {isOpen && (
+                    <DatePicker
+                      selected={startDate}
+                      onChange={handleChange}
+                      dateFormat="MM/dd/yyyy"
+                      inline
+                    />
+                  )}
                 </div>
               </div>
             </div>

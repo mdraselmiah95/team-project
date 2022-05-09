@@ -1,24 +1,34 @@
 const express = require("express");
 const SSLCommerz = require("sslcommerz-nodejs");
+const cors = require("cors");
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
-app.post("/", (req, res) => {
+app.use(express.json());
+app.use(cors());
+
+app.get("/", (req, res) => {
+  res.send("API is running....");
+});
+
+app.post("/payment", (req, res) => {
+  const { total } = req.body;
   let settings = {
-    isSandboxMode: false, //false if live version
+    isSandboxMode: true,
     store_id: "freel626ec40abfe63",
     store_passwd: "freel626ec40abfe63@ssl",
   };
 
   let sslcommerz = new SSLCommerz(settings);
   let post_body = {};
-  post_body["total_amount"] = 100.26;
+  post_body["total_amount"] = total.toString();
   post_body["currency"] = "BDT";
   post_body["tran_id"] = "12345";
-  post_body["success_url"] = "your success url";
-  post_body["fail_url"] = "your fail url";
-  post_body["cancel_url"] = "your cancel url";
+  post_body["success_url"] =
+    "https://freelancer-solutions.herokuapp.com/success";
+  post_body["fail_url"] = "https://freelancer-solutions.herokuapp.com/fail";
+  post_body["cancel_url"] = "https://freelancer-solutions.herokuapp.com/cancel";
   post_body["emi_option"] = 0;
   post_body["cus_name"] = "test";
   post_body["cus_email"] = "test@test.com";
@@ -35,11 +45,22 @@ app.post("/", (req, res) => {
   sslcommerz
     .init_transaction(post_body)
     .then((response) => {
-      console.log(response);
+      res.send(response.GatewayPageURL);
     })
     .catch((error) => {
       console.log(error);
     });
+});
+
+app.post("/success", (req, res) => {
+  res.redirect(301, "https://gilded-trifle-eca6a9.netlify.app");
+});
+
+app.post("/fail", (req, res) => {
+  res.redirect(301, "https://gilded-trifle-eca6a9.netlify.app/fail");
+});
+app.post("/cancel", (req, res) => {
+  res.redirect(301, "https://gilded-trifle-eca6a9.netlify.app/cancel");
 });
 
 app.listen(port, () => {

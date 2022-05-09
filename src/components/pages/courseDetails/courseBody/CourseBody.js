@@ -28,7 +28,7 @@ const CourseBody = ({ findProduct }) => {
 
   return (
     <div className="px-5 py-6 md:pt-16 md:pb-32 md:pl-36 md:pr-56 responsive">
-      <div className="grid grid-cols-1 md:grid-cols-3">
+      <div className="grid grid-cols-1 mb-40 md:grid-cols-3">
         <div className="col-span-2 mr-4 md:mr-12">
           <div className="relative bg-black rounded-2xl">
             {!video ? (

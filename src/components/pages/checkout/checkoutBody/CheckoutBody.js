@@ -13,8 +13,7 @@ const CheckoutBody = () => {
   const MobilePayment = async () => {
     setLoading(true);
     const { data } = await axios.post(
-      // "https://freelancer-solutions.herokuapp.com/payment",
-      "http://localhost:5000/payment",
+      "https://freelancer-solutions.herokuapp.com/payment",
       {
         total,
       }

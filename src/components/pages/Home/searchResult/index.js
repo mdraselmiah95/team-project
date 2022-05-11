@@ -39,6 +39,7 @@ const SearchResult = () => {
             title
             user_id
             wholePrice
+            videoLink
           }
         }`,
       },

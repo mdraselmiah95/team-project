@@ -17,10 +17,14 @@ const Course = ({ data }) => {
             alt="icon"
             className="cursor-pointer"
             type="button"
+            style={{
+              width: "255px",
+              height: "144px",
+            }}
           />
         </NavLink>
         <NavLink to={`/courseDetails/${id}`}>
-          <h2 className="mt-4 font-medium text-color-one hover:text-blue-500 transition">
+          <h2 className="mt-4 font-medium transition text-color-one hover:text-blue-500">
             {title}
           </h2>
         </NavLink>

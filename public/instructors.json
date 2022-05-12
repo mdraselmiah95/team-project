@@ -8,7 +8,7 @@
     "enroll": 50302,
     "star": 5,
     "totalStar": 20,
-    "image": "https://i.ibb.co/VvLnqPt/img1.png"
+    "image": "https://i.ibb.co/3c5f6h4/teacher1.png"
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
     "enroll": 60302,
     "star": 5,
     "totalStar": 60,
-    "image": "https://i.ibb.co/Vpz64PL/img2.png"
+    "image": "https://i.ibb.co/0yvvwCx/teacher2.jpg"
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
     "enroll": 70702,
     "star": 4,
     "totalStar": 80,
-    "image": "https://i.ibb.co/jD3sdXS/img3.png"
+    "image": "https://i.ibb.co/6FWQbrf/teacher3.jpg"
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "enroll": 50702,
     "star": 5,
     "totalStar": 74,
-    "image": "https://i.ibb.co/mXDLj1w/img4.png"
+    "image": "https://i.ibb.co/8M9V9d4/teacher4.jpg"
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
     "enroll": 70702,
     "star": 4,
     "totalStar": 88,
-    "image": "https://i.ibb.co/rv3YF4k/img5.png"
+    "image": "https://i.ibb.co/cbTQPRt/teacher5.jpg"
   },
   {
     "id": 6,
@@ -63,7 +63,7 @@
     "enroll": 60501,
     "star": 5,
     "totalStar": 79,
-    "image": "https://i.ibb.co/VvCfxZZ/img6.png"
+    "image": "https://i.ibb.co/vhT7xyj/teacher7.jpg"
   },
   {
     "id": 7,
@@ -74,7 +74,7 @@
     "enroll": 60702,
     "star": 4,
     "totalStar": 99,
-    "image": "https://i.ibb.co/Yt5W9W3/img7.png"
+    "image": "https://i.ibb.co/zbV2Cwt/teacher8.jpg"
   },
   {
     "id": 8,
@@ -85,6 +85,6 @@
     "enroll": 90702,
     "star": 4,
     "totalStar": 66,
-    "image": "https://i.ibb.co/CK038pV/img8.png"
+    "image": "https://i.ibb.co/NFkzMLZ/teacher6.jpg"
   }
 ]

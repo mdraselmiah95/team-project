@@ -63,10 +63,6 @@ const Carts = () => {
                           <span>&#2547;</span>
                           {data.wholePrice}
                         </h2>
-                        <h5 className="font-medium text-color-two">
-                          <span>&#2547;</span>
-                          <del>{data.price}</del>
-                        </h5>
                       </div>
                     </td>
                     <td>
